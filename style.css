@@ -332,3 +332,22 @@ figcaption{color:var(--faint); font-size:11px; letter-spacing:.06em; text-transf
 .placeholder .label{margin:0 0 .4rem}
 .placeholder p:last-child{margin:0; color:var(--faint); font-size:.95rem}
 @media(max-width:900px){ .split{grid-template-columns:1fr} }
+
+/* ---------- live-forhaandsvisning ---------- */
+.preview{
+  border:1px solid var(--hair); border-radius:10px; overflow:hidden;
+  box-shadow:0 14px 40px rgba(0,0,0,.09); margin:2rem 0 1.2rem; background:#fff;
+}
+.preview-bar{
+  display:flex; align-items:center; gap:6px;
+  padding:.6rem .9rem; background:var(--soft); border-bottom:1px solid var(--hair);
+}
+.preview-bar .dot{width:10px; height:10px; border-radius:50%; background:#d9d5cf; display:block}
+.preview-bar em{
+  margin-left:.8rem; font-style:normal; font-size:11px; letter-spacing:.06em;
+  color:var(--faint);
+}
+.preview-frame{position:relative; aspect-ratio:16/10; background:#fff}
+.preview-frame iframe{position:absolute; inset:0; width:100%; height:100%; border:0}
+.preview-cta{margin:0}
+@media(max-width:700px){ .preview-frame{aspect-ratio:3/4} }
