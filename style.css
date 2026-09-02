@@ -359,3 +359,11 @@ figcaption{color:var(--faint); font-size:11px; letter-spacing:.06em; text-transf
   box-shadow:inset 0 0 0 1px var(--ink);
 }
 .btn-ghost:hover{background:var(--ink); color:#fff; opacity:1}
+
+/* gruppeoverskrifter i dropdown-menuen */
+.nav .sub .subhead{
+  font-size:9px; font-weight:700; letter-spacing:.2em; text-transform:uppercase;
+  color:var(--accent); padding:.7rem .7rem .3rem; pointer-events:none;
+}
+.nav .sub .subhead:first-child{padding-top:.3rem}
+.nav .sub li + .subhead{border-top:1px solid var(--hair); margin-top:.35rem; padding-top:.6rem}
