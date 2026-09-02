@@ -104,18 +104,19 @@ p{margin:0 0 1.05rem}
 
 /* ---------- billeder ---------- */
 figure{margin:2.5rem 0}
-figure img{width:100%; max-height:78vh; object-fit:cover; background:var(--soft); border-radius:6px}
+figure img{
+  max-height:72vh; width:auto; max-width:100%; margin-inline:auto;
+  background:var(--soft); border-radius:6px;
+}
 figcaption{color:var(--faint); font-size:11px; letter-spacing:.06em; text-transform:uppercase; margin-top:.7rem}
 
-.gallery{
-  display:grid; grid-template-columns:repeat(4,1fr); grid-auto-rows:200px;
-  gap:4px; margin:2.5rem 0;
+.gallery{columns:4; column-gap:10px; margin:2.5rem 0}
+.gallery .g{
+  break-inside:avoid; margin:0 0 10px; overflow:hidden; border-radius:6px;
+  background:var(--soft); line-height:0;
 }
-.gallery a,.gallery .g{overflow:hidden; border-radius:6px; background:var(--soft)}
-.gallery img{width:100%; height:100%; object-fit:cover; transition:transform .45s ease}
-.gallery .g:hover img{transform:scale(1.05)}
-.gallery .g.tall{grid-row:span 2}
-.gallery .g.wide{grid-column:span 2}
+.gallery img{width:100%; height:auto; transition:opacity .3s ease}
+.gallery .g:hover img{opacity:.88}
 
 /* ---------- kort ---------- */
 .cards{display:grid; grid-template-columns:repeat(auto-fill,minmax(320px,1fr)); gap:1px; background:var(--hair); border:1px solid var(--hair); margin:2.5rem 0}
@@ -188,11 +189,14 @@ figcaption{color:var(--faint); font-size:11px; letter-spacing:.06em; text-transf
 
 /* ---------- mobil ---------- */
 @media(max-width:1000px){
-  .gallery{grid-template-columns:repeat(2,1fr); grid-auto-rows:160px}
+  .gallery{columns:2}
   .stats{grid-template-columns:repeat(2,1fr)}
   .intro{grid-template-columns:1fr}
   .phead{grid-template-columns:1fr}
   .phead-meta{text-align:left}
+}
+@media(max-width:640px){
+  .gallery{columns:1}
 }
 @media(max-width:900px){
   .burger{display:block}
@@ -205,4 +209,45 @@ figcaption{color:var(--faint); font-size:11px; letter-spacing:.06em; text-transf
   .card img{width:100%; aspect-ratio:16/9}
   .proj{grid-template-columns:auto 1fr; gap:1rem}
   .proj .k{display:none}
+}
+
+/* ---------- gallerier inde i de håndkodede sider ---------- */
+/* de var bygget som faste felter med beskæring — her vises hele billedet */
+.embed .sem-gallery, .embed .sem-gallery-2, .embed .p4-gallery, .embed .cc-gallery,
+.embed .pp-img-grid, .embed .p4-grid-top3, .embed .p4-grid-bot2, .embed .p4-grid-4,
+.embed .js-ref-grid, .embed .js-proc-grid, .embed .dc-trends-grid,
+.embed .dc-sites-grid-2, .embed .dc-sites-grid-3{
+  display:block !important;
+  columns:4; column-gap:8px;
+  grid-auto-rows:auto !important;
+}
+.embed .sem-gallery > *, .embed .sem-gallery-2 > *, .embed .p4-gallery > *,
+.embed .cc-gallery > *, .embed .pp-img-grid > *, .embed .p4-grid-top3 > *,
+.embed .p4-grid-bot2 > *, .embed .p4-grid-4 > *, .embed .js-ref-grid > *,
+.embed .js-proc-grid > *, .embed .dc-trends-grid > *,
+.embed .dc-sites-grid-2 > *, .embed .dc-sites-grid-3 > *{
+  break-inside:avoid; display:block;
+  margin:0 0 8px !important;
+  height:auto !important; aspect-ratio:auto !important;
+  grid-row:auto !important; grid-column:auto !important;
+}
+.embed .sem-gallery img, .embed .sem-gallery-2 img, .embed .p4-gallery img,
+.embed .cc-gallery img, .embed .pp-img-grid img, .embed .p4-grid-top3 img,
+.embed .p4-grid-bot2 img, .embed .p4-grid-4 img, .embed .js-ref-grid img,
+.embed .js-proc-grid img, .embed .dc-trends-grid img,
+.embed .dc-sites-grid-2 img, .embed .dc-sites-grid-3 img{
+  height:auto !important; aspect-ratio:auto !important;
+  object-fit:contain !important; width:100%;
+}
+@media(max-width:1000px){
+  .embed .sem-gallery, .embed .sem-gallery-2, .embed .p4-gallery, .embed .cc-gallery,
+  .embed .pp-img-grid, .embed .p4-grid-top3, .embed .p4-grid-bot2, .embed .p4-grid-4,
+  .embed .js-ref-grid, .embed .js-proc-grid, .embed .dc-trends-grid,
+  .embed .dc-sites-grid-2, .embed .dc-sites-grid-3{columns:2}
+}
+@media(max-width:640px){
+  .embed .sem-gallery, .embed .sem-gallery-2, .embed .p4-gallery, .embed .cc-gallery,
+  .embed .pp-img-grid, .embed .p4-grid-top3, .embed .p4-grid-bot2, .embed .p4-grid-4,
+  .embed .js-ref-grid, .embed .js-proc-grid, .embed .dc-trends-grid,
+  .embed .dc-sites-grid-2, .embed .dc-sites-grid-3{columns:1}
 }
