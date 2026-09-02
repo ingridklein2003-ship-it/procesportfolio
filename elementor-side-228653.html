@@ -3,15 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Projekt 4 — Ingrid Klein</title>
+<title>Projekt 4 · Ingrid Klein</title>
 <meta name="description" content="Procesportfolio for Ingrid Klein, multimediedesign.">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header class="top">
-  <a class="brand" href="index.html"><span>Ingrid Klein</span><small>Procesportfolio</small></a>
-  <button class="burger" aria-label="Menu" onclick="document.body.classList.toggle('open')">☰</button>
-  <nav class="nav"><ul>
+ <a class="brand" href="index.html"><span>Ingrid Klein</span><small>Procesportfolio</small></a>
+ <button class="burger" aria-label="Menu" onclick="document.body.classList.toggle('open')">☰</button>
+ <nav class="nav"><ul>
 <li><a href="1-semester.html">1. Semester</a>
 <ul class="sub">
 <li><a href="227976-2.html">Studie-tur</a></li>
@@ -44,234 +44,233 @@
 </header>
 <main>
 <article class="embed"><!-- 
-  PROJEKT 4 — Processide med billedgallerier
-  Paste i HTML-widget i Elementor.
+ PROJEKT 4, Processide med billedgallerier
+ Paste i HTML-widget i Elementor.
 -->
 
 <style>
-  .p4-wrap {
-    font-family: sans-serif;
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 2rem 1rem;
-    color: #111;
-  }
-  .p4-hero {
-    position: relative;
-    border-radius: 14px;
-    overflow: hidden;
-    aspect-ratio: 16/7;
-    background: #0a0a0a;
-    margin-bottom: 2.5rem;
-  }
-  .p4-hero img { width:100%;height:100%;object-fit:cover;display:block;opacity:0.55; }
-  .p4-hero-overlay { position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.05) 60%); }
-  .p4-hero-text { position:absolute;bottom:0;left:0;right:0;padding:2rem 2.5rem; }
-  .p4-tag { display:inline-block;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;background:rgba(255,255,255,0.15);color:#fff;border:1px solid rgba(255,255,255,0.25);border-radius:99px;padding:4px 14px;margin-bottom:0.75rem; }
-  .p4-hero h1 { font-size:2rem;font-weight:700;color:#fff;margin:0 0 0.4rem;line-height:1.2; }
-  .p4-hero-meta { font-size:13px;color:rgba(255,255,255,0.65);margin:0; }
-  .p4-meta { display:flex;gap:1.5rem;flex-wrap:wrap;margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid #e5e5e5; }
-  .p4-meta-item label { font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:#999;display:block;margin-bottom:4px; }
-  .p4-meta-item span { font-size:14px;color:#111;font-weight:500; }
-  .p4-intro { font-size:16px;line-height:1.8;color:#333;margin-bottom:2rem; }
-  .p4-intro p { margin:0 0 1rem; }
+ .p4-wrap {
+ font-family: sans-serif;
+ max-width: 900px;
+ margin: 0 auto;
+ padding: 2rem 1rem;
+ color: #111;
+ }
+ .p4-hero {
+ position: relative;
+ border-radius: 14px;
+ overflow: hidden;
+ aspect-ratio: 16/7;
+ background: #0a0a0a;
+ margin-bottom: 2.5rem;
+ }
+ .p4-hero img { width:100%;height:100%;object-fit:cover;display:block;opacity:0.55; }
+ .p4-hero-overlay { position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.05) 60%); }
+ .p4-hero-text { position:absolute;bottom:0;left:0;right:0;padding:2rem 2.5rem; }
+ .p4-tag { display:inline-block;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;background:rgba(255,255,255,0.15);color:#fff;border:1px solid rgba(255,255,255,0.25);border-radius:99px;padding:4px 14px;margin-bottom:0.75rem; }
+ .p4-hero h1 { font-size:2rem;font-weight:700;color:#fff;margin:0 0 0.4rem;line-height:1.2; }
+ .p4-hero-meta { font-size:13px;color:rgba(255,255,255,0.65);margin:0; }
+ .p4-meta { display:flex;gap:1.5rem;flex-wrap:wrap;margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid #e5e5e5; }
+ .p4-meta-item label { font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:#999;display:block;margin-bottom:4px; }
+ .p4-meta-item span { font-size:14px;color:#111;font-weight:500; }
+ .p4-intro { font-size:16px;line-height:1.8;color:#333;margin-bottom:2rem; }
+ .p4-intro p { margin:0 0 1rem; }
 
-  /* MINI GALLERIER */
-  .p4-minigallery-label { font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#bbb;margin:0 0 0.75rem; }
-  .p4-grid-4 { display:grid;grid-template-columns:repeat(4,1fr);gap:0.5rem;margin-bottom:2.5rem; }
-  .p4-grid-4 .cell { aspect-ratio:1;overflow:hidden;border-radius:8px;background:#eee; }
-  .p4-grid-4 .cell img { width:100%;height:100%;object-fit:cover;display:block; }
-  .p4-grid-top3 { display:grid;grid-template-columns:repeat(3,1fr);gap:0.5rem;margin-bottom:0.5rem; }
-  .p4-grid-bot2 { display:grid;grid-template-columns:1fr 1fr;gap:0.5rem;margin-bottom:2rem; }
-  .p4-grid-top3 .cell { aspect-ratio:4/3;overflow:hidden;border-radius:8px;background:#eee; }
-  .p4-grid-bot2 .cell { aspect-ratio:16/9;overflow:hidden;border-radius:8px;background:#eee; }
-  .p4-grid-top3 .cell img,
-  .p4-grid-bot2 .cell img { width:100%;height:100%;object-fit:cover;display:block; }
+ /* MINI GALLERIER */
+ .p4-minigallery-label { font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#bbb;margin:0 0 0.75rem; }
+ .p4-grid-4 { display:grid;grid-template-columns:repeat(4,1fr);gap:0.5rem;margin-bottom:2.5rem; }
+ .p4-grid-4 .cell { aspect-ratio:1;overflow:hidden;border-radius:8px;background:#eee; }
+ .p4-grid-4 .cell img { width:100%;height:100%;object-fit:cover;display:block; }
+ .p4-grid-top3 { display:grid;grid-template-columns:repeat(3,1fr);gap:0.5rem;margin-bottom:0.5rem; }
+ .p4-grid-bot2 { display:grid;grid-template-columns:1fr 1fr;gap:0.5rem;margin-bottom:2rem; }
+ .p4-grid-top3 .cell { aspect-ratio:4/3;overflow:hidden;border-radius:8px;background:#eee; }
+ .p4-grid-bot2 .cell { aspect-ratio:16/9;overflow:hidden;border-radius:8px;background:#eee; }
+ .p4-grid-top3 .cell img.p4-grid-bot2 .cell img { width:100%;height:100%;object-fit:cover;display:block; }
 
-  /* SPRINT */
-  .p4-sprint { margin-bottom:3.5rem; }
-  .p4-sprint-label { font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:#999;margin:0 0 0.4rem; }
-  .p4-sprint-title { font-size:1.5rem;font-weight:700;color:#111;margin:0 0 1.5rem;padding-bottom:0.75rem;border-bottom:2px solid #111; }
-  .p4-split { display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start;margin-bottom:1.5rem; }
-  .p4-split.reverse { direction:rtl; }
-  .p4-split.reverse > * { direction:ltr; }
-  .p4-split-text { font-size:15px;line-height:1.8;color:#444; }
-  .p4-split-text p { margin:0 0 1rem; }
-  .p4-split-img { border-radius:10px;overflow:hidden;aspect-ratio:4/3;background:#eee; }
-  .p4-split-img img { width:100%;height:100%;object-fit:cover;display:block; }
-  .p4-gallery { display:grid;grid-template-columns:repeat(3,1fr);gap:0.75rem;margin:1.5rem 0; }
-  .p4-gallery img { width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:8px;background:#eee;display:block; }
-  .p4-callout { background:#f5f5f5;border-left:3px solid #111;border-radius:0 10px 10px 0;padding:1.25rem 1.5rem;margin:1.5rem 0; }
-  .p4-callout p { font-size:15px;line-height:1.7;color:#333;margin:0; }
-  .p4-insights { margin:1.5rem 0;display:grid;gap:0.75rem; }
-  .p4-insight { display:flex;gap:1rem;align-items:flex-start;padding:1rem 1.25rem;background:#f9f9f9;border-radius:10px;border:1px solid #e8e8e8; }
-  .p4-insight-num { flex-shrink:0;font-size:12px;font-weight:700;color:#999;padding-top:2px;min-width:20px; }
-  .p4-insight-body { font-size:14px;line-height:1.6;color:#333; }
-  .p4-insight-body strong { display:block;color:#111;margin-bottom:3px;font-weight:600; }
-  .p4-reflection { background:#111;color:#fff;border-radius:14px;padding:2rem 2.5rem;margin-bottom:2rem; }
-  .p4-reflection h2 { font-size:1.3rem;font-weight:700;margin:0 0 1rem;color:#fff; }
-  .p4-reflection p { font-size:15px;line-height:1.8;color:rgba(255,255,255,0.75);margin:0 0 1rem; }
-  .p4-reflection p:last-child { margin:0; }
-  .p4-divider { border:none;border-top:1px solid #e5e5e5;margin:2rem 0; }
-  .p4-nav { display:flex;justify-content:space-between;font-size:13px;padding-top:0.5rem; }
-  .p4-nav a { color:#555;text-decoration:none; }
+ /* SPRINT */
+ .p4-sprint { margin-bottom:3.5rem; }
+ .p4-sprint-label { font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:#999;margin:0 0 0.4rem; }
+ .p4-sprint-title { font-size:1.5rem;font-weight:700;color:#111;margin:0 0 1.5rem;padding-bottom:0.75rem;border-bottom:2px solid #111; }
+ .p4-split { display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start;margin-bottom:1.5rem; }
+ .p4-split.reverse { direction:rtl; }
+ .p4-split.reverse > * { direction:ltr; }
+ .p4-split-text { font-size:15px;line-height:1.8;color:#444; }
+ .p4-split-text p { margin:0 0 1rem; }
+ .p4-split-img { border-radius:10px;overflow:hidden;aspect-ratio:4/3;background:#eee; }
+ .p4-split-img img { width:100%;height:100%;object-fit:cover;display:block; }
+ .p4-gallery { display:grid;grid-template-columns:repeat(3,1fr);gap:0.75rem;margin:1.5rem 0; }
+ .p4-gallery img { width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:8px;background:#eee;display:block; }
+ .p4-callout { background:#f5f5f5;border-left:3px solid #111;border-radius:0 10px 10px 0;padding:1.25rem 1.5rem;margin:1.5rem 0; }
+ .p4-callout p { font-size:15px;line-height:1.7;color:#333;margin:0; }
+ .p4-insights { margin:1.5rem 0;display:grid;gap:0.75rem; }
+ .p4-insight { display:flex;gap:1rem;align-items:flex-start;padding:1rem 1.25rem;background:#f9f9f9;border-radius:10px;border:1px solid #e8e8e8; }
+ .p4-insight-num { flex-shrink:0;font-size:12px;font-weight:700;color:#999;padding-top:2px;min-width:20px; }
+ .p4-insight-body { font-size:14px;line-height:1.6;color:#333; }
+ .p4-insight-body strong { display:block;color:#111;margin-bottom:3px;font-weight:600; }
+ .p4-reflection { background:#111;color:#fff;border-radius:14px;padding:2rem 2.5rem;margin-bottom:2rem; }
+ .p4-reflection h2 { font-size:1.3rem;font-weight:700;margin:0 0 1rem;color:#fff; }
+ .p4-reflection p { font-size:15px;line-height:1.8;color:rgba(255,255,255,0.75);margin:0 0 1rem; }
+ .p4-reflection p:last-child { margin:0; }
+ .p4-divider { border:none;border-top:1px solid #e5e5e5;margin:2rem 0; }
+ .p4-nav { display:flex;justify-content:space-between;font-size:13px;padding-top:0.5rem; }
+ .p4-nav a { color:#555;text-decoration:none; }
 
-  @media (max-width: 640px) {
-    .p4-split { grid-template-columns:1fr; }
-    .p4-split.reverse { direction:ltr; }
-    .p4-gallery { grid-template-columns:repeat(2,1fr); }
-    .p4-grid-4 { grid-template-columns:repeat(2,1fr); }
-    .p4-grid-top3 { grid-template-columns:repeat(2,1fr); }
-    .p4-hero h1 { font-size:1.4rem; }
-    .p4-hero-text { padding:1.25rem 1.5rem; }
-    .p4-reflection { padding:1.5rem; }
-  }
+ @media (max-width: 640px) {
+ .p4-split { grid-template-columns:1fr; }
+ .p4-split.reverse { direction:ltr; }
+ .p4-gallery { grid-template-columns:repeat(2,1fr); }
+ .p4-grid-4 { grid-template-columns:repeat(2,1fr); }
+ .p4-grid-top3 { grid-template-columns:repeat(2,1fr); }
+ .p4-hero h1 { font-size:1.4rem; }
+ .p4-hero-text { padding:1.25rem 1.5rem; }
+ .p4-reflection { padding:1.5rem; }
+ }
 </style>
 
 <div class="p4-wrap">
 
-  <!-- HERO -->
-  <div class="p4-hero">
-    <img src="img/2026/04/DSC08165-scaled.jpeg" alt="Projekt 4 — GAME" />
-    <div class="p4-hero-overlay"></div>
-    <div class="p4-hero-text">
-      <div class="p4-tag">3. semester · Forår 2026</div>
-      <h1>Projekt 4 — Brugergrænseflader og digitalt indhold</h1>
-      <p class="p4-hero-meta">GAME · Hold 1, Gruppe 1 · Ingrid, Mikkel, Sebastian, Mathilde, Ela</p>
-    </div>
-  </div>
+ <!-- HERO -->
+ <div class="p4-hero">
+ <img src="img/2026/04/DSC08165-scaled.jpeg" alt="Projekt 4, GAME" />
+ <div class="p4-hero-overlay"></div>
+ <div class="p4-hero-text">
+ <div class="p4-tag">3. semester · Forår 2026</div>
+ <h1>Projekt 4, Brugergrænseflader og digitalt indhold</h1>
+ <p class="p4-hero-meta">GAME · Hold 1, Gruppe 1 · Ingrid, Mikkel, Sebastian, Mathilde, Ela</p>
+ </div>
+ </div>
 
-  <!-- META -->
-  <div class="p4-meta">
-    <div class="p4-meta-item"><label>Periode</label><span>Marts – April 2026</span></div>
-    <div class="p4-meta-item"><label>Case</label><span>GAME Denmark</span></div>
-    <div class="p4-meta-item"><label>Min rolle</label><span>Scrummaster</span></div>
-    <div class="p4-meta-item"><label>Gruppe</label><span>5 personer</span></div>
-    <div class="p4-meta-item"><label>Sprints</label><span>3 sprints</span></div>
-  </div>
+ <!-- META -->
+ <div class="p4-meta">
+ <div class="p4-meta-item"><label>Periode</label><span>Marts – April 2026</span></div>
+ <div class="p4-meta-item"><label>Case</label><span>GAME Denmark</span></div>
+ <div class="p4-meta-item"><label>Min rolle</label><span>Scrummaster</span></div>
+ <div class="p4-meta-item"><label>Gruppe</label><span>5 personer</span></div>
+ <div class="p4-meta-item"><label>Sprints</label><span>3 sprints</span></div>
+ </div>
 
-  <!-- INTRO -->
-  <div class="p4-intro">
-    <p>Projekt 4 begyndte med et KickOff, hvor vi blev introduceret til opgaven og opdelt i grupper af underviserne. Jeg kom i gruppe med Mikkel og Sebastian, som jeg tidligere havde været i studiegruppe med, men vi blev denne gang sat sammen med Ela og Mathilde, som vi ikke kendte særlig godt. Det betød, at vi fra starten skulle finde en fælles arbejdsrytme og samkøre to grupper, der var vant til at arbejde på hver sin måde.</p>
-    <p>Jeg fik rollen som Scrummaster og var ansvarlig for at sætte scrumboardet op og holde styr på processen. Vi valgte GAME som vores case — en non-profit organisation der kombinerer gadeidræt og streetkultur med sociale formål for unge 20–25-årige.</p>
-  </div>
+ <!-- INTRO -->
+ <div class="p4-intro">
+ <p>Projekt 4 begyndte med et KickOff, hvor vi blev introduceret til opgaven og opdelt i grupper af underviserne. Jeg kom i gruppe med Mikkel og Sebastian, som jeg tidligere havde været i studiegruppe med, men vi blev denne gang sat sammen med Ela og Mathilde, som vi ikke kendte særlig godt. Det betød, at vi fra starten skulle finde en fælles arbejdsrytme og samkøre to grupper, der var vant til at arbejde på hver sin måde.</p>
+ <p>Jeg fik rollen som Scrummaster og var ansvarlig for at sætte scrumboardet op og holde styr på processen. Vi valgte GAME som vores case, en non-profit organisation der kombinerer gadeidræt og streetkultur med sociale formål for unge 20–25-årige.</p>
+ </div>
 
-  <!-- 📸 GALLERI 1 — Arbejdsfotos fra opstarten -->
-  <p class="p4-minigallery-label">Fra arbejdsprocessen</p>
-  <div class="p4-grid-4">
-    <div class="cell"><img src="img/2026/05/IMG_3893.jpg" alt="Gruppe arbejder" /></div>
-    <div class="cell"><img src="img/2026/05/Skaermbillede-2026-05-15-kl.-02.05.21-scaled.jpg" alt="Scrumboard" /></div>
-    <div class="cell"><img src="img/2026/05/Skaermbillede-2026-05-15-kl.-02.07.15.jpg" alt="Møde" /></div>
-    <div class="cell"><img src="img/2025/12/IMG_0913.jpg" alt="Laptop og noter" /></div>
-  </div>
+ <!-- 📸 GALLERI 1, Arbejdsfotos fra opstarten -->
+ <p class="p4-minigallery-label">Fra arbejdsprocessen</p>
+ <div class="p4-grid-4">
+ <div class="cell"><img src="img/2026/05/IMG_3893.jpg" alt="Gruppe arbejder" /></div>
+ <div class="cell"><img src="img/2026/05/Skaermbillede-2026-05-15-kl.-02.05.21-scaled.jpg" alt="Scrumboard" /></div>
+ <div class="cell"><img src="img/2026/05/Skaermbillede-2026-05-15-kl.-02.07.15.jpg" alt="Møde" /></div>
+ <div class="cell"><img src="img/2025/12/IMG_0913.jpg" alt="Laptop og noter" /></div>
+ </div>
 
-  <!-- ─── SPRINT 1 ─── -->
-  <div class="p4-sprint">
-    <p class="p4-sprint-label">Sprint 1</p>
-    <h2 class="p4-sprint-title">Research og problemforståelse</h2>
+ <!-- ─── SPRINT 1 ─── -->
+ <div class="p4-sprint">
+ <p class="p4-sprint-label">Sprint 1</p>
+ <h2 class="p4-sprint-title">Research og problemforståelse</h2>
 
-    <div class="p4-split">
-      <div class="p4-split-text">
-        <p>I første sprint stod research i centrum. Jeg lavede blandt andet en netnografisk analyse af GAME's Instagram-profil, hvor jeg kiggede på visuelle signaler, tone of voice, hashtags og kommunikationsform. Det gav mig en god forståelse for deres eksisterende visuelle identitet og den målgruppe, de henvender sig til.</p>
-        <p>Vi lavede desuden Think Aloud-brugertests på GAME's eksisterende hjemmeside, som bekræftede at tilmeldingsflowet var uoverskueligt, og at der manglede en tydelig call-to-action. Brugerne efterspurgte kortere formularer, mere visuel kommunikation og et design der i højere grad afspejler GAMEs ungdommelige univers.</p>
-        <p>Jeg bidrog også til at sætte spørgeskemaet op, som gav os kvantitativ data om unges motivation for frivillighed.</p>
-      </div>
-      <div class="p4-split-img">
-        <img src="img/2026/05/Skaermbillede-2026-05-15-kl.-01.28.49-scaled.jpg" alt="Research og brugertest" />
-      </div>
-    </div>
+ <div class="p4-split">
+ <div class="p4-split-text">
+ <p>I første sprint stod research i centrum. Jeg lavede blandt andet en netnografisk analyse af GAME's Instagram-profil, hvor jeg kiggede på visuelle signaler, tone of voice, hashtags og kommunikationsform. Det gav mig en god forståelse for deres eksisterende visuelle identitet og den målgruppe, de henvender sig til.</p>
+ <p>Vi lavede desuden Think Aloud-brugertests på GAME's eksisterende hjemmeside, som bekræftede at tilmeldingsflowet var uoverskueligt, og at der manglede en tydelig call-to-action. Brugerne efterspurgte kortere formularer, mere visuel kommunikation og et design der i højere grad afspejler GAMEs ungdommelige univers.</p>
+ <p>Jeg bidrog også til at sætte spørgeskemaet op, som gav os kvantitativ data om unges motivation for frivillighed.</p>
+ </div>
+ <div class="p4-split-img">
+ <img src="img/2026/05/Skaermbillede-2026-05-15-kl.-01.28.49-scaled.jpg" alt="Research og brugertest" />
+ </div>
+ </div>
 
-    <div class="p4-callout">
-      <p>På baggrund af indsigterne besluttede vi, at produktet skulle fokusere på et redesign af forsiden samt en ny underside om frivillighed hos GAME — enkel, overskuelig og med en nem tilmeldingsproces.</p>
-    </div>
+ <div class="p4-callout">
+ <p>På baggrund af indsigterne besluttede vi, at produktet skulle fokusere på et redesign af forsiden samt en ny underside om frivillighed hos GAME, enkel, overskuelig og med en nem tilmeldingsproces.</p>
+ </div>
 
-    <div class="p4-insights">
-      <div class="p4-insight">
-        <div class="p4-insight-num">01</div>
-        <div class="p4-insight-body"><strong>GAME eksisterer ikke i de unges bevidsthed</strong>Ingen af vores interviewpersoner kendte GAME. Produktet skal derfor både skabe kendskab OG konvertere — ikke bare det ene.</div>
-      </div>
-      <div class="p4-insight">
-        <div class="p4-insight-num">02</div>
-        <div class="p4-insight-body"><strong>Unge vil gerne — de ved bare ikke hvordan</strong>Motivationen er der (fællesskab, CV, udvikling) men barrieren er uklarhed og uoverskuelighed. Det handler om at gøre det nemt, ikke om at overbevise dem.</div>
-      </div>
-      <div class="p4-insight">
-        <div class="p4-insight-num">03</div>
-        <div class="p4-insight-body"><strong>Hjemmesiden taler ikke til unge</strong>Brugerne følte sig forvirrede og mistede tålmodigheden. Navigationen er ulogisk og CTA'er er usynlige.</div>
-      </div>
-      <div class="p4-insight">
-        <div class="p4-insight-num">04</div>
-        <div class="p4-insight-body"><strong>Visuel identitet matcher ikke streetkulturen</strong>GAME's SoMe er fed og energisk — hjemmesiden er det modsatte. Der er et stort gap som skal lukkes.</div>
-      </div>
-    </div>
-  </div>
+ <div class="p4-insights">
+ <div class="p4-insight">
+ <div class="p4-insight-num">01</div>
+ <div class="p4-insight-body"><strong>GAME eksisterer ikke i de unges bevidsthed</strong>Ingen af vores interviewpersoner kendte GAME. Produktet skal derfor både skabe kendskab OG konvertere, ikke bare det ene.</div>
+ </div>
+ <div class="p4-insight">
+ <div class="p4-insight-num">02</div>
+ <div class="p4-insight-body"><strong>Unge vil gerne, de ved bare ikke hvordan</strong>Motivationen er der (fællesskab, CV, udvikling) men barrieren er uklarhed og uoverskuelighed. Det handler om at gøre det nemt, ikke om at overbevise dem.</div>
+ </div>
+ <div class="p4-insight">
+ <div class="p4-insight-num">03</div>
+ <div class="p4-insight-body"><strong>Hjemmesiden taler ikke til unge</strong>Brugerne følte sig forvirrede og mistede tålmodigheden. Navigationen er ulogisk og CTA'er er usynlige.</div>
+ </div>
+ <div class="p4-insight">
+ <div class="p4-insight-num">04</div>
+ <div class="p4-insight-body"><strong>Visuel identitet matcher ikke streetkulturen</strong>GAME's SoMe er fed og energisk, hjemmesiden er det modsatte. Der er et stort gap som skal lukkes.</div>
+ </div>
+ </div>
+ </div>
 
-  <!-- ─── SPRINT 2 ─── -->
-  <div class="p4-sprint">
-    <p class="p4-sprint-label">Sprint 2</p>
-    <h2 class="p4-sprint-title">Design og visuel retning</h2>
+ <!-- ─── SPRINT 2 ─── -->
+ <div class="p4-sprint">
+ <p class="p4-sprint-label">Sprint 2</p>
+ <h2 class="p4-sprint-title">Design og visuel retning</h2>
 
-    <div class="p4-split reverse">
-      <div class="p4-split-text">
-        <p>I anden sprint gik vi i gang med den visuelle retning. Jeg var med til at forme designmanualen og bidrog til at koble vores research og testindsigter til de visuelle valg, vi tog som gruppe. Jeg udarbejdede desuden SoMe-strategien tidligt i dette sprint — tanken var, at hele gruppen løbende skulle holde sig til de retningslinjer, der var sat op.</p>
-        <p>Det skete desværre ikke i praksis, og strategien måtte løbende tilpasses, efterhånden som vi lavede indhold uden at følge den. Her opstod også de første tydelige udfordringer i samarbejdet.</p>
-        <p>Til midtvejspitchen var jeg desværre syg og måtte blive hjemme. De andre præsenterede vores arbejde og fik både ros og konstruktiv feedback — bl.a. om at gøre brugertestene tydeligere og bedre koble dem til vores designvalg.</p>
-      </div>
-      <div class="p4-split-img">
-        <img src="img/2026/05/Artboard-5.png" alt="Design og visuel retning" />
-      </div>
-    </div>
+ <div class="p4-split reverse">
+ <div class="p4-split-text">
+ <p>I anden sprint gik vi i gang med den visuelle retning. Jeg var med til at forme designmanualen og bidrog til at koble vores research og testindsigter til de visuelle valg, vi tog som gruppe. Jeg udarbejdede desuden SoMe-strategien tidligt i dette sprint, tanken var, at hele gruppen løbende skulle holde sig til de retningslinjer, der var sat op.</p>
+ <p>Det skete desværre ikke i praksis, og strategien måtte løbende tilpasses, efterhånden som vi lavede indhold uden at følge den. Her opstod også de første tydelige udfordringer i samarbejdet.</p>
+ <p>Til midtvejspitchen var jeg desværre syg og måtte blive hjemme. De andre præsenterede vores arbejde og fik både ros og konstruktiv feedback, bl.a. om at gøre brugertestene tydeligere og bedre koble dem til vores designvalg.</p>
+ </div>
+ <div class="p4-split-img">
+ <img src="img/2026/05/Artboard-5.png" alt="Design og visuel retning" />
+ </div>
+ </div>
 
-    <div class="p4-gallery">
-      <img src="img/2026/05/Skaermbillede-2026-05-15-kl.-01.34.22.jpg" alt="Indholdsstrategi" />
-      <img src="img/2026/05/Style_tile.jpg" alt="Style tile" />
-      <img src="img/2026/05/Skaermbillede-2026-05-15-kl.-01.34.39.jpg" alt="Designsystem" />
-    </div>
-  </div>
+ <div class="p4-gallery">
+ <img src="img/2026/05/Skaermbillede-2026-05-15-kl.-01.34.22.jpg" alt="Indholdsstrategi" />
+ <img src="img/2026/05/Style_tile.jpg" alt="Style tile" />
+ <img src="img/2026/05/Skaermbillede-2026-05-15-kl.-01.34.39.jpg" alt="Designsystem" />
+ </div>
+ </div>
 
-  <!-- ─── SPRINT 3 ─── -->
-  <div class="p4-sprint">
-    <p class="p4-sprint-label">Sprint 3</p>
-    <h2 class="p4-sprint-title">Prototype og produktion</h2>
+ <!-- ─── SPRINT 3 ─── -->
+ <div class="p4-sprint">
+ <p class="p4-sprint-label">Sprint 3</p>
+ <h2 class="p4-sprint-title">Prototype og produktion</h2>
 
-    <div class="p4-split">
-      <div class="p4-split-text">
-        <p>I tredje sprint arbejdede vi videre med prototyperne og begyndte at bygge selve produktet op. Mit primære ansvar i dette sprint var designmanualen — at samle alle visuelle elementer fra prototyper og styletiles i en samlet og konsistent Figma-fil.</p>
-        <p>Det viste sig at være mere komplekst end forventet, da mange elementer var blevet ændret undervejs eller ikke var fuldt færdige. Jeg valgte derfor at starte en ny Figma-fil og opbygge det hele fra bunden for at sikre et ordentligt grundlag.</p>
-        <p>Desværre var det ikke denne fil, der endte med at blive afleveret — og dermed er det arbejde, jeg lagde i den, ikke synligt i klientrapporten. Det er en fejl, der ærgrer mig, fordi indsatsen reelt ikke kan ses i det endelige produkt.</p>
-        <p>Grundet private udfordringer og det akkumulerede tidspres fra samarbejdsudfordringerne og SoMe-strategien, måtte jeg sygemelde mig i slutningen af projektet og nåede ikke at bidrage fuldt ud i den afsluttende fase.</p>
-      </div>
-      <div class="p4-split-img">
-        <img src="img/2026/05/Skaermbillede-2026-05-15-kl.-01.44.17.jpg" alt="Prototype og Figma" />
-      </div>
-    </div>
+ <div class="p4-split">
+ <div class="p4-split-text">
+ <p>I tredje sprint arbejdede vi videre med prototyperne og begyndte at bygge selve produktet op. Mit primære ansvar i dette sprint var designmanualen, at samle alle visuelle elementer fra prototyper og styletiles i en samlet og konsistent Figma-fil.</p>
+ <p>Det viste sig at være mere komplekst end forventet, da mange elementer var blevet ændret undervejs eller ikke var fuldt færdige. Jeg valgte derfor at starte en ny Figma-fil og opbygge det hele fra bunden for at sikre et ordentligt grundlag.</p>
+ <p>Desværre var det ikke denne fil, der endte med at blive afleveret, og dermed er det arbejde, jeg lagde i den, ikke synligt i klientrapporten. Det er en fejl, der ærgrer mig, fordi indsatsen reelt ikke kan ses i det endelige produkt.</p>
+ <p>Grundet private udfordringer og det akkumulerede tidspres fra samarbejdsudfordringerne og SoMe-strategien, måtte jeg sygemelde mig i slutningen af projektet og nåede ikke at bidrage fuldt ud i den afsluttende fase.</p>
+ </div>
+ <div class="p4-split-img">
+ <img src="img/2026/05/Skaermbillede-2026-05-15-kl.-01.44.17.jpg" alt="Prototype og Figma" />
+ </div>
+ </div>
 
-    <div class="p4-gallery">
-      <img src="img/2026/05/Skaermbillede-2026-05-15-kl.-01.42.10.jpg" alt="Prototype" />
-      <img src="img/2026/05/Skaermbillede-2026-05-15-kl.-01.42.22-scaled.jpg" alt="Designsystem Figma" />
-      <img src="img/2026/05/Skaermbillede-2026-05-15-kl.-01.42.36-scaled.jpg" alt="Kode og GitHub" />
-    </div>
+ <div class="p4-gallery">
+ <img src="img/2026/05/Skaermbillede-2026-05-15-kl.-01.42.10.jpg" alt="Prototype" />
+ <img src="img/2026/05/Skaermbillede-2026-05-15-kl.-01.42.22-scaled.jpg" alt="Designsystem Figma" />
+ <img src="img/2026/05/Skaermbillede-2026-05-15-kl.-01.42.36-scaled.jpg" alt="Kode og GitHub" />
+ </div>
 
-    <!-- 📸 GALLERI 2 — Content-optagelser ude ved GAME -->
-    <p class="p4-minigallery-label" style="margin-top:2rem;">Ude og optage content til GAME</p>
-    <div class="p4-grid-top3">
-      <div class="cell"><img src="img/2026/04/DSC08345-scaled.jpg" alt="Content optagelse" /></div>
-      <div class="cell"><img src="img/2026/04/DSC08373-scaled.jpg" alt="På location" /></div>
-      <div class="cell"><img src="img/2026/04/DSC08402-scaled.jpg" alt="Kamera og setup" /></div>
-    </div>
-    <div class="p4-grid-bot2">
-      <div class="cell"><img src="img/2026/04/DSC08343-scaled.jpg" alt="Behind the scenes" /></div>
-      <div class="cell"><img src="img/2026/04/DSC08346-scaled.jpg" /></div>
-    </div>
+ <!-- 📸 GALLERI 2, Content-optagelser ude ved GAME -->
+ <p class="p4-minigallery-label" style="margin-top:2rem;">Ude og optage content til GAME</p>
+ <div class="p4-grid-top3">
+ <div class="cell"><img src="img/2026/04/DSC08345-scaled.jpg" alt="Content optagelse" /></div>
+ <div class="cell"><img src="img/2026/04/DSC08373-scaled.jpg" alt="På location" /></div>
+ <div class="cell"><img src="img/2026/04/DSC08402-scaled.jpg" alt="Kamera og setup" /></div>
+ </div>
+ <div class="p4-grid-bot2">
+ <div class="cell"><img src="img/2026/04/DSC08343-scaled.jpg" alt="Behind the scenes" /></div>
+ <div class="cell"><img src="img/2026/04/DSC08346-scaled.jpg" /></div>
+ </div>
 
-  </div>
+ </div>
 
-  <!-- REFLEKSION -->
-  <div class="p4-reflection">
-    <h2>Refleksion</h2>
-    <p>Projekt 4 har givet mig en vigtig erfaring, som rækker ud over det faglige. Det har vist mig, hvor afgørende et godt samarbejde er — ikke bare for trivslen, men for selve produktets kvalitet. Man kan have utroligt dygtige mennesker i en gruppe, der hver især har styr på deres fag, og alligevel ende med et svagere produkt, hvis samarbejdet ikke fungerer.</p>
-    <p>Det er nok den vigtigste indsigt, jeg tager med mig. Som Scrummaster lærte jeg, at struktur og overblik er vigtige, men at de ikke kan stå alene. Jeg burde have taget fat i samarbejdsudfordringerne langt tidligere og tydeligere — ikke for at skabe konflikt, men fordi det er mere respektfuldt over for gruppen at tale åbent om problemer, end at lade dem vokse sig større i stilhed.</p>
-    <p>Fagligt har projektet styrket mine kompetencer inden for research, designsystemer og visuel identitet, men jeg er bevidst om, at noget af mit arbejde ikke nåede at blive synligt i det endelige produkt. Det motiverer mig til næste projekt at sikre, at mit arbejde er bedre forankret i gruppen — og at jeg ikke trækker mig, når det bliver svært.</p>
-  </div>
+ <!-- REFLEKSION -->
+ <div class="p4-reflection">
+ <h2>Refleksion</h2>
+ <p>Projekt 4 har givet mig en vigtig erfaring, som rækker ud over det faglige. Det har vist mig, hvor afgørende et godt samarbejde er, ikke bare for trivslen, men for selve produktets kvalitet. Man kan have utroligt dygtige mennesker i en gruppe, der hver især har styr på deres fag, og alligevel ende med et svagere produkt, hvis samarbejdet ikke fungerer.</p>
+ <p>Det er nok den vigtigste indsigt, jeg tager med mig. Som Scrummaster lærte jeg, at struktur og overblik er vigtige, men at de ikke kan stå alene. Jeg burde have taget fat i samarbejdsudfordringerne langt tidligere og tydeligere, ikke for at skabe konflikt, men fordi det er mere respektfuldt over for gruppen at tale åbent om problemer, end at lade dem vokse sig større i stilhed.</p>
+ <p>Fagligt har projektet styrket mine kompetencer inden for research, designsystemer og visuel identitet, men jeg er bevidst om, at noget af mit arbejde ikke nåede at blive synligt i det endelige produkt. Det motiverer mig til næste projekt at sikre, at mit arbejde er bedre forankret i gruppen, og at jeg ikke trækker mig, når det bliver svært.</p>
+ </div>
 </article>
 <div class="body"><h2>Flere billeder fra processen</h2><div class="gallery" style="columns:4">
 <div class="g"><img src="img/2026/04/Skaermbillede-2026-04-08-kl.-18.44.07.jpg" alt="" loading="lazy"></div>
@@ -296,7 +295,7 @@
 <div class="g"><img src="img/2026/04/Skaermbillede-2026-04-08-kl.-19.15.19.jpg" alt="" loading="lazy"></div>
 <div class="g"><img src="img/2026/04/Skaermbillede-2026-04-08-kl.-19.15.13.jpg" alt="" loading="lazy"></div>
 </div>
-<div class="gallery" style="columns:4">
+<div class="gallery" style="columns:2">
 <div class="g"><img src="img/2026/04/Skaermbillede-2026-04-08-kl.-19.10.01.jpg" alt="" loading="lazy"></div>
 <div class="g"><img src="img/2026/04/Skaermbillede-2026-04-08-kl.-19.09.47.jpg" alt="" loading="lazy"></div>
 <div class="g"><img src="img/2026/04/Skaermbillede-2026-04-08-kl.-19.09.38.jpg" alt="" loading="lazy"></div>

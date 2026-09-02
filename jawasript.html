@@ -3,15 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>JavaSript — Ingrid Klein</title>
+<title>JavaSript · Ingrid Klein</title>
 <meta name="description" content="Procesportfolio for Ingrid Klein, multimediedesign.">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header class="top">
-  <a class="brand" href="index.html"><span>Ingrid Klein</span><small>Procesportfolio</small></a>
-  <button class="burger" aria-label="Menu" onclick="document.body.classList.toggle('open')">☰</button>
-  <nav class="nav"><ul>
+ <a class="brand" href="index.html"><span>Ingrid Klein</span><small>Procesportfolio</small></a>
+ <button class="burger" aria-label="Menu" onclick="document.body.classList.toggle('open')">☰</button>
+ <nav class="nav"><ul>
 <li><a href="1-semester.html">1. Semester</a>
 <ul class="sub">
 <li><a href="227976-2.html">Studie-tur</a></li>
@@ -44,526 +44,526 @@
 </header>
 <main>
 <article class="embed"><!--
-  JAVASCRIPT-PROJEKT — Editorial version
-  Paste ind i HTML-widget i Elementor.
-  Skift YouTube-ID og billeder ud med dine egne.
+ JAVASCRIPT-PROJEKT, Editorial version
+ Paste ind i HTML-widget i Elementor.
+ Skift YouTube-ID og billeder ud med dine egne.
 -->
 
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
 
-  .js-root {
-    font-family: 'Inter', sans-serif;
-    max-width: 100%;
-    margin: 0;
-    padding: 0;
-    color: #111;
-    overflow-x: hidden;
-  }
+ .js-root {
+ font-family: 'Inter', sans-serif;
+ max-width: 100%;
+ margin: 0;
+ padding: 0;
+ color: #111;
+ overflow-x: hidden;
+ }
 
-  /* ── TYPOGRAFISK HERO ── */
-  .js-title-block {
-    padding: 3rem 2rem 1.5rem;
-    position: relative;
-  }
-  .js-overline {
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: #999;
-    margin-bottom: 0.5rem;
-  }
-  .js-big-title {
-    font-size: clamp(4rem, 13vw, 11rem);
-    font-weight: 900;
-    line-height: 0.88;
-    letter-spacing: -0.03em;
-    color: #111;
-    margin: 0;
-    text-transform: uppercase;
-  }
-  .js-big-title span {
-    display: block;
-  }
-  .js-big-title .indent {
-    padding-left: clamp(2rem, 8vw, 8rem);
-  }
+ /* ── TYPOGRAFISK HERO ── */
+ .js-title-block {
+ padding: 3rem 2rem 1.5rem;
+ position: relative;
+ }
+ .js-overline {
+ font-size: 11px;
+ font-weight: 600;
+ letter-spacing: 0.2em;
+ text-transform: uppercase;
+ color: #999;
+ margin-bottom: 0.5rem;
+ }
+ .js-big-title {
+ font-size: clamp(4rem, 13vw, 11rem);
+ font-weight: 900;
+ line-height: 0.88;
+ letter-spacing: -0.03em;
+ color: #111;
+ margin: 0;
+ text-transform: uppercase;
+ }
+ .js-big-title span {
+ display: block;
+ }
+ .js-big-title .indent {
+ padding-left: clamp(2rem, 8vw, 8rem);
+ }
 
-  /* ── INTRO SPLIT ── */
-  .js-intro-split {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0;
-    margin-top: 2rem;
-    align-items: start;
-  }
-  .js-intro-img-wrap {
-    position: relative;
-    aspect-ratio: 4/3;
-    overflow: hidden;
-    background: #111;
-  }
-  .js-intro-img-wrap img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-  .js-intro-text-side {
-    padding: 3rem 2.5rem 3rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-  }
-  .js-meta-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.25rem 1.5rem;
-    margin-bottom: 1.5rem;
-    padding-bottom: 1.5rem;
-    border-bottom: 1px solid #e0e0e0;
-  }
-  .js-meta-row span {
-    font-size: 12px;
-    color: #888;
-    white-space: nowrap;
-  }
-  .js-meta-row span strong {
-    color: #111;
-    font-weight: 600;
-  }
-  .js-intro-body {
-    font-size: 15px;
-    line-height: 1.75;
-    color: #444;
-  }
-  .js-intro-body p { margin: 0 0 0.9rem; }
-  .js-intro-body p:last-child { margin: 0; }
+ /* ── INTRO SPLIT ── */
+ .js-intro-split {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 0;
+ margin-top: 2rem;
+ align-items: start;
+ }
+ .js-intro-img-wrap {
+ position: relative;
+ aspect-ratio: 4/3;
+ overflow: hidden;
+ background: #111;
+ }
+ .js-intro-img-wrap img {
+ width: 100%;
+ height: 100%;
+ object-fit: cover;
+ display: block;
+ }
+ .js-intro-text-side {
+ padding: 3rem 2.5rem 3rem;
+ display: flex;
+ flex-direction: column;
+ justify-content: flex-end;
+ }
+ .js-meta-row {
+ display: flex;
+ flex-wrap: wrap;
+ gap: 0.25rem 1.5rem;
+ margin-bottom: 1.5rem;
+ padding-bottom: 1.5rem;
+ border-bottom: 1px solid #e0e0e0;
+ }
+ .js-meta-row span {
+ font-size: 12px;
+ color: #888;
+ white-space: nowrap;
+ }
+ .js-meta-row span strong {
+ color: #111;
+ font-weight: 600;
+ }
+ .js-intro-body {
+ font-size: 15px;
+ line-height: 1.75;
+ color: #444;
+ }
+ .js-intro-body p { margin: 0 0 0.9rem; }
+ .js-intro-body p:last-child { margin: 0; }
 
-  /* ── SECTION LABEL ── */
-  .js-section {
-    padding: 5rem 2rem;
-  }
-  .js-section-label {
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: #bbb;
-    margin-bottom: 1rem;
-  }
-  .js-section-title {
-    font-size: clamp(2rem, 5vw, 3.5rem);
-    font-weight: 800;
-    letter-spacing: -0.025em;
-    line-height: 1.05;
-    color: #111;
-    margin: 0 0 3rem;
-    max-width: 700px;
-  }
+ /* ── SECTION LABEL ── */
+ .js-section {
+ padding: 5rem 2rem;
+ }
+ .js-section-label {
+ font-size: 10px;
+ font-weight: 700;
+ letter-spacing: 0.2em;
+ text-transform: uppercase;
+ color: #bbb;
+ margin-bottom: 1rem;
+ }
+ .js-section-title {
+ font-size: clamp(2rem, 5vw, 3.5rem);
+ font-weight: 800;
+ letter-spacing: -0.025em;
+ line-height: 1.05;
+ color: #111;
+ margin: 0 0 3rem;
+ max-width: 700px;
+ }
 
-  /* ── PROCES SPLIT ── */
-  .js-proc-grid {
-    display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
-    gap: 4rem;
-    align-items: start;
-  }
-  .js-proc-text p {
-    font-size: 15px;
-    line-height: 1.8;
-    color: #444;
-    margin: 0 0 1rem;
-  }
-  .js-proc-text p strong { color: #111; }
-  .js-proc-img {
-    aspect-ratio: 4/3;
-    border-radius: 4px;
-    overflow: hidden;
-    background: #eee;
-  }
-  .js-proc-img img {
-    width: 100%; height: 100%;
-    object-fit: cover;
-    display: block;
-  }
+ /* ── PROCES SPLIT ── */
+ .js-proc-grid {
+ display: grid;
+ grid-template-columns: 1.1fr 0.9fr;
+ gap: 4rem;
+ align-items: start;
+ }
+ .js-proc-text p {
+ font-size: 15px;
+ line-height: 1.8;
+ color: #444;
+ margin: 0 0 1rem;
+ }
+ .js-proc-text p strong { color: #111; }
+ .js-proc-img {
+ aspect-ratio: 4/3;
+ border-radius: 4px;
+ overflow: hidden;
+ background: #eee;
+ }
+ .js-proc-img img {
+ width: 100%; height: 100%;
+ object-fit: cover;
+ display: block;
+ }
 
-  /* ── GALLERI ── */
-  .js-gallery-equal {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.75rem;
-    margin-top: 2rem;
-  }
-  .js-gallery-equal .cell {
-    overflow: hidden;
-    border-radius: 6px;
-    background: #eee;
-    aspect-ratio: 4/3;
-  }
-  .js-gallery-equal .cell img {
-    width: 100%; height: 100%;
-    object-fit: cover;
-    display: block;
-  }
+ /* ── GALLERI ── */
+ .js-gallery-equal {
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
+ gap: 0.75rem;
+ margin-top: 2rem;
+ }
+ .js-gallery-equal .cell {
+ overflow: hidden;
+ border-radius: 6px;
+ background: #eee;
+ aspect-ratio: 4/3;
+ }
+ .js-gallery-equal .cell img {
+ width: 100%; height: 100%;
+ object-fit: cover;
+ display: block;
+ }
 
-  /* ── VIDEO ── */
-  .js-video-section {
-    background: #111;
-    padding: 5rem 2rem;
-  }
-  .js-video-section .js-section-label { color: #555; }
-  .js-video-section .js-section-title { color: #fff; }
-  .js-video-frame {
-    position: relative;
-    aspect-ratio: 16/9;
-    border-radius: 6px;
-    overflow: hidden;
-    background: #000;
-    max-width: 800px;
-  }
-  .js-video-frame iframe {
-    position: absolute; inset: 0;
-    width: 100%; height: 100%;
-    border: none;
-  }
-  .js-video-caption {
-    margin-top: 1rem;
-    font-size: 12px;
-    color: #555;
-  }
+ /* ── VIDEO ── */
+ .js-video-section {
+ background: #111;
+ padding: 5rem 2rem;
+ }
+ .js-video-section .js-section-label { color: #555; }
+ .js-video-section .js-section-title { color: #fff; }
+ .js-video-frame {
+ position: relative;
+ aspect-ratio: 16/9;
+ border-radius: 6px;
+ overflow: hidden;
+ background: #000;
+ max-width: 800px;
+ }
+ .js-video-frame iframe {
+ position: absolute; inset: 0;
+ width: 100%; height: 100%;
+ border: none;
+ }
+ .js-video-caption {
+ margin-top: 1rem;
+ font-size: 12px;
+ color: #555;
+ }
 
-  /* ── KOD SEKTION ── */
-  .js-code-section {
-    padding: 5rem 2rem;
-    background: #f8f8f8;
-  }
-  .js-code-block {
-    background: #0d1117;
-    border-radius: 8px;
-    padding: 2rem;
-    overflow-x: auto;
-    margin: 2rem 0;
-  }
-  .js-code-filename {
-    font-size: 11px;
-    color: #6e7681;
-    font-family: monospace;
-    margin-bottom: 1rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-  .js-code-filename::before {
-    content: '';
-    display: inline-block;
-    width: 8px; height: 8px;
-    background: #f59e0b;
-    border-radius: 50%;
-  }
-  pre.js-code {
-    font-family: 'Courier New', monospace;
-    font-size: 13px;
-    line-height: 1.75;
-    color: #e6edf3;
-    white-space: pre;
-    margin: 0;
-  }
-  .c-comment { color: #8b949e; }
-  .c-keyword  { color: #ff7b72; }
-  .c-string   { color: #a5d6ff; }
-  .c-method   { color: #d2a8ff; }
-  .c-var      { color: #ffa657; }
+ /* ── KOD SEKTION ── */
+ .js-code-section {
+ padding: 5rem 2rem;
+ background: #f8f8f8;
+ }
+ .js-code-block {
+ background: #0d1117;
+ border-radius: 8px;
+ padding: 2rem;
+ overflow-x: auto;
+ margin: 2rem 0;
+ }
+ .js-code-filename {
+ font-size: 11px;
+ color: #6e7681;
+ font-family: monospace;
+ margin-bottom: 1rem;
+ display: flex;
+ align-items: center;
+ gap: 0.5rem;
+ }
+ .js-code-filename::before {
+ content: '';
+ display: inline-block;
+ width: 8px; height: 8px;
+ background: #f59e0b;
+ border-radius: 50%;
+ }
+ pre.js-code {
+ font-family: 'Courier New', monospace;
+ font-size: 13px;
+ line-height: 1.75;
+ color: #e6edf3;
+ white-space: pre;
+ margin: 0;
+ }
+ .c-comment { color: #8b949e; }
+ .c-keyword { color: #ff7b72; }
+ .c-string { color: #a5d6ff; }
+ .c-method { color: #d2a8ff; }
+ .c-var { color: #ffa657; }
 
-  /* ── FAGBEGREBER ── */
-  .js-concepts {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1px;
-    background: #e5e5e5;
-    margin-top: 3rem;
-    border: 1px solid #e5e5e5;
-  }
-  .js-concept-item {
-    background: #fff;
-    padding: 1.75rem;
-  }
-  .js-concept-num {
-    font-size: 10px;
-    font-weight: 700;
-    color: #bbb;
-    letter-spacing: 0.1em;
-    margin-bottom: 0.5rem;
-  }
-  .js-concept-tag {
-    font-size: 13px;
-    font-weight: 800;
-    color: #111;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin-bottom: 0.75rem;
-  }
-  .js-concept-body {
-    font-size: 13px;
-    line-height: 1.65;
-    color: #555;
-  }
-  .js-concept-body em { color: #111; font-style: normal; font-weight: 600; }
+ /* ── FAGBEGREBER ── */
+ .js-concepts {
+ display: grid;
+ grid-template-columns: repeat(2, 1fr);
+ gap: 1px;
+ background: #e5e5e5;
+ margin-top: 3rem;
+ border: 1px solid #e5e5e5;
+ }
+ .js-concept-item {
+ background: #fff;
+ padding: 1.75rem;
+ }
+ .js-concept-num {
+ font-size: 10px;
+ font-weight: 700;
+ color: #bbb;
+ letter-spacing: 0.1em;
+ margin-bottom: 0.5rem;
+ }
+ .js-concept-tag {
+ font-size: 13px;
+ font-weight: 800;
+ color: #111;
+ text-transform: uppercase;
+ letter-spacing: 0.05em;
+ margin-bottom: 0.75rem;
+ }
+ .js-concept-body {
+ font-size: 13px;
+ line-height: 1.65;
+ color: #555;
+ }
+ .js-concept-body em { color: #111; font-style: normal; font-weight: 600; }
 
-  /* ── REFLEKSION ── */
-  .js-ref-section {
-    padding: 0;
-  }
-  .js-ref-header {
-    background: #111;
-    padding: 5rem 2rem 4rem;
-  }
-  .js-ref-header .js-section-label { color: #555; }
-  .js-ref-header .js-section-title { color: #fff; margin-bottom: 0; }
-  .js-ref-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1px;
-    background: #111;
-  }
-  .js-ref-item {
-    background: #111;
-    padding: 2.5rem;
-    border-top: 1px solid #222;
-  }
-  .js-ref-label {
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: #555;
-    margin-bottom: 0.75rem;
-  }
-  .js-ref-text {
-    font-size: 14px;
-    line-height: 1.7;
-    color: rgba(255,255,255,0.75);
-    margin: 0;
-  }
+ /* ── REFLEKSION ── */
+ .js-ref-section {
+ padding: 0;
+ }
+ .js-ref-header {
+ background: #111;
+ padding: 5rem 2rem 4rem;
+ }
+ .js-ref-header .js-section-label { color: #555; }
+ .js-ref-header .js-section-title { color: #fff; margin-bottom: 0; }
+ .js-ref-grid {
+ display: grid;
+ grid-template-columns: repeat(2, 1fr);
+ gap: 1px;
+ background: #111;
+ }
+ .js-ref-item {
+ background: #111;
+ padding: 2.5rem;
+ border-top: 1px solid #222;
+ }
+ .js-ref-label {
+ font-size: 10px;
+ font-weight: 700;
+ letter-spacing: 0.18em;
+ text-transform: uppercase;
+ color: #555;
+ margin-bottom: 0.75rem;
+ }
+ .js-ref-text {
+ font-size: 14px;
+ line-height: 1.7;
+ color: rgba(255,255,255,0.75);
+ margin: 0;
+ }
 
-  /* ── FOOTER NAV ── */
-  .js-footer-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2rem;
-    border-top: 1px solid #e5e5e5;
-    font-size: 13px;
-  }
-  .js-footer-nav a {
-    color: #555;
-    text-decoration: none;
-    font-weight: 500;
-  }
-  .js-footer-nav a:hover { color: #111; }
+ /* ── FOOTER NAV ── */
+ .js-footer-nav {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: 2rem;
+ border-top: 1px solid #e5e5e5;
+ font-size: 13px;
+ }
+ .js-footer-nav a {
+ color: #555;
+ text-decoration: none;
+ font-weight: 500;
+ }
+ .js-footer-nav a:hover { color: #111; }
 
-  /* ── RESPONSIVE ── */
-  @media (max-width: 680px) {
-    .js-intro-split { grid-template-columns: 1fr; }
-    .js-intro-img-wrap { aspect-ratio: 16/9; }
-    .js-proc-grid { grid-template-columns: 1fr; }
-    .js-gallery-strip { grid-template-columns: 1fr 1fr; max-height: none; }
-    .js-gallery-strip .cell.tall { display: none; }
-    .js-concepts { grid-template-columns: 1fr; }
-    .js-ref-grid { grid-template-columns: 1fr; }
-    .js-big-title { font-size: 3.5rem; }
-    .js-section { padding: 3rem 1.25rem; }
-    .js-video-section { padding: 3rem 1.25rem; }
-    .js-code-section { padding: 3rem 1.25rem; }
-    .js-ref-header { padding: 3rem 1.25rem 2rem; }
-    .js-ref-item { padding: 1.75rem 1.25rem; }
-  }
+ /* ── RESPONSIVE ── */
+ @media (max-width: 680px) {
+ .js-intro-split { grid-template-columns: 1fr; }
+ .js-intro-img-wrap { aspect-ratio: 16/9; }
+ .js-proc-grid { grid-template-columns: 1fr; }
+ .js-gallery-strip { grid-template-columns: 1fr 1fr; max-height: none; }
+ .js-gallery-strip .cell.tall { display: none; }
+ .js-concepts { grid-template-columns: 1fr; }
+ .js-ref-grid { grid-template-columns: 1fr; }
+ .js-big-title { font-size: 3.5rem; }
+ .js-section { padding: 3rem 1.25rem; }
+ .js-video-section { padding: 3rem 1.25rem; }
+ .js-code-section { padding: 3rem 1.25rem; }
+ .js-ref-header { padding: 3rem 1.25rem 2rem; }
+ .js-ref-item { padding: 1.75rem 1.25rem; }
+ }
 </style>
 
 <div class="js-root">
 
-  <!-- ── TYPOGRAFISK HERO ── -->
-  <div class="js-title-block">
-    <p class="js-overline">2. Semester · Februar 2026</p>
-    <h1 class="js-big-title">
-      <span>JAVA</span>
-      <span class="indent">SCRIPT</span>
-    </h1>
-  </div>
+ <!-- ── TYPOGRAFISK HERO ── -->
+ <div class="js-title-block">
+ <p class="js-overline">2. Semester · Februar 2026</p>
+ <h1 class="js-big-title">
+ <span>JAVA</span>
+ <span class="indent">SCRIPT</span>
+ </h1>
+ </div>
 
-  <!-- ── INTRO SPLIT: BILLEDE + TEKST ── -->
-  <div class="js-intro-split">
-    <div class="js-intro-img-wrap">
-      <!-- Skift ud med dit eget billede -->
-      <img src="img/2026/02/IMG_2755-scaled.jpeg" alt="JavaScript projekt" />
-    </div>
-    <div class="js-intro-text-side">
-      <div class="js-meta-row">
-        <span><strong>Periode</strong> · 9–13. feb. 2026</span>
-        <span><strong>Site</strong> · faaborgoh.dk</span>
-        <span><strong>Gruppe</strong> · Ingrid, Mikkel, Sebastian</span>
-        <span><strong>Tech</strong> · HTML · CSS · JS · GitHub</span>
-      </div>
-      <div class="js-intro-body">
-        <p>Opgaven gik ud på at finde et kommercielt website og re-implementere det i HTML, CSS og JavaScript. Hvert teammedlem skulle implementere nok JavaScript til at dække hele pensum — og til sidst optage en fælles forklaringsvideo.</p>
-      </div>
-    </div>
-  </div>
+ <!-- ── INTRO SPLIT: BILLEDE + TEKST ── -->
+ <div class="js-intro-split">
+ <div class="js-intro-img-wrap">
+ <!-- Skift ud med dit eget billede -->
+ <img src="img/2026/02/IMG_2755-scaled.jpeg" alt="JavaScript projekt" />
+ </div>
+ <div class="js-intro-text-side">
+ <div class="js-meta-row">
+ <span><strong>Periode</strong> · 9–13. feb. 2026</span>
+ <span><strong>Site</strong> · faaborgoh.dk</span>
+ <span><strong>Gruppe</strong> · Ingrid, Mikkel, Sebastian</span>
+ <span><strong>Tech</strong> · HTML · CSS · JS · GitHub</span>
+ </div>
+ <div class="js-intro-body">
+ <p>Opgaven gik ud på at finde et kommercielt website og re-implementere det i HTML, CSS og JavaScript. Hvert teammedlem skulle implementere nok JavaScript til at dække hele pensum, og til sidst optage en fælles forklaringsvideo.</p>
+ </div>
+ </div>
+ </div>
 
-  <!-- ── PROCESSEN ── -->
-  <div class="js-section">
-    <p class="js-section-label">Processen</p>
-    <h2 class="js-section-title">Fra briefing til merge på fire dage</h2>
+ <!-- ── PROCESSEN ── -->
+ <div class="js-section">
+ <p class="js-section-label">Processen</p>
+ <h2 class="js-section-title">Fra briefing til merge på fire dage</h2>
 
-    <div class="js-proc-grid">
-      <div class="js-proc-text">
-        <p>Dagen begyndte med opgavebeskrivelsen og lidt tid til at stille spørgsmål. Sebastian kom lidt forsinket, men havde medbragt kage som kompensation — skaden var hurtigt glemt.</p>
-        <p>Da hele gruppen var samlet, fandt vi hurtigt hjemmesiden <strong>faaborgoh.dk</strong> og fordelte arbejdet. Mikkel tog HTML og CSS, mens jeg satte GitHub op med development branches, så vi kunne arbejde parallelt uden at ødelægge hinandens kode. Sebastian valgte at arbejde hjemmefra, hvor han er mest produktiv.</p>
-        <p>Den <strong>11. februar kl. 9.00</strong> mødtes vi for at merge vores dev-branches og sammensætte det, der skulle siges i videoen. Vi gik igennem hinandens kode grundigt — for man lærer bedst, når man skal forklare det til andre.</p>
-      </div>
-      <div class="js-proc-img">
-        <!-- Valgfrit ekstra billede fra processen -->
-        <img src="img/2026/04/DSC08179-scaled.jpeg" alt="Processen" />
-      </div>
-    </div>
-  </div>
+ <div class="js-proc-grid">
+ <div class="js-proc-text">
+ <p>Dagen begyndte med opgavebeskrivelsen og lidt tid til at stille spørgsmål. Sebastian kom lidt forsinket, men havde medbragt kage som kompensation, skaden var hurtigt glemt.</p>
+ <p>Da hele gruppen var samlet, fandt vi hurtigt hjemmesiden <strong>faaborgoh.dk</strong> og fordelte arbejdet. Mikkel tog HTML og CSS, mens jeg satte GitHub op med development branches, så vi kunne arbejde parallelt uden at ødelægge hinandens kode. Sebastian valgte at arbejde hjemmefra, hvor han er mest produktiv.</p>
+ <p>Den <strong>11. februar kl. 9.00</strong> mødtes vi for at merge vores dev-branches og sammensætte det, der skulle siges i videoen. Vi gik igennem hinandens kode grundigt, for man lærer bedst, når man skal forklare det til andre.</p>
+ </div>
+ <div class="js-proc-img">
+ <!-- Valgfrit ekstra billede fra processen -->
+ <img src="img/2026/04/DSC08179-scaled.jpeg" alt="Processen" />
+ </div>
+ </div>
+ </div>
 
-  <!-- Tre ens billeder -->
-  <div style="padding: 0 2rem 3rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem;">
-    <div style="aspect-ratio:4/3; overflow:hidden; border-radius:6px; background:#eee;">
-      <img src="img/2026/04/DSC08169-scaled.jpeg" alt="Arbejde" style="width:100%;height:100%;object-fit:cover;display:block;" />
-    </div>
-    <div style="aspect-ratio:4/3; overflow:hidden; border-radius:6px; background:#eee;">
-      <img src="img/2026/05/Skaermbillede-2026-02-09-kl.-08.37.10.jpg" alt="Kode" style="width:100%;height:100%;object-fit:cover;display:block;" />
-    </div>
-    <div style="aspect-ratio:4/3; overflow:hidden; border-radius:6px; background:#eee;">
-      <img src="img/2026/05/Skaermbillede-2026-05-15-kl.-00.29.16-scaled.jpg" alt="Resultat" style="width:100%;height:100%;object-fit:cover;display:block;" />
-    </div>
-  </div>
+ <!-- Tre ens billeder -->
+ <div style="padding: 0 2rem 3rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem;">
+ <div style="aspect-ratio:4/3; overflow:hidden; border-radius:6px; background:#eee;">
+ <img src="img/2026/04/DSC08169-scaled.jpeg" alt="Arbejde" style="width:100%;height:100%;object-fit:cover;display:block;" />
+ </div>
+ <div style="aspect-ratio:4/3; overflow:hidden; border-radius:6px; background:#eee;">
+ <img src="img/2026/05/Skaermbillede-2026-02-09-kl.-08.37.10.jpg" alt="Kode" style="width:100%;height:100%;object-fit:cover;display:block;" />
+ </div>
+ <div style="aspect-ratio:4/3; overflow:hidden; border-radius:6px; background:#eee;">
+ <img src="img/2026/05/Skaermbillede-2026-05-15-kl.-00.29.16-scaled.jpg" alt="Resultat" style="width:100%;height:100%;object-fit:cover;display:block;" />
+ </div>
+ </div>
 
-  <!-- ── VIDEO ── -->
-  <div class="js-video-section">
-    <p class="js-section-label">Forklaringsvideo</p>
-    <h2 class="js-section-title">Vi forklarer koden</h2>
+ <!-- ── VIDEO ── -->
+ <div class="js-video-section">
+ <p class="js-section-label">Forklaringsvideo</p>
+ <h2 class="js-section-title">Vi forklarer koden</h2>
 
-    <!--
-      INDSÆT DIT YOUTUBE VIDEO-ID:
-      Fra linket  youtube.com/watch?v=N3reV-4NesE
-      er ID'et:  N3reV-4NesE
-    -->
-    <div class="js-video-frame">
-      <iframe
-        src="https://www.youtube.com/embed/N3reV-4NesE"
-        title="JavaScript forklaringsvideo"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen>
-      </iframe>
-    </div>
-    <p class="js-video-caption">Fælles forklaringsvideo · ca. 4–8 min · Ingrid, Mikkel og Sebastian</p>
-  </div>
+ <!--
+ INDSÆT DIT YOUTUBE VIDEO-ID:
+ Fra linket youtube.com/watch?v=N3reV-4NesE
+ er ID'et: N3reV-4NesE
+ -->
+ <div class="js-video-frame">
+ <iframe
+ src="https://www.youtube.com/embed/N3reV-4NesE"
+ title="JavaScript forklaringsvideo"
+ allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+ allowfullscreen>
+ </iframe>
+ </div>
+ <p class="js-video-caption">Fælles forklaringsvideo · ca. 4–8 min · Ingrid, Mikkel og Sebastian</p>
+ </div>
 
-  <!-- ── KODEN ── -->
-  <div class="js-code-section">
-    <p class="js-section-label">JavaScript-koden forklaret</p>
-    <h2 class="js-section-title">FAQ-accordion med event bubbling</h2>
+ <!-- ── KODEN ── -->
+ <div class="js-code-section">
+ <p class="js-section-label">JavaScript-koden forklaret</p>
+ <h2 class="js-section-title">FAQ-accordion med event bubbling</h2>
 
-    <div class="js-code-block">
-      <div class="js-code-filename">faq.js</div>
-      <pre class="js-code"><span class="c-comment">// DOM-selektion: henter alle elementer med klassen .faqItem</span>
+ <div class="js-code-block">
+ <div class="js-code-filename">faq.js</div>
+ <pre class="js-code"><span class="c-comment">// DOM-selektion: henter alle elementer med klassen .faqItem</span>
 <span class="c-keyword">const</span> <span class="c-var">faqItems</span> = document.<span class="c-method">querySelectorAll</span>(<span class="c-string">".faqItem"</span>);
 
 <span class="c-comment">// For-løkke: itererer igennem NodeList'en ét element ad gangen</span>
 <span class="c-keyword">for</span> (<span class="c-keyword">let</span> <span class="c-var">i</span> = <span class="c-string">0</span>; <span class="c-var">i</span> &lt; <span class="c-var">faqItems</span>.length; <span class="c-var">i</span>++) {
-  <span class="c-keyword">const</span> <span class="c-var">item</span> = <span class="c-var">faqItems</span>[<span class="c-var">i</span>];
-  <span class="c-keyword">const</span> <span class="c-var">question</span> = <span class="c-var">item</span>.<span class="c-method">querySelector</span>(<span class="c-string">".faqQuestion"</span>);
+ <span class="c-keyword">const</span> <span class="c-var">item</span> = <span class="c-var">faqItems</span>[<span class="c-var">i</span>];
+ <span class="c-keyword">const</span> <span class="c-var">question</span> = <span class="c-var">item</span>.<span class="c-method">querySelector</span>(<span class="c-string">".faqQuestion"</span>);
 
-  <span class="c-comment">// Event listener: koden kører kun når brugeren klikker</span>
-  <span class="c-var">question</span>.<span class="c-method">addEventListener</span>(<span class="c-string">"click"</span>, <span class="c-keyword">function</span>() {
-    <span class="c-comment">// classList.toggle: tilføjer "active" eller fjerner den</span>
-    <span class="c-var">item</span>.classList.<span class="c-method">toggle</span>(<span class="c-string">"active"</span>);
-  });
+ <span class="c-comment">// Event listener: koden kører kun når brugeren klikker</span>
+ <span class="c-var">question</span>.<span class="c-method">addEventListener</span>(<span class="c-string">"click"</span>, <span class="c-keyword">function</span>() {
+ <span class="c-comment">// classList.toggle: tilføjer "active" eller fjerner den</span>
+ <span class="c-var">item</span>.classList.<span class="c-method">toggle</span>(<span class="c-string">"active"</span>);
+ });
 }
 
 <span class="c-comment">// Event bubbling: klik bobler op til document</span>
 document.<span class="c-method">addEventListener</span>(<span class="c-string">"click"</span>, <span class="c-keyword">function</span>(<span class="c-var">event</span>) {
-  <span class="c-keyword">const</span> <span class="c-var">clickedInside</span> = <span class="c-var">event</span>.target.<span class="c-method">closest</span>(<span class="c-string">".faqItem"</span>);
+ <span class="c-keyword">const</span> <span class="c-var">clickedInside</span> = <span class="c-var">event</span>.target.<span class="c-method">closest</span>(<span class="c-string">".faqItem"</span>);
 
-  <span class="c-comment">// State reset: lukker alt hvis der klikkes udenfor</span>
-  <span class="c-keyword">if</span> (!<span class="c-var">clickedInside</span>) {
-    <span class="c-keyword">for</span> (<span class="c-keyword">let</span> <span class="c-var">i</span> = <span class="c-string">0</span>; <span class="c-var">i</span> &lt; <span class="c-var">faqItems</span>.length; <span class="c-var">i</span>++) {
-      <span class="c-var">faqItems</span>[<span class="c-var">i</span>].classList.<span class="c-method">remove</span>(<span class="c-string">"active"</span>);
-    }
-  }
+ <span class="c-comment">// State reset: lukker alt hvis der klikkes udenfor</span>
+ <span class="c-keyword">if</span> (!<span class="c-var">clickedInside</span>) {
+ <span class="c-keyword">for</span> (<span class="c-keyword">let</span> <span class="c-var">i</span> = <span class="c-string">0</span>; <span class="c-var">i</span> &lt; <span class="c-var">faqItems</span>.length; <span class="c-var">i</span>++) {
+ <span class="c-var">faqItems</span>[<span class="c-var">i</span>].classList.<span class="c-method">remove</span>(<span class="c-string">"active"</span>);
+ }
+ }
 });</pre>
-    </div>
+ </div>
 
-    <!-- FAGBEGREBER GRID -->
-    <div class="js-concepts">
-      <div class="js-concept-item">
-        <div class="js-concept-num">01</div>
-        <div class="js-concept-tag">DOM-selektion</div>
-        <div class="js-concept-body"><em>querySelectorAll(".faqItem")</em> returnerer en NodeList med alle elementer der matcher klassen — vores startpunkt for at arbejde med FAQ-boksene.</div>
-      </div>
-      <div class="js-concept-item">
-        <div class="js-concept-num">02</div>
-        <div class="js-concept-tag">For-løkke</div>
-        <div class="js-concept-body">Koden kører ét FAQ-element ad gangen og tilkobler en event listener til hvert spørgsmål. Uden løkken skulle vi gentage koden manuelt for hvert element.</div>
-      </div>
-      <div class="js-concept-item">
-        <div class="js-concept-num">03</div>
-        <div class="js-concept-tag">Event listener</div>
-        <div class="js-concept-body"><em>addEventListener("click", ...)</em> — koden er event-driven. Callback-funktionen kører kun når brugeren aktivt klikker. Intet sker af sig selv.</div>
-      </div>
-      <div class="js-concept-item">
-        <div class="js-concept-num">04</div>
-        <div class="js-concept-tag">classList.toggle</div>
-        <div class="js-concept-body">Tilføjer CSS-klassen <em>"active"</em> hvis den ikke er der — fjerner den hvis den er. CSS bestemmer hvad "active" visuelt betyder: typisk at svaret vises.</div>
-      </div>
-      <div class="js-concept-item">
-        <div class="js-concept-num">05</div>
-        <div class="js-concept-tag">Event bubbling</div>
-        <div class="js-concept-body">Et klik på et element propagerer automatisk opad i DOM-træet. Vi lytter på <em>document</em> for at fange alle klik på siden — uanset hvor de sker.</div>
-      </div>
-      <div class="js-concept-item">
-        <div class="js-concept-num">06</div>
-        <div class="js-concept-tag">closest() + State reset</div>
-        <div class="js-concept-body"><em>closest(".faqItem")</em> søger opad og returnerer null ved klik udenfor. Så fjerner vi "active" fra alle items og lukker accordionen helt.</div>
-      </div>
-    </div>
-  </div>
+ <!-- FAGBEGREBER GRID -->
+ <div class="js-concepts">
+ <div class="js-concept-item">
+ <div class="js-concept-num">01</div>
+ <div class="js-concept-tag">DOM-selektion</div>
+ <div class="js-concept-body"><em>querySelectorAll(".faqItem")</em> returnerer en NodeList med alle elementer der matcher klassen, vores startpunkt for at arbejde med FAQ-boksene.</div>
+ </div>
+ <div class="js-concept-item">
+ <div class="js-concept-num">02</div>
+ <div class="js-concept-tag">For-løkke</div>
+ <div class="js-concept-body">Koden kører ét FAQ-element ad gangen og tilkobler en event listener til hvert spørgsmål. Uden løkken skulle vi gentage koden manuelt for hvert element.</div>
+ </div>
+ <div class="js-concept-item">
+ <div class="js-concept-num">03</div>
+ <div class="js-concept-tag">Event listener</div>
+ <div class="js-concept-body"><em>addEventListener("click"...)</em>, koden er event-driven. Callback-funktionen kører kun når brugeren aktivt klikker. Intet sker af sig selv.</div>
+ </div>
+ <div class="js-concept-item">
+ <div class="js-concept-num">04</div>
+ <div class="js-concept-tag">classList.toggle</div>
+ <div class="js-concept-body">Tilføjer CSS-klassen <em>"active"</em> hvis den ikke er der, fjerner den hvis den er. CSS bestemmer hvad "active" visuelt betyder: typisk at svaret vises.</div>
+ </div>
+ <div class="js-concept-item">
+ <div class="js-concept-num">05</div>
+ <div class="js-concept-tag">Event bubbling</div>
+ <div class="js-concept-body">Et klik på et element propagerer automatisk opad i DOM-træet. Vi lytter på <em>document</em> for at fange alle klik på siden, uanset hvor de sker.</div>
+ </div>
+ <div class="js-concept-item">
+ <div class="js-concept-num">06</div>
+ <div class="js-concept-tag">closest() + State reset</div>
+ <div class="js-concept-body"><em>closest(".faqItem")</em> søger opad og returnerer null ved klik udenfor. Så fjerner vi "active" fra alle items og lukker accordionen helt.</div>
+ </div>
+ </div>
+ </div>
 
-  <!-- ── REFLEKSION ── -->
-  <div class="js-ref-section">
-    <div class="js-ref-header">
-      <p class="js-section-label">Refleksion</p>
-      <h2 class="js-section-title">Hvad tog jeg med mig?</h2>
-    </div>
-    <div class="js-ref-grid">
-      <div class="js-ref-item">
-        <div class="js-ref-label">Hvad lærte jeg?</div>
-        <p class="js-ref-text">Vigtigheden af god Git-workflow. Dev-branches lod os arbejde parallelt uden at ødelægge hinandens kode — og code review-sessionen den 11. februar var den mest lærerige del. Man forstår bedst sin egen kode, når man skal forklare den til andre.</p>
-      </div>
-      <div class="js-ref-item">
-        <div class="js-ref-label">Hvad var svært?</div>
-        <p class="js-ref-text">At koordinere på afstand, da Sebastian arbejdede hjemmefra. Vi skulle kommunikere præcist om hvem der lavede hvad — og få JavaScript-funktioner skrevet separat til at spille ordentligt sammen ved merge.</p>
-      </div>
-      <div class="js-ref-item">
-        <div class="js-ref-label">Hvad var nemt?</div>
-        <p class="js-ref-text">Selve opgaveforståelsen var ligetil, og vi fandt hurtigt et godt site. GitHub-setup gik glat da jeg havde erfaring med det fra tidligere. Gruppen supplerede hinanden godt med forskellige styrker.</p>
-      </div>
-      <div class="js-ref-item">
-        <div class="js-ref-label">Næste skridt</div>
-        <p class="js-ref-text">Jeg vil skrive mere struktureret og dokumenteret kode undervejs — ikke bare til sidst. Og gerne eksperimentere med moderne features som arrow functions og async/await til næste projekt.</p>
-      </div>
-    </div>
-  </div>
+ <!-- ── REFLEKSION ── -->
+ <div class="js-ref-section">
+ <div class="js-ref-header">
+ <p class="js-section-label">Refleksion</p>
+ <h2 class="js-section-title">Hvad tog jeg med mig?</h2>
+ </div>
+ <div class="js-ref-grid">
+ <div class="js-ref-item">
+ <div class="js-ref-label">Hvad lærte jeg?</div>
+ <p class="js-ref-text">Vigtigheden af god Git-workflow. Dev-branches lod os arbejde parallelt uden at ødelægge hinandens kode, og code review-sessionen den 11. februar var den mest lærerige del. Man forstår bedst sin egen kode, når man skal forklare den til andre.</p>
+ </div>
+ <div class="js-ref-item">
+ <div class="js-ref-label">Hvad var svært?</div>
+ <p class="js-ref-text">At koordinere på afstand, da Sebastian arbejdede hjemmefra. Vi skulle kommunikere præcist om hvem der lavede hvad, og få JavaScript-funktioner skrevet separat til at spille ordentligt sammen ved merge.</p>
+ </div>
+ <div class="js-ref-item">
+ <div class="js-ref-label">Hvad var nemt?</div>
+ <p class="js-ref-text">Selve opgaveforståelsen var ligetil, og vi fandt hurtigt et godt site. GitHub-setup gik glat da jeg havde erfaring med det fra tidligere. Gruppen supplerede hinanden godt med forskellige styrker.</p>
+ </div>
+ <div class="js-ref-item">
+ <div class="js-ref-label">Næste skridt</div>
+ <p class="js-ref-text">Jeg vil skrive mere struktureret og dokumenteret kode undervejs, ikke bare til sidst. Og gerne eksperimentere med moderne features som arrow functions og async/await til næste projekt.</p>
+ </div>
+ </div>
+ </div>
 
-  <!-- ── NAV ── -->
-  <div class="js-footer-nav">
-    <a href="#">← Forrige projekt</a>
-    <a href="#">Næste projekt →</a>
-  </div>
+ <!-- ── NAV ── -->
+ <div class="js-footer-nav">
+ <a href="#">← Forrige projekt</a>
+ <a href="#">Næste projekt →</a>
+ </div>
 
 </div></article>
 </main>

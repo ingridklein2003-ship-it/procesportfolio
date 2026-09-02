@@ -3,15 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>2. Semester — Ingrid Klein</title>
+<title>2. Semester · Ingrid Klein</title>
 <meta name="description" content="Procesportfolio for Ingrid Klein, multimediedesign.">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header class="top">
-  <a class="brand" href="index.html"><span>Ingrid Klein</span><small>Procesportfolio</small></a>
-  <button class="burger" aria-label="Menu" onclick="document.body.classList.toggle('open')">☰</button>
-  <nav class="nav"><ul>
+ <a class="brand" href="index.html"><span>Ingrid Klein</span><small>Procesportfolio</small></a>
+ <button class="burger" aria-label="Menu" onclick="document.body.classList.toggle('open')">☰</button>
+ <nav class="nav"><ul>
 <li><a href="1-semester.html">1. Semester</a>
 <ul class="sub">
 <li><a href="227976-2.html">Studie-tur</a></li>
@@ -44,524 +44,524 @@
 </header>
 <main>
 <article class="embed"><!--
-  2. SEMESTER — Semesteroversigt
-  Paste i HTML-widget i Elementor.
-  Skift billedlinks ud med dine egne fra WordPress-mediebiblioteket.
+ 2. SEMESTER, Semesteroversigt
+ Paste i HTML-widget i Elementor.
+ Skift billedlinks ud med dine egne fra WordPress-mediebiblioteket.
 -->
 
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
 
-  .sem-root {
-    font-family: 'Inter', sans-serif;
-    max-width: 100%;
-    margin: 0; padding: 0;
-    color: #111;
-    overflow-x: hidden;
-  }
+ .sem-root {
+ font-family: 'Inter', sans-serif;
+ max-width: 100%;
+ margin: 0; padding: 0;
+ color: #111;
+ overflow-x: hidden;
+ }
 
-  /* ── TITLE ── */
-  .sem-header {
-    padding: 3rem 2rem 0;
-    display: grid;
-    grid-template-columns: 1fr auto;
-    align-items: end;
-    gap: 2rem;
-    margin-bottom: 3rem;
-  }
-  .sem-big-title {
-    font-size: clamp(4rem, 14vw, 11rem);
-    font-weight: 900;
-    line-height: 0.85;
-    letter-spacing: -0.04em;
-    color: #111;
-    margin: 0;
-    text-transform: uppercase;
-  }
-  .sem-big-title span { display: block; }
-  .sem-big-title .sm { font-size: clamp(1.8rem, 5vw, 4rem); color: #bbb; }
-  .sem-header-right {
-    text-align: right;
-    padding-bottom: 0.5rem;
-  }
-  .sem-header-right p {
-    font-size: 12px;
-    color: #999;
-    margin: 0 0 0.25rem;
-    line-height: 1.5;
-  }
-  .sem-header-right strong { color: #111; }
+ /* ── TITLE ── */
+ .sem-header {
+ padding: 3rem 2rem 0;
+ display: grid;
+ grid-template-columns: 1fr auto;
+ align-items: end;
+ gap: 2rem;
+ margin-bottom: 3rem;
+ }
+ .sem-big-title {
+ font-size: clamp(4rem, 14vw, 11rem);
+ font-weight: 900;
+ line-height: 0.85;
+ letter-spacing: -0.04em;
+ color: #111;
+ margin: 0;
+ text-transform: uppercase;
+ }
+ .sem-big-title span { display: block; }
+ .sem-big-title .sm { font-size: clamp(1.8rem, 5vw, 4rem); color: #bbb; }
+ .sem-header-right {
+ text-align: right;
+ padding-bottom: 0.5rem;
+ }
+ .sem-header-right p {
+ font-size: 12px;
+ color: #999;
+ margin: 0 0 0.25rem;
+ line-height: 1.5;
+ }
+ .sem-header-right strong { color: #111; }
 
-  /* ── STAT ROW ── */
-  .sem-stats {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1px;
-    background: #e5e5e5;
-    border-top: 1px solid #e5e5e5;
-    border-bottom: 1px solid #e5e5e5;
-    margin-bottom: 4rem;
-  }
-  .sem-stat {
-    background: #fff;
-    padding: 1.5rem 2rem;
-  }
-  .sem-stat-num {
-    font-size: clamp(2rem, 4vw, 3rem);
-    font-weight: 900;
-    letter-spacing: -0.03em;
-    color: #111;
-    line-height: 1;
-    margin-bottom: 0.25rem;
-  }
-  .sem-stat-label {
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: #999;
-  }
+ /* ── STAT ROW ── */
+ .sem-stats {
+ display: grid;
+ grid-template-columns: repeat(4, 1fr);
+ gap: 1px;
+ background: #e5e5e5;
+ border-top: 1px solid #e5e5e5;
+ border-bottom: 1px solid #e5e5e5;
+ margin-bottom: 4rem;
+ }
+ .sem-stat {
+ background: #fff;
+ padding: 1.5rem 2rem;
+ }
+ .sem-stat-num {
+ font-size: clamp(2rem, 4vw, 3rem);
+ font-weight: 900;
+ letter-spacing: -0.03em;
+ color: #111;
+ line-height: 1;
+ margin-bottom: 0.25rem;
+ }
+ .sem-stat-label {
+ font-size: 11px;
+ font-weight: 600;
+ letter-spacing: 0.1em;
+ text-transform: uppercase;
+ color: #999;
+ }
 
-  /* ── MASONRY GALLERI ── */
-  .sem-gallery-section {
-    padding: 0 2rem 4rem;
-  }
-  .sem-gallery-label {
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: #bbb;
-    margin-bottom: 1rem;
-  }
-  .sem-gallery {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: 180px;
-    gap: 4px;
-  }
-  .sem-gallery .g {
-    overflow: hidden;
-    border-radius: 6px;
-    background: #f0f0f0;
-  }
-  .sem-gallery .g.tall { grid-row: span 2; }
-  .sem-gallery .g.wide { grid-column: span 2; }
-  .sem-gallery .g img {
-    width: 100%; height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.4s ease;
-  }
-  .sem-gallery .g img:hover { transform: scale(1.04); }
+ /* ── MASONRY GALLERI ── */
+ .sem-gallery-section {
+ padding: 0 2rem 4rem;
+ }
+ .sem-gallery-label {
+ font-size: 10px;
+ font-weight: 700;
+ letter-spacing: 0.2em;
+ text-transform: uppercase;
+ color: #bbb;
+ margin-bottom: 1rem;
+ }
+ .sem-gallery {
+ display: grid;
+ grid-template-columns: repeat(4, 1fr);
+ grid-auto-rows: 180px;
+ gap: 4px;
+ }
+ .sem-gallery .g {
+ overflow: hidden;
+ border-radius: 6px;
+ background: #f0f0f0;
+ }
+ .sem-gallery .g.tall { grid-row: span 2; }
+ .sem-gallery .g.wide { grid-column: span 2; }
+ .sem-gallery .g img {
+ width: 100%; height: 100%;
+ object-fit: cover;
+ display: block;
+ transition: transform 0.4s ease;
+ }
+ .sem-gallery .g img:hover { transform: scale(1.04); }
 
-  /* ── DIVIDER ── */
-  .sem-divider {
-    height: 1px;
-    background: #e5e5e5;
-    margin: 0 2rem 4rem;
-  }
+ /* ── DIVIDER ── */
+ .sem-divider {
+ height: 1px;
+ background: #e5e5e5;
+ margin: 0 2rem 4rem;
+ }
 
-  /* ── PROJEKTER/WORKSHOPS ── */
-  .sem-projects {
-    padding: 0 2rem 4rem;
-  }
-  .sem-projects-label {
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: #bbb;
-    margin-bottom: 2rem;
-  }
+ /* ── PROJEKTER/WORKSHOPS ── */
+ .sem-projects {
+ padding: 0 2rem 4rem;
+ }
+ .sem-projects-label {
+ font-size: 10px;
+ font-weight: 700;
+ letter-spacing: 0.2em;
+ text-transform: uppercase;
+ color: #bbb;
+ margin-bottom: 2rem;
+ }
 
-  /* Stor featured projekt */
-  .sem-featured {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0;
-    border: 1px solid #e5e5e5;
-    border-radius: 14px;
-    overflow: hidden;
-    margin-bottom: 1.5rem;
-  }
-  .sem-featured-img {
-    background: #111;
-    aspect-ratio: 4/3;
-    overflow: hidden;
-  }
-  .sem-featured-img img {
-    width: 100%; height: 100%;
-    object-fit: cover;
-    display: block;
-    opacity: 0.85;
-  }
-  .sem-featured-text {
-    padding: 2.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  .sem-featured-top { }
-  .sem-project-type {
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: #bbb;
-    margin-bottom: 0.5rem;
-  }
-  .sem-project-title {
-    font-size: clamp(1.3rem, 2.5vw, 1.8rem);
-    font-weight: 800;
-    letter-spacing: -0.02em;
-    color: #111;
-    line-height: 1.1;
-    margin-bottom: 1rem;
-  }
-  .sem-project-desc {
-    font-size: 14px;
-    line-height: 1.7;
-    color: #555;
-    margin-bottom: 1.5rem;
-  }
-  .sem-project-meta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-  }
-  .sem-pill {
-    font-size: 11px;
-    font-weight: 500;
-    background: #f3f3f3;
-    color: #555;
-    padding: 4px 12px;
-    border-radius: 99px;
-  }
-  .sem-project-date {
-    font-size: 11px;
-    color: #bbb;
-    font-weight: 500;
-    margin-top: 1rem;
-  }
+ /* Stor featured projekt */
+ .sem-featured {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 0;
+ border: 1px solid #e5e5e5;
+ border-radius: 14px;
+ overflow: hidden;
+ margin-bottom: 1.5rem;
+ }
+ .sem-featured-img {
+ background: #111;
+ aspect-ratio: 4/3;
+ overflow: hidden;
+ }
+ .sem-featured-img img {
+ width: 100%; height: 100%;
+ object-fit: cover;
+ display: block;
+ opacity: 0.85;
+ }
+ .sem-featured-text {
+ padding: 2.5rem;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+ }
+ .sem-featured-top { }
+ .sem-project-type {
+ font-size: 10px;
+ font-weight: 700;
+ letter-spacing: 0.15em;
+ text-transform: uppercase;
+ color: #bbb;
+ margin-bottom: 0.5rem;
+ }
+ .sem-project-title {
+ font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+ font-weight: 800;
+ letter-spacing: -0.02em;
+ color: #111;
+ line-height: 1.1;
+ margin-bottom: 1rem;
+ }
+ .sem-project-desc {
+ font-size: 14px;
+ line-height: 1.7;
+ color: #555;
+ margin-bottom: 1.5rem;
+ }
+ .sem-project-meta {
+ display: flex;
+ flex-wrap: wrap;
+ gap: 0.5rem;
+ }
+ .sem-pill {
+ font-size: 11px;
+ font-weight: 500;
+ background: #f3f3f3;
+ color: #555;
+ padding: 4px 12px;
+ border-radius: 99px;
+ }
+ .sem-project-date {
+ font-size: 11px;
+ color: #bbb;
+ font-weight: 500;
+ margin-top: 1rem;
+ }
 
-  /* Grid af mindre projekter/workshops */
-  .sem-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1px;
-    background: #e5e5e5;
-    border: 1px solid #e5e5e5;
-    border-radius: 14px;
-    overflow: hidden;
-    margin-bottom: 1.5rem;
-  }
-  .sem-card {
-    background: #fff;
-    padding: 1.75rem;
-    display: flex;
-    flex-direction: column;
-  }
-  .sem-card-img {
-    aspect-ratio: 16/9;
-    border-radius: 8px;
-    overflow: hidden;
-    background: #f0f0f0;
-    margin-bottom: 1.25rem;
-  }
-  .sem-card-img img {
-    width: 100%; height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-  .sem-card-type {
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: #bbb;
-    margin-bottom: 0.4rem;
-  }
-  .sem-card-title {
-    font-size: 15px;
-    font-weight: 700;
-    color: #111;
-    margin-bottom: 0.6rem;
-    line-height: 1.2;
-  }
-  .sem-card-desc {
-    font-size: 13px;
-    line-height: 1.6;
-    color: #666;
-    flex: 1;
-    margin-bottom: 1rem;
-  }
-  .sem-card-meta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.35rem;
-  }
-  .sem-card-date {
-    font-size: 11px;
-    color: #bbb;
-    margin-top: 0.75rem;
-  }
+ /* Grid af mindre projekter/workshops */
+ .sem-grid {
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
+ gap: 1px;
+ background: #e5e5e5;
+ border: 1px solid #e5e5e5;
+ border-radius: 14px;
+ overflow: hidden;
+ margin-bottom: 1.5rem;
+ }
+ .sem-card {
+ background: #fff;
+ padding: 1.75rem;
+ display: flex;
+ flex-direction: column;
+ }
+ .sem-card-img {
+ aspect-ratio: 16/9;
+ border-radius: 8px;
+ overflow: hidden;
+ background: #f0f0f0;
+ margin-bottom: 1.25rem;
+ }
+ .sem-card-img img {
+ width: 100%; height: 100%;
+ object-fit: cover;
+ display: block;
+ }
+ .sem-card-type {
+ font-size: 10px;
+ font-weight: 700;
+ letter-spacing: 0.12em;
+ text-transform: uppercase;
+ color: #bbb;
+ margin-bottom: 0.4rem;
+ }
+ .sem-card-title {
+ font-size: 15px;
+ font-weight: 700;
+ color: #111;
+ margin-bottom: 0.6rem;
+ line-height: 1.2;
+ }
+ .sem-card-desc {
+ font-size: 13px;
+ line-height: 1.6;
+ color: #666;
+ flex: 1;
+ margin-bottom: 1rem;
+ }
+ .sem-card-meta {
+ display: flex;
+ flex-wrap: wrap;
+ gap: 0.35rem;
+ }
+ .sem-card-date {
+ font-size: 11px;
+ color: #bbb;
+ margin-top: 0.75rem;
+ }
 
-  /* ── MERE GALLERI NEDENUNDER ── */
-  .sem-gallery-2 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 4px;
-    margin-bottom: 4rem;
-    padding: 0 2rem;
-  }
-  .sem-gallery-2 .g {
-    aspect-ratio: 4/3;
-    overflow: hidden;
-    border-radius: 6px;
-    background: #f0f0f0;
-  }
-  .sem-gallery-2 .g img {
-    width: 100%; height: 100%;
-    object-fit: cover;
-    display: block;
-  }
+ /* ── MERE GALLERI NEDENUNDER ── */
+ .sem-gallery-2 {
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
+ gap: 4px;
+ margin-bottom: 4rem;
+ padding: 0 2rem;
+ }
+ .sem-gallery-2 .g {
+ aspect-ratio: 4/3;
+ overflow: hidden;
+ border-radius: 6px;
+ background: #f0f0f0;
+ }
+ .sem-gallery-2 .g img {
+ width: 100%; height: 100%;
+ object-fit: cover;
+ display: block;
+ }
 
-  /* ── AFSLUTNING ── */
-  .sem-outro {
-    background: #111;
-    padding: 4rem 2rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
-  }
-  .sem-outro-title {
-    font-size: clamp(2rem, 4vw, 3rem);
-    font-weight: 900;
-    letter-spacing: -0.025em;
-    color: #fff;
-    line-height: 1.05;
-    margin: 0 0 1rem;
-  }
-  .sem-outro-sub {
-    font-size: 13px;
-    color: #555;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-  }
-  .sem-outro-text {
-    font-size: 15px;
-    line-height: 1.8;
-    color: rgba(255,255,255,0.65);
-    margin: 0;
-  }
+ /* ── AFSLUTNING ── */
+ .sem-outro {
+ background: #111;
+ padding: 4rem 2rem;
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 4rem;
+ align-items: center;
+ }
+ .sem-outro-title {
+ font-size: clamp(2rem, 4vw, 3rem);
+ font-weight: 900;
+ letter-spacing: -0.025em;
+ color: #fff;
+ line-height: 1.05;
+ margin: 0 0 1rem;
+ }
+ .sem-outro-sub {
+ font-size: 13px;
+ color: #555;
+ letter-spacing: 0.1em;
+ text-transform: uppercase;
+ font-weight: 600;
+ margin-bottom: 0.5rem;
+ }
+ .sem-outro-text {
+ font-size: 15px;
+ line-height: 1.8;
+ color: rgba(255,255,255,0.65);
+ margin: 0;
+ }
 
-  /* NAV */
-  .sem-nav {
-    display: flex;
-    justify-content: space-between;
-    padding: 1.5rem 2rem;
-    font-size: 13px;
-    border-top: 1px solid #e5e5e5;
-  }
-  .sem-nav a { color: #555; text-decoration: none; }
+ /* NAV */
+ .sem-nav {
+ display: flex;
+ justify-content: space-between;
+ padding: 1.5rem 2rem;
+ font-size: 13px;
+ border-top: 1px solid #e5e5e5;
+ }
+ .sem-nav a { color: #555; text-decoration: none; }
 
-  @media (max-width: 700px) {
-    .sem-header { grid-template-columns: 1fr; }
-    .sem-header-right { text-align: left; }
-    .sem-stats { grid-template-columns: repeat(2, 1fr); }
-    .sem-gallery { grid-template-columns: repeat(2, 1fr); }
-    .sem-gallery .g.wide { grid-column: span 1; }
-    .sem-featured { grid-template-columns: 1fr; }
-    .sem-grid { grid-template-columns: 1fr; }
-    .sem-gallery-2 { grid-template-columns: repeat(2, 1fr); }
-    .sem-outro { grid-template-columns: 1fr; gap: 2rem; }
-    .sem-gallery-section, .sem-projects, .sem-gallery-2 { padding-left: 1.25rem; padding-right: 1.25rem; }
-    .sem-divider { margin-left: 1.25rem; margin-right: 1.25rem; }
-    .sem-header { padding: 2rem 1.25rem 0; }
-    .sem-outro { padding: 3rem 1.25rem; }
-  }
+ @media (max-width: 700px) {
+ .sem-header { grid-template-columns: 1fr; }
+ .sem-header-right { text-align: left; }
+ .sem-stats { grid-template-columns: repeat(2, 1fr); }
+ .sem-gallery { grid-template-columns: repeat(2, 1fr); }
+ .sem-gallery .g.wide { grid-column: span 1; }
+ .sem-featured { grid-template-columns: 1fr; }
+ .sem-grid { grid-template-columns: 1fr; }
+ .sem-gallery-2 { grid-template-columns: repeat(2, 1fr); }
+ .sem-outro { grid-template-columns: 1fr; gap: 2rem; }
+ .sem-gallery-section.sem-projects.sem-gallery-2 { padding-left: 1.25rem; padding-right: 1.25rem; }
+ .sem-divider { margin-left: 1.25rem; margin-right: 1.25rem; }
+ .sem-header { padding: 2rem 1.25rem 0; }
+ .sem-outro { padding: 3rem 1.25rem; }
+ }
 </style>
 
 <div class="sem-root">
 
-  <!-- TITEL -->
-  <div class="sem-header">
-    <h1 class="sem-big-title">
-      <span class="sm">2.</span>
-      <span>SEMESTER</span>
-    </h1>
-    <div class="sem-header-right">
-      <p><strong>Multimedie · UCL</strong></p>
-      <p>Januar – April 2026</p>
-      <p>Odense, Danmark</p>
-    </div>
-  </div>
+ <!-- TITEL -->
+ <div class="sem-header">
+ <h1 class="sem-big-title">
+ <span class="sm">2.</span>
+ <span>SEMESTER</span>
+ </h1>
+ <div class="sem-header-right">
+ <p><strong>Multimedie · UCL</strong></p>
+ <p>Januar – April 2026</p>
+ <p>Odense, Danmark</p>
+ </div>
+ </div>
 
-  <!-- STATS -->
-  <div class="sem-stats">
-    <div class="sem-stat">
-      <div class="sem-stat-num">4</div>
-      <div class="sem-stat-label">Projekter & workshops</div>
-    </div>
-    <div class="sem-stat">
-      <div class="sem-stat-num">3</div>
-      <div class="sem-stat-label">Måneder</div>
-    </div>
-    <div class="sem-stat">
-      <div class="sem-stat-label" style="padding-top:0.5rem">Teknologier</div>
-      <div style="font-size:13px;font-weight:600;color:#111;margin-top:0.4rem;line-height:1.6;">HTML · CSS · JS<br>Figma · GitHub · Notion</div>
-    </div>
-    <div class="sem-stat">
-      <div class="sem-stat-label" style="padding-top:0.5rem">Fokus</div>
-      <div style="font-size:13px;font-weight:600;color:#111;margin-top:0.4rem;line-height:1.6;">Design · Kode<br>UX · Research</div>
-    </div>
-  </div>
+ <!-- STATS -->
+ <div class="sem-stats">
+ <div class="sem-stat">
+ <div class="sem-stat-num">4</div>
+ <div class="sem-stat-label">Projekter & workshops</div>
+ </div>
+ <div class="sem-stat">
+ <div class="sem-stat-num">3</div>
+ <div class="sem-stat-label">Måneder</div>
+ </div>
+ <div class="sem-stat">
+ <div class="sem-stat-label" style="padding-top:0.5rem">Teknologier</div>
+ <div style="font-size:13px;font-weight:600;color:#111;margin-top:0.4rem;line-height:1.6;">HTML · CSS · JS<br>Figma · GitHub · Notion</div>
+ </div>
+ <div class="sem-stat">
+ <div class="sem-stat-label" style="padding-top:0.5rem">Fokus</div>
+ <div style="font-size:13px;font-weight:600;color:#111;margin-top:0.4rem;line-height:1.6;">Design · Kode<br>UX · Research</div>
+ </div>
+ </div>
 
-  <!-- GALLERI 1 — arbejdsfotos fra semestret -->
-  <div class="sem-gallery-section">
-    <p class="sem-gallery-label">Fra semestret</p>
-    <div class="sem-gallery">
-      <!-- Skift alle disse ud med dine egne billeder fra semestret -->
-      <div class="g tall">
-        <img src="img/2026/05/IMG_3893.jpg" alt="" />
-      </div>
-      <div class="g">
-        <img src="img/2026/05/IMG_3704-scaled.jpg" alt="" />
-      </div>
-      <div class="g">
-        <img src="img/2026/05/IMG_2753-1-scaled.jpeg" alt="" />
-      </div>
-      <div class="g">
-        <img src="img/2026/05/IMG_6063-scaled.jpeg" alt="" />
-      </div>
-      <div class="g wide">
-        <img src="img/2026/05/IMG_6286.jpg" alt="" />
-      </div>
-      <div class="g">
-        <img src="img/2026/02/IMG_2755-scaled.jpeg" alt="" />
-      </div>
-      <div class="g">
-        <img src="img/2026/04/DSC08169-scaled.jpeg" alt="" />
-      </div>
-      <div class="g">
-        <img src="img/2026/05/IMG_3703-scaled.jpg" alt="" />
-      </div>
-    </div>
-  </div>
+ <!-- GALLERI 1, arbejdsfotos fra semestret -->
+ <div class="sem-gallery-section">
+ <p class="sem-gallery-label">Fra semestret</p>
+ <div class="sem-gallery">
+ <!-- Skift alle disse ud med dine egne billeder fra semestret -->
+ <div class="g tall">
+ <img src="img/2026/05/IMG_3893.jpg" alt="" />
+ </div>
+ <div class="g">
+ <img src="img/2026/05/IMG_3704-scaled.jpg" alt="" />
+ </div>
+ <div class="g">
+ <img src="img/2026/05/IMG_2753-1-scaled.jpeg" alt="" />
+ </div>
+ <div class="g">
+ <img src="img/2026/05/IMG_6063-scaled.jpeg" alt="" />
+ </div>
+ <div class="g wide">
+ <img src="img/2026/05/IMG_6286.jpg" alt="" />
+ </div>
+ <div class="g">
+ <img src="img/2026/02/IMG_2755-scaled.jpeg" alt="" />
+ </div>
+ <div class="g">
+ <img src="img/2026/04/DSC08169-scaled.jpeg" alt="" />
+ </div>
+ <div class="g">
+ <img src="img/2026/05/IMG_3703-scaled.jpg" alt="" />
+ </div>
+ </div>
+ </div>
 
-  <div class="sem-divider"></div>
+ <div class="sem-divider"></div>
 
-  <!-- PROJEKTER & WORKSHOPS RECAP -->
-  <div class="sem-projects">
-    <p class="sem-projects-label">Projekter & workshops — 2. semester</p>
+ <!-- PROJEKTER & WORKSHOPS RECAP -->
+ <div class="sem-projects">
+ <p class="sem-projects-label">Projekter & workshops, 2. semester</p>
 
-    <!-- PROJEKT 4 — featured -->
-    <div class="sem-featured">
-      <div class="sem-featured-img">
-        <!-- Skift ud med dit bedste GAME/Projekt 4-billede -->
-        <img src="img/2026/04/DSC08165-scaled.jpeg" alt="Projekt 4 — GAME" />
-      </div>
-      <div class="sem-featured-text">
-        <div class="sem-featured-top">
-          <p class="sem-project-type">Stort projekt</p>
-          <h2 class="sem-project-title">Projekt 4 — Brugergrænseflader & digitalt indhold</h2>
-          <p class="sem-project-desc">Et 5-ugers gruppeforløb med GAME Denmark som case. Opgaven var at redesigne deres digitale tilstedeværelse — forsiden og en ny frivillighedsunderside — og producere indhold til sociale medier. Jeg var Scrummaster og styrede processen i Notion.</p>
-          <div class="sem-project-meta">
-            <span class="sem-pill">GAME Denmark</span>
-            <span class="sem-pill">Scrummaster</span>
-            <span class="sem-pill">HTML/CSS/JS</span>
-            <span class="sem-pill">Figma</span>
-            <span class="sem-pill">Research</span>
-            <span class="sem-pill">SoMe</span>
-          </div>
-        </div>
-        <p class="sem-project-date">Marts – April 2026 · Hold 1, Gruppe 1 · Mikkel, Sebastian, Mathilde, Ela</p>
-      </div>
-    </div>
+ <!-- PROJEKT 4, featured -->
+ <div class="sem-featured">
+ <div class="sem-featured-img">
+ <!-- Skift ud med dit bedste GAME/Projekt 4-billede -->
+ <img src="img/2026/04/DSC08165-scaled.jpeg" alt="Projekt 4, GAME" />
+ </div>
+ <div class="sem-featured-text">
+ <div class="sem-featured-top">
+ <p class="sem-project-type">Stort projekt</p>
+ <h2 class="sem-project-title">Projekt 4, Brugergrænseflader & digitalt indhold</h2>
+ <p class="sem-project-desc">Et 5-ugers gruppeforløb med GAME Denmark som case. Opgaven var at redesigne deres digitale tilstedeværelse, forsiden og en ny frivillighedsunderside, og producere indhold til sociale medier. Jeg var Scrummaster og styrede processen i Notion.</p>
+ <div class="sem-project-meta">
+ <span class="sem-pill">GAME Denmark</span>
+ <span class="sem-pill">Scrummaster</span>
+ <span class="sem-pill">HTML/CSS/JS</span>
+ <span class="sem-pill">Figma</span>
+ <span class="sem-pill">Research</span>
+ <span class="sem-pill">SoMe</span>
+ </div>
+ </div>
+ <p class="sem-project-date">Marts – April 2026 · Hold 1, Gruppe 1 · Mikkel, Sebastian, Mathilde, Ela</p>
+ </div>
+ </div>
 
-    <!-- 3 workshops -->
-    <div class="sem-grid">
+ <!-- 3 workshops -->
+ <div class="sem-grid">
 
-      <!-- JavaScript -->
-      <div class="sem-card">
-        <div class="sem-card-img">
-          <img src="img/2026/02/IMG_2755-scaled.jpeg" alt="JavaScript-Projekt" />
-        </div>
-        <p class="sem-card-type">Workshop / Projekt</p>
-        <h3 class="sem-card-title">JavaScript-Projekt</h3>
-        <p class="sem-card-desc">Re-implementering af faaborgoh.dk i HTML, CSS og JavaScript. Vi arbejdede i separate GitHub dev-branches og mødtes til code review og fælles forklaringsvideo. Jeg implementerede en FAQ-accordion med event bubbling og DOM-manipulation.</p>
-        <div class="sem-card-meta">
-          <span class="sem-pill">JavaScript</span>
-          <span class="sem-pill">GitHub</span>
-          <span class="sem-pill">DOM</span>
-        </div>
-        <p class="sem-card-date">9.–13. februar 2026 · Mikkel, Sebastian</p>
-      </div>
+ <!-- JavaScript -->
+ <div class="sem-card">
+ <div class="sem-card-img">
+ <img src="img/2026/02/IMG_2755-scaled.jpeg" alt="JavaScript-Projekt" />
+ </div>
+ <p class="sem-card-type">Workshop / Projekt</p>
+ <h3 class="sem-card-title">JavaScript-Projekt</h3>
+ <p class="sem-card-desc">Re-implementering af faaborgoh.dk i HTML, CSS og JavaScript. Vi arbejdede i separate GitHub dev-branches og mødtes til code review og fælles forklaringsvideo. Jeg implementerede en FAQ-accordion med event bubbling og DOM-manipulation.</p>
+ <div class="sem-card-meta">
+ <span class="sem-pill">JavaScript</span>
+ <span class="sem-pill">GitHub</span>
+ <span class="sem-pill">DOM</span>
+ </div>
+ <p class="sem-card-date">9.–13. februar 2026 · Mikkel, Sebastian</p>
+ </div>
 
-      <!-- Design Challenge -->
-      <div class="sem-card">
-        <div class="sem-card-img">
-          <!-- Skift ud med dit VAULT Figma-screenshot -->
-          <img src="img/2026/05/IMG_2753-scaled.jpeg" alt="Design Challenge Workshop" />
-        </div>
-        <p class="sem-card-type">Workshop</p>
-        <h3 class="sem-card-title">Design Challenge Workshop</h3>
-        <p class="sem-card-desc">Analyse af UI-tendenser inden for hobby og e-handel med Awwwards som kilde. Analyserede 3 gode og 2 svage sites ud fra farver, typografi og layout. Designede derefter eget website: VAULT Sport & Fitness i Figma.</p>
-        <div class="sem-card-meta">
-          <span class="sem-pill">UI-analyse</span>
-          <span class="sem-pill">Figma</span>
-          <span class="sem-pill">E-handel</span>
-        </div>
-        <p class="sem-card-date">27. februar 2026</p>
-      </div>
+ <!-- Design Challenge -->
+ <div class="sem-card">
+ <div class="sem-card-img">
+ <!-- Skift ud med dit VAULT Figma-screenshot -->
+ <img src="img/2026/05/IMG_2753-scaled.jpeg" alt="Design Challenge Workshop" />
+ </div>
+ <p class="sem-card-type">Workshop</p>
+ <h3 class="sem-card-title">Design Challenge Workshop</h3>
+ <p class="sem-card-desc">Analyse af UI-tendenser inden for hobby og e-handel med Awwwards som kilde. Analyserede 3 gode og 2 svage sites ud fra farver, typografi og layout. Designede derefter eget website: VAULT Sport & Fitness i Figma.</p>
+ <div class="sem-card-meta">
+ <span class="sem-pill">UI-analyse</span>
+ <span class="sem-pill">Figma</span>
+ <span class="sem-pill">E-handel</span>
+ </div>
+ <p class="sem-card-date">27. februar 2026</p>
+ </div>
 
-      <!-- Code Challenge -->
-      <div class="sem-card">
-        <div class="sem-card-img">
-          <!-- Evt. et billede fra Code Challenge — post-its eller skærm -->
-          <img src="img/2026/05/IMG_6066-scaled.jpeg" alt="Code Challenge Workshop" />
-        </div>
-        <p class="sem-card-type">Workshop</p>
-        <h3 class="sem-card-title">Code Challenge Workshop</h3>
-        <p class="sem-card-desc">Lærte grundlæggende programmeringslogik ved at simulere en CPU fysisk med farvede post-its. 10 stigende opgaver dækkede sekvens, løkker, variable, aritmetik, betingede hop og binær logik — uden at skrive én linje kode.</p>
-        <div class="sem-card-meta">
-          <span class="sem-pill">CPU-logik</span>
-          <span class="sem-pill">Programmering</span>
-          <span class="sem-pill">Marc Altfuldisch</span>
-        </div>
-        <p class="sem-card-date">Forår 2026</p>
-      </div>
+ <!-- Code Challenge -->
+ <div class="sem-card">
+ <div class="sem-card-img">
+ <!-- Evt. et billede fra Code Challenge, post-its eller skærm -->
+ <img src="img/2026/05/IMG_6066-scaled.jpeg" alt="Code Challenge Workshop" />
+ </div>
+ <p class="sem-card-type">Workshop</p>
+ <h3 class="sem-card-title">Code Challenge Workshop</h3>
+ <p class="sem-card-desc">Lærte grundlæggende programmeringslogik ved at simulere en CPU fysisk med farvede post-its. 10 stigende opgaver dækkede sekvens, løkker, variable, aritmetik, betingede hop og binær logik, uden at skrive én linje kode.</p>
+ <div class="sem-card-meta">
+ <span class="sem-pill">CPU-logik</span>
+ <span class="sem-pill">Programmering</span>
+ <span class="sem-pill">Marc Altfuldisch</span>
+ </div>
+ <p class="sem-card-date">Forår 2026</p>
+ </div>
 
-    </div>
+ </div>
 
-    <!-- Ekstra billeder fra workshops -->
-    <div class="sem-gallery-label" style="margin-top:3rem;">Flere billeder fra forløbet</div>
-  </div>
+ <!-- Ekstra billeder fra workshops -->
+ <div class="sem-gallery-label" style="margin-top:3rem;">Flere billeder fra forløbet</div>
+ </div>
 
-  <!-- GALLERI 2 -->
-  <div class="sem-gallery-2">
-    <div class="g"><img src="img/2026/05/IMG_3380-2-1-scaled.jpg"  alt="" /></div>
-    <div class="g"><img src="img/2026/05/IMG_6425-1-scaled.jpg" alt="" /></div>
-    <div class="g"><img src="img/2026/05/IMG_6267-1-scaled.jpg" alt="" /></div>
-    <div class="g"><img src="img/2026/05/IMG_6265-1-scaled.jpg" alt="" /></div>
-    <div class="g"><img src="img/2026/05/IMG_6394-1-scaled.jpg" alt="" /></div>
-    <div class="g"><img src="img/2026/05/IMG_3388-1-scaled.jpg" alt="" /></div>
-  </div>
+ <!-- GALLERI 2 -->
+ <div class="sem-gallery-2">
+ <div class="g"><img src="img/2026/05/IMG_3380-2-1-scaled.jpg" alt="" /></div>
+ <div class="g"><img src="img/2026/05/IMG_6425-1-scaled.jpg" alt="" /></div>
+ <div class="g"><img src="img/2026/05/IMG_6267-1-scaled.jpg" alt="" /></div>
+ <div class="g"><img src="img/2026/05/IMG_6265-1-scaled.jpg" alt="" /></div>
+ <div class="g"><img src="img/2026/05/IMG_6394-1-scaled.jpg" alt="" /></div>
+ <div class="g"><img src="img/2026/05/IMG_3388-1-scaled.jpg" alt="" /></div>
+ </div>
 
-  <!-- OUTRO -->
-  <div class="sem-outro">
-    <div>
-      <p class="sem-outro-sub">Semester-refleksion</p>
-      <h2 class="sem-outro-title">Et semester med mange lag</h2>
-    </div>
-    <p class="sem-outro-text">
-      2. semester var mere komplekst end det første — ikke bare fagligt, men også samarbejdsmæssigt. Jeg lærte at kode JavaScript, analysere UI-systemer, styre et scrumboard og navigere i et gruppesamarbejde der ikke altid gik som planlagt. Det har gjort mig bedre til at arbejde struktureret, kommunikere tydeligere og forstå at processen er en del af produktet.
-    </p>
-  </div>
+ <!-- OUTRO -->
+ <div class="sem-outro">
+ <div>
+ <p class="sem-outro-sub">Semester-refleksion</p>
+ <h2 class="sem-outro-title">Et semester med mange lag</h2>
+ </div>
+ <p class="sem-outro-text">
+ 2. semester var mere komplekst end det første, ikke bare fagligt, men også samarbejdsmæssigt. Jeg lærte at kode JavaScript, analysere UI-systemer, styre et scrumboard og navigere i et gruppesamarbejde der ikke altid gik som planlagt. Det har gjort mig bedre til at arbejde struktureret, kommunikere tydeligere og forstå at processen er en del af produktet.
+ </p>
+ </div>
 
  </article>
 </main>
