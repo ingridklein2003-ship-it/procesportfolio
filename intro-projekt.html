@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Intro Projekt — Ingrid Klein</title>
+<meta name="description" content="Procesportfolio for Ingrid Klein, multimediedesign.">
+<style>:root{
+  --ink:#1a1a1a; --muted:#6b6b6b; --line:#e6e4e0; --bg:#fbfaf8; --card:#fff;
+  --accent:#cc1016; --max:900px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font:400 17px/1.65 "Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+}
+img{max-width:100%; height:auto; display:block}
+a{color:inherit}
+
+/* header */
+.top{
+  position:sticky; top:0; z-index:50; background:rgba(251,250,248,.92);
+  backdrop-filter:blur(8px); border-bottom:1px solid var(--line);
+  display:flex; align-items:center; gap:1.5rem; padding:.85rem 1.5rem; flex-wrap:wrap;
+}
+.brand{text-decoration:none; display:flex; flex-direction:column; line-height:1.15}
+.brand span{font-weight:700; letter-spacing:-.01em}
+.brand small{color:var(--muted); font-size:.78rem}
+.burger{display:none; margin-left:auto; background:none; border:0; font-size:1.4rem; cursor:pointer}
+
+.nav{margin-left:auto}
+.nav ul{list-style:none; margin:0; padding:0; display:flex; gap:1.4rem}
+.nav>ul>li{position:relative}
+.nav a{text-decoration:none; font-size:.94rem; color:var(--muted); padding:.35rem 0; display:block}
+.nav a:hover{color:var(--ink)}
+.nav li.on>a{color:var(--ink); font-weight:600}
+.nav .sub{
+  display:none; position:absolute; left:-.9rem; top:100%; flex-direction:column; gap:.1rem;
+  background:var(--card); border:1px solid var(--line); border-radius:10px;
+  padding:.6rem .9rem; min-width:230px; box-shadow:0 12px 30px rgba(0,0,0,.08);
+}
+.nav>ul>li:hover .sub{display:flex}
+.nav .sub a{padding:.3rem 0; font-size:.9rem}
+
+/* indhold */
+main{padding:2.5rem 1.25rem 4rem; overflow-x:clip}
+.page{max-width:var(--max); margin:0 auto}
+.embed{max-width:1180px; margin:0 auto; overflow-x:clip}
+.embed img{max-width:100%}
+h1{font-size:clamp(2rem,5vw,2.9rem); line-height:1.1; letter-spacing:-.02em; margin:0 0 1rem}
+h2{font-size:1.5rem; letter-spacing:-.01em; margin:2.4rem 0 .8rem}
+h3{font-size:1.15rem; margin:1.8rem 0 .5rem}
+p{margin:0 0 1rem}
+.lead{font-size:1.2rem; color:var(--muted); max-width:36em}
+.prose{margin:0 0 1.4rem}
+.prose ul,.prose ol{padding-left:1.2rem}
+
+figure{margin:1.8rem 0}
+figure img{border-radius:12px; width:100%}
+figcaption{color:var(--muted); font-size:.87rem; margin-top:.5rem}
+
+.gallery{display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr)); gap:.9rem; margin:1.8rem 0}
+.gallery img{border-radius:10px; aspect-ratio:4/3; object-fit:cover; width:100%}
+
+.card{
+  display:flex; gap:1.1rem; align-items:flex-start; background:var(--card);
+  border:1px solid var(--line); border-radius:14px; padding:1.1rem; margin:.9rem 0;
+}
+.card img{width:110px; border-radius:9px; flex:0 0 auto; aspect-ratio:1; object-fit:cover}
+.card h3{margin:0 0 .3rem; font-size:1.05rem}
+.card p{margin:0; color:var(--muted); font-size:.94rem}
+
+.video{position:relative; aspect-ratio:16/9; margin:1.8rem 0}
+.video iframe{position:absolute; inset:0; width:100%; height:100%; border:0; border-radius:12px}
+
+.btn{
+  display:inline-block; text-decoration:none; background:var(--ink); color:#fff;
+  padding:.6rem 1.2rem; border-radius:999px; font-size:.92rem;
+}
+
+/* forside */
+.hero{padding-top:2rem; padding-bottom:1rem}
+.semgrid{
+  max-width:var(--max); margin:2.5rem auto 0;
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:1.2rem;
+}
+.sem{background:var(--card); border:1px solid var(--line); border-radius:14px; padding:1.3rem 1.4rem}
+.sem h2{margin:0 0 .7rem; font-size:1.2rem}
+.sem h2 a{text-decoration:none}
+.sem ul{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:.4rem}
+.sem a{color:var(--muted); text-decoration:none; font-size:.94rem}
+.sem a:hover{color:var(--ink)}
+
+.foot{border-top:1px solid var(--line); padding:2rem 1.5rem; color:var(--muted); font-size:.88rem; text-align:center}
+
+@media(max-width:860px){
+  .burger{display:block}
+  .nav{flex-basis:100%; display:none}
+  body.open .nav{display:block}
+  .nav ul{flex-direction:column; gap:.2rem}
+  .nav .sub{display:flex; position:static; border:0; box-shadow:none; padding:.2rem 0 .6rem 1rem; background:none}
+  .card{flex-direction:column}
+  .card img{width:100%; aspect-ratio:16/9}
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="index.html"><span>Ingrid Klein</span><small>Procesportfolio</small></a>
+  <button class="burger" aria-label="Menu" onclick="document.body.classList.toggle('open')">☰</button>
+  <nav class="nav"><ul>
+<li class="on"><a href="1-semester.html">1. Semester</a>
+<ul class="sub">
+<li><a href="227976-2.html">Studie-tur</a></li>
+<li class="on"><a href="intro-projekt.html">Intro Projekt</a></li>
+<li><a href="re-design-af-en-hjemmeside.html">Re-design af en hjemmeside</a></li>
+<li><a href="elementor-228182.html">Installationsprojekt</a></li>
+<li><a href="our-mission.html">KleinDesign</a></li>
+<li><a href="moving-art.html">Moving Art</a></li>
+<li><a href="tone-of-voice-workshop.html">Tone Of Voice</a></li>
+<li><a href="prototyping-workshop.html">Prototyping</a></li>
+</ul>
+</li>
+<li><a href="2-semester.html">2. Semester</a>
+<ul class="sub">
+<li><a href="jawasript.html">JavaScript</a></li>
+<li><a href="elementor-side-228653.html">Projekt 4</a></li>
+<li><a href="projekt-5-eksamensprojekt.html">Projekt 5 – Eksamensprojekt</a></li>
+<li><a href="code-challenge-workshop.html">Code Challenge Workshop</a></li>
+<li><a href="elementor-228775.html">Design Challenge Workshop</a></li>
+<li><a href="projekt.html">Workshop Content Creation</a></li>
+</ul>
+</li>
+<li><a href="3-semester.html">3. Semester</a>
+</li>
+<li><a href="studiemakker-paa-tvaers.html">Studiemakker på tværs</a>
+</li>
+</ul></nav>
+</header>
+<main>
+<article class="page"><h1>Intro Projekt</h1>
+<h2>En Rodet Dag</h2>
+<div class="prose"><strong><i>"Elsker IS  - </i><i>Hader ROD"</i></strong><p class="p1">I intro-ugen fik vi opgaven at lave en historie ud fra to ord: <i>"Elsker IS"</i> og <i>"Hader ROD"</i>. </p><p class="p1">Formålet var at arbejde med storytelling, storyboard og video-produktion, og at præsentere resultatet som en kort film (30 sek. – 3 min.). </p><p class="p1">Vi startede med idéudvikling, hvor vi brainstormede forskellige scenarier omkring de to ord. Vi ville skabe en humoristisk og genkendelig historie, der havde en klar pointe og en rød tråd. </p><p class="p2">Herefter lavede vi et storyboard, hvor vi visualiserede scenen for scenen</p><ul style="direction: ltr; unicode-bidi: embed; margin-top: 0in; margin-bottom: 0in;" type="disc"><li style="margin-top: 0px; margin-bottom: 0px; vertical-align: middle; color: black;">Introduktion med vores ord, titel og gruppemedlemmer.</li><li style="margin-top: 0px; margin-bottom: 0px; vertical-align: middle; color: black;">Karakteren der elsker is.</li><li style="margin-top: 0px; margin-bottom: 0px; vertical-align: middle; color: black;">Kontrasten med kaos/rod som han hader.</li><li style="margin-top: 0px; margin-bottom: 0px; vertical-align: middle; color: black;">Konflikt og løsning, hvor pointen bliver tydelig.</li></ul> Værktøjer &amp; metoder<ul style="direction: ltr; unicode-bidi: embed; margin-top: 0in; margin-bottom: 0in;" type="disc"><li style="margin-top: 0; margin-bottom: 0; vertical-align: middle;">Storytelling: Vi arbejdede med en klassisk opbygning (intro, konflikt, løsning).</li></ul><ul style="direction: ltr; unicode-bidi: embed; margin-top: 0in; margin-bottom: 0in;" type="disc"><li style="margin-top: 0; margin-bottom: 0; vertical-align: middle;">Storyboard: Brugte skitser til at planlægge filmens scener.</li></ul><ul style="direction: ltr; unicode-bidi: embed; margin-top: 0in; margin-bottom: 0in;" type="disc"><li style="margin-top: 0; margin-bottom: 0; vertical-align: middle;">Videooptagelse: Optog med mobil.</li></ul><ul style="direction: ltr; unicode-bidi: embed; margin-top: 0in; margin-bottom: 0in;" type="disc"><li style="margin-top: 0; margin-bottom: 0; vertical-align: middle;">Redigering: Klippet i CapCut.</li></ul><p> </p></div>
+<figure><img src="img/2025/09/20250904_103314-1.jpg" alt="" loading="lazy"></figure>
+<div class="gallery"><img src="img/2025/09/20250904_121859-2-scaled.jpg" alt="" loading="lazy"><img src="img/2025/09/20250904_123736-2-scaled.jpg" alt="" loading="lazy"><img src="img/2025/09/20250904_1243171-3-scaled.jpg" alt="" loading="lazy"><img src="img/2025/09/20250904_121422-1-scaled.jpg" alt="" loading="lazy"><img src="img/2025/09/20250904_103314-1.jpg" alt="" loading="lazy"></div>
+<h2>Refleksioner</h2>
+<div class="prose"><p style="margin: 0in; font-family: Calibri; font-size: 11.0pt;">Da vi fik opgaven og startede på brainstormen, kom vi hurtigt med forskellige idéer, men jeg oplevede, at processen ikke var så struktureret, som den kunne have været. Vi snakkede meget frem og tilbage, men vi fik ikke skrevet idéerne ned undervejs. Det tror jeg kunne have hjulpet os, fordi vi så kunne have sammenlignet idéerne bedre, måske sat elementer sammen på tværs, og lettere være kommet til enighed. Uden noterne blev det lidt uoverskueligt at holde styr på alle forslagene, hvilket også gjorde det sværere at vælge den endelige idé. Til sidst fandt vi dog frem til en historie, som vi alle kunne stå inde for.</p><p style="margin: 0in; font-family: Calibri; font-size: 11.0pt;">Under selve produktionen af videoen fulgte vi vores storyboard, men vi arbejdede nok lidt for hurtigt. Vi havde travlt med at komme igennem scenerne, og det betød, at vi ikke altid stoppede op og vurderede, om optagelserne var gode nok, eller om vi burde have taget en scene om. Hvis vi havde gjort det, kunne kvaliteten af filmen være blevet bedre. For eksempel kunne nogle af scenerne godt have været mere flydende, især i de sekvenser hvor vi brugte stop motion. Her blev figurerne rykket lidt tilfældigt, uden at vi tænkte over hvor meget eller hvor lidt de skulle rykkes for at få en god effekt. Resultatet er, at filmen fremstår lidt for hurtigt produceret, hvilket jeg synes kan ses i det færdige produkt.</p><p style="margin: 0in; font-family: Calibri; font-size: 11.0pt;">Til gengæld synes jeg, at vi lærte meget af processen. Jeg er blevet mere opmærksom på, hvor vigtigt det er at strukturere brainstormen og dokumentere idéerne, så man har noget konkret at arbejde ud fra. Jeg har også erfaret, at det kan betale sig at bruge lidt ekstra tid på optagelserne, selvom det tager længere tid, fordi det giver et bedre slutprodukt</p></div>
+<div class="video"><iframe src="https://www.youtube.com/embed/Dj0KLwU9cik" frameborder="0" allowfullscreen loading="lazy"></iframe></div></article>
+</main>
+<footer class="foot">
+  <p>Procesportfolio · Multimediedesign · Ingrid Klein</p>
+</footer>
+</body>
+</html>

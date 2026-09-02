@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KleinDesign — Ingrid Klein</title>
+<meta name="description" content="Procesportfolio for Ingrid Klein, multimediedesign.">
+<style>:root{
+  --ink:#1a1a1a; --muted:#6b6b6b; --line:#e6e4e0; --bg:#fbfaf8; --card:#fff;
+  --accent:#cc1016; --max:900px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font:400 17px/1.65 "Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+}
+img{max-width:100%; height:auto; display:block}
+a{color:inherit}
+
+/* header */
+.top{
+  position:sticky; top:0; z-index:50; background:rgba(251,250,248,.92);
+  backdrop-filter:blur(8px); border-bottom:1px solid var(--line);
+  display:flex; align-items:center; gap:1.5rem; padding:.85rem 1.5rem; flex-wrap:wrap;
+}
+.brand{text-decoration:none; display:flex; flex-direction:column; line-height:1.15}
+.brand span{font-weight:700; letter-spacing:-.01em}
+.brand small{color:var(--muted); font-size:.78rem}
+.burger{display:none; margin-left:auto; background:none; border:0; font-size:1.4rem; cursor:pointer}
+
+.nav{margin-left:auto}
+.nav ul{list-style:none; margin:0; padding:0; display:flex; gap:1.4rem}
+.nav>ul>li{position:relative}
+.nav a{text-decoration:none; font-size:.94rem; color:var(--muted); padding:.35rem 0; display:block}
+.nav a:hover{color:var(--ink)}
+.nav li.on>a{color:var(--ink); font-weight:600}
+.nav .sub{
+  display:none; position:absolute; left:-.9rem; top:100%; flex-direction:column; gap:.1rem;
+  background:var(--card); border:1px solid var(--line); border-radius:10px;
+  padding:.6rem .9rem; min-width:230px; box-shadow:0 12px 30px rgba(0,0,0,.08);
+}
+.nav>ul>li:hover .sub{display:flex}
+.nav .sub a{padding:.3rem 0; font-size:.9rem}
+
+/* indhold */
+main{padding:2.5rem 1.25rem 4rem; overflow-x:clip}
+.page{max-width:var(--max); margin:0 auto}
+.embed{max-width:1180px; margin:0 auto; overflow-x:clip}
+.embed img{max-width:100%}
+h1{font-size:clamp(2rem,5vw,2.9rem); line-height:1.1; letter-spacing:-.02em; margin:0 0 1rem}
+h2{font-size:1.5rem; letter-spacing:-.01em; margin:2.4rem 0 .8rem}
+h3{font-size:1.15rem; margin:1.8rem 0 .5rem}
+p{margin:0 0 1rem}
+.lead{font-size:1.2rem; color:var(--muted); max-width:36em}
+.prose{margin:0 0 1.4rem}
+.prose ul,.prose ol{padding-left:1.2rem}
+
+figure{margin:1.8rem 0}
+figure img{border-radius:12px; width:100%}
+figcaption{color:var(--muted); font-size:.87rem; margin-top:.5rem}
+
+.gallery{display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr)); gap:.9rem; margin:1.8rem 0}
+.gallery img{border-radius:10px; aspect-ratio:4/3; object-fit:cover; width:100%}
+
+.card{
+  display:flex; gap:1.1rem; align-items:flex-start; background:var(--card);
+  border:1px solid var(--line); border-radius:14px; padding:1.1rem; margin:.9rem 0;
+}
+.card img{width:110px; border-radius:9px; flex:0 0 auto; aspect-ratio:1; object-fit:cover}
+.card h3{margin:0 0 .3rem; font-size:1.05rem}
+.card p{margin:0; color:var(--muted); font-size:.94rem}
+
+.video{position:relative; aspect-ratio:16/9; margin:1.8rem 0}
+.video iframe{position:absolute; inset:0; width:100%; height:100%; border:0; border-radius:12px}
+
+.btn{
+  display:inline-block; text-decoration:none; background:var(--ink); color:#fff;
+  padding:.6rem 1.2rem; border-radius:999px; font-size:.92rem;
+}
+
+/* forside */
+.hero{padding-top:2rem; padding-bottom:1rem}
+.semgrid{
+  max-width:var(--max); margin:2.5rem auto 0;
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:1.2rem;
+}
+.sem{background:var(--card); border:1px solid var(--line); border-radius:14px; padding:1.3rem 1.4rem}
+.sem h2{margin:0 0 .7rem; font-size:1.2rem}
+.sem h2 a{text-decoration:none}
+.sem ul{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:.4rem}
+.sem a{color:var(--muted); text-decoration:none; font-size:.94rem}
+.sem a:hover{color:var(--ink)}
+
+.foot{border-top:1px solid var(--line); padding:2rem 1.5rem; color:var(--muted); font-size:.88rem; text-align:center}
+
+@media(max-width:860px){
+  .burger{display:block}
+  .nav{flex-basis:100%; display:none}
+  body.open .nav{display:block}
+  .nav ul{flex-direction:column; gap:.2rem}
+  .nav .sub{display:flex; position:static; border:0; box-shadow:none; padding:.2rem 0 .6rem 1rem; background:none}
+  .card{flex-direction:column}
+  .card img{width:100%; aspect-ratio:16/9}
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="index.html"><span>Ingrid Klein</span><small>Procesportfolio</small></a>
+  <button class="burger" aria-label="Menu" onclick="document.body.classList.toggle('open')">☰</button>
+  <nav class="nav"><ul>
+<li class="on"><a href="1-semester.html">1. Semester</a>
+<ul class="sub">
+<li><a href="227976-2.html">Studie-tur</a></li>
+<li><a href="intro-projekt.html">Intro Projekt</a></li>
+<li><a href="re-design-af-en-hjemmeside.html">Re-design af en hjemmeside</a></li>
+<li><a href="elementor-228182.html">Installationsprojekt</a></li>
+<li class="on"><a href="our-mission.html">KleinDesign</a></li>
+<li><a href="moving-art.html">Moving Art</a></li>
+<li><a href="tone-of-voice-workshop.html">Tone Of Voice</a></li>
+<li><a href="prototyping-workshop.html">Prototyping</a></li>
+</ul>
+</li>
+<li><a href="2-semester.html">2. Semester</a>
+<ul class="sub">
+<li><a href="jawasript.html">JavaScript</a></li>
+<li><a href="elementor-side-228653.html">Projekt 4</a></li>
+<li><a href="projekt-5-eksamensprojekt.html">Projekt 5 – Eksamensprojekt</a></li>
+<li><a href="code-challenge-workshop.html">Code Challenge Workshop</a></li>
+<li><a href="elementor-228775.html">Design Challenge Workshop</a></li>
+<li><a href="projekt.html">Workshop Content Creation</a></li>
+</ul>
+</li>
+<li><a href="3-semester.html">3. Semester</a>
+</li>
+<li><a href="studiemakker-paa-tvaers.html">Studiemakker på tværs</a>
+</li>
+</ul></nav>
+</header>
+<main>
+<article class="page"><h1>KleinDesign</h1>
+<h2>Klein
+Design</h2>
+<h3>Eksamens-projekt</h3>
+<div class="prose"><p>Dette projekt omhandler udviklingen af min personlige præsentationsportfolio <em data-start="656" data-end="670">Klein Design</em>, som er kodet fra bunden i HTML og CSS. Projektet har strakt sig over en længere periode og har været en meget lærerig proces, hvor jeg både har arbejdet intensivt med design, kodning, brugeroplevelse og personlig branding.</p></div>
+<figure><img src="img/2025/12/e466149e-865c-4841-82a8-6b915e80d6b4.jpeg" alt="" loading="lazy"></figure>
+<figure><img src="img/2025/12/9db71b48-74cb-4f47-a0ea-caa49512ccad-1.jpeg" alt="" loading="lazy"></figure>
+<h3>Proces</h3>
+<div class="prose"><p>Arbejdet med hjemmesiden har været en iterativ proces, hvor jeg løbende har udviklet, testet, justeret og forbedret løsningen. Jeg startede med en overordnet idé om, hvordan jeg gerne ville præsentere mig selv visuelt og professionelt, men meget af det endelige udtryk er opstået undervejs i processen.</p><p>Jeg brugte især meget tid på at finde de rigtige farver, typografi og den rette stemning for siden. Det var vigtigt for mig, at designet føltes personligt og afspejlede, hvem jeg er, samtidig med at det fremstod professionelt og overskueligt. Undervejs oplevede jeg, at små ændringer i farver, spacing og layout havde stor betydning for helhedsindtrykket, hvilket gjorde processen både tidskrævende og lærerig.</p></div>
+<h2>Designvalg og visuel identitet</h2>
+<div class="prose"><p data-start="1675" data-end="2013">Farvevalget blev truffet med fokus på balance mellem det rolige og det karakterfulde. Jeg ønskede et udtryk, der ikke var for larmende, men som stadig havde personlighed. Typografi og opbygning blev valgt ud fra læsbarhed og hierarki, og jeg arbejdede bevidst med designprincipper som C.R.A.P. for at skabe sammenhæng på tværs af siderne.</p><p data-start="2015" data-end="2369">Jeg har desuden arbejdet med mobile first-princippet, hvilket betød, at mobilvisningen blev prioriteret højt. Det gav en del udfordringer undervejs, da layoutet flere gange fungerede godt på desktop, men ikke på mobil. Disse udfordringer lærte mig vigtigheden af at teste løbende og ikke antage, at en løsning automatisk fungerer på alle skærmstørrelser.</p></div>
+<figure><img src="img/2025/12/Skaermbillede-2025-12-17-kl.-23.20.07-scaled.jpg" alt="" loading="lazy"></figure>
+<article class="card"><div><h3>Kodning og teknisk arbejde</h3><p>Hjemmesiden er kodet fra bunden i HTML5 og CSS, og jeg har anvendt BEM-struktur for at holde koden organiseret og overskuelig. Undervejs har jeg arbejdet meget med fejlfinding og justeringer, særligt i forhold til responsivt design, margin, padding og placering af elementer.</p></div></article>
+<article class="card"><div><p>Processen har ikke altid været lige nem, og der har været tidspunkter, hvor jeg sad fast i koden. Her lærte jeg vigtigheden af at tage pauser, arbejde systematisk og nogle gange acceptere, at løsningen kræver flere forsøg, før den fungerer optimalt.</p></div></article>
+<figure><img src="img/2025/12/screencapture-kleinurin-fo-univers-html-2025-12-17-23_02_37-scaled.jpg" alt="" loading="lazy"></figure>
+<article class="card"><div><h3>Samarbejde og studiegruppe</h3><p>Selvom projektet er individuelt, har studiegruppen spillet en vigtig rolle i min proces. Vi mødtes kun fysisk én gang, men til gengæld brugte jeg studiegruppen meget online. Gruppen fungerede som et trygt rum, hvor det var nemt at stille spørgsmål, dele frustrationer og hjælpe hinanden videre.</p></div></article>
+<article class="card"><div><p>Jeg oplevede, at folk var gode til at svare og støtte hinanden, også når nogen sad fast eller var pressede. Denne form for online samarbejde har været en stor hjælp og har givet mig følelsen af ikke at stå alene i processen, selvom arbejdet primært blev lavet individuelt.</p></div></article>
+<h2>Hvad jeg er glad for, jeg gjorde 
+- 
+Hvad jeg ville gøre anderledes næste gang</h2>
+<figure><img src="img/2025/12/Skaermbillede-2025-12-17-kl.-23.46.58.jpg" alt="" loading="lazy"></figure>
+<figure><img src="img/2025/12/Skaermbillede-2025-12-17-kl.-23.45.50.jpg" alt="" loading="lazy"></figure>
+<figure><img src="img/2025/12/Skaermbillede-2025-12-17-kl.-23.48.44.jpg" alt="" loading="lazy"></figure>
+<div class="prose"><p data-start="3574" data-end="3913">Jeg er især glad for, at jeg gav mig selv lov til at fordybe mig i projektet og arbejde grundigt med detaljerne. Jeg har ikke bare forsøgt at blive færdig, men har haft fokus på kvalitet, sammenhæng og personlighed. Derudover er jeg glad for, at jeg turde justere og ændre løsninger undervejs, i stedet for at holde fast i de første idéer.</p><p data-start="3915" data-end="4071">Jeg er også tilfreds med, at jeg har arbejdet konsekvent med mobile first og har taget feedback fra brugertest seriøst og brugt det aktivt til forbedringer.</p><p data-start="4121" data-end="4387">Hvis jeg skulle lave projektet igen, ville jeg arbejde mere struktureret fra starten og lave en endnu klarere plan for både design og kodning. Jeg ville også bruge mere tid på tidlig test, så problemer med layout og responsivitet kunne opdages tidligere i processen.</p><p data-start="4389" data-end="4567">Derudover ville jeg forsøge at stole lidt mere på mine første beslutninger og ikke bruge helt så lang tid på at tvivle på farver og detaljer, da det til tider bremsede processen.</p><h3 data-start="4569" data-end="4592"> </h3></div>
+<h2>Samlet refleksion</h2>
+<article class="card"><div><p>Arbejdet med Klein Design har givet mig en markant dybere forståelse for sammenhængen mellem design, kode og brugeroplevelse, og hvordan disse elementer ikke kan betragtes hver for sig, men skal fungere i samspil for at skabe en velfungerende digital løsning. Projektet har tydeliggjort for mig, at selv små designvalg – såsom farver, typografi, spacing og struktur – kan have stor betydning for, hvordan en bruger oplever og forstår en hjemmeside.
+
+Jeg har udviklet mig både fagligt og personligt gennem processen. Fagligt har jeg opnået større sikkerhed i frontend-udvikling og i at omsætte designidéer til fungerende kode. Samtidig har jeg fået en bedre forståelse for, hvordan teori fra undervisningen, såsom designprincipper, mobile first og brugercentreret design, anvendes i praksis. Projektet har vist mig, at teori først virkelig giver mening, når den afprøves og udfordres i konkrete løsninger.</p></div></article>
+<article class="card"><div><p>Personligt har projektet givet mig indsigt i min egen arbejdsproces. Jeg har erfaret, at jeg arbejder bedst, når jeg får lov til at fordybe mig og arbejde iterativt, hvor løsninger løbende justeres og forbedres. Jeg har også lært, at min perfektionisme både kan være en styrke og en udfordring. På den ene side har den gjort, at jeg har været grundig og detaljeorienteret, men på den anden side har den til tider gjort processen længere og mere krævende end nødvendigt.</p></div></article>
+<figure><img src="img/2025/12/IMG_3371-1-scaled-e1766015525308.jpg" alt="" loading="lazy"></figure>
+<article class="card"><div><p>Projektet har desuden lært mig vigtigheden af at håndtere modgang og frustration i udviklingsprocessen. Der har været perioder, hvor jeg har siddet fast i kodningen eller været i tvivl om designvalg, hvilket har været udfordrende. Her har jeg lært at tage et skridt tilbage, søge hjælp og acceptere, at fejl og justeringer er en naturlig del af læringen.
+
+Samarbejdet i studiegruppen har også haft stor betydning for min proces. Selvom vi kun mødtes fysisk én gang, oplevede jeg et stærkt fællesskab online, hvor det var nemt at stille spørgsmål og hjælpe hinanden. Denne form for samarbejde har vist mig værdien af faglig sparring og videndeling, også når samarbejdet foregår digitalt, og har givet mig en større forståelse for, hvordan man kan indgå i tværfaglige og udviklingsorienterede arbejdsprocesser.</p></div></article>
+<article class="card"><div><p>Samlet set har arbejdet med Klein Design været både udfordrende og meget lærerigt. Projektet har givet mig et solidt fundament for mit videre studieforløb og har styrket min forståelse for multimediedesignerens rolle i praksis. Jeg står tilbage med en større faglig selvtillid og en klarere forståelse af, hvordan jeg fremadrettet kan udvikle mine kompetencer og arbejde mere bevidst med både design, kode og brugeroplevelse.</p></div></article></article>
+</main>
+<footer class="foot">
+  <p>Procesportfolio · Multimediedesign · Ingrid Klein</p>
+</footer>
+</body>
+</html>

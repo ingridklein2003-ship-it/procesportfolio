@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Studie-tur — Ingrid Klein</title>
+<meta name="description" content="Procesportfolio for Ingrid Klein, multimediedesign.">
+<style>:root{
+  --ink:#1a1a1a; --muted:#6b6b6b; --line:#e6e4e0; --bg:#fbfaf8; --card:#fff;
+  --accent:#cc1016; --max:900px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font:400 17px/1.65 "Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+}
+img{max-width:100%; height:auto; display:block}
+a{color:inherit}
+
+/* header */
+.top{
+  position:sticky; top:0; z-index:50; background:rgba(251,250,248,.92);
+  backdrop-filter:blur(8px); border-bottom:1px solid var(--line);
+  display:flex; align-items:center; gap:1.5rem; padding:.85rem 1.5rem; flex-wrap:wrap;
+}
+.brand{text-decoration:none; display:flex; flex-direction:column; line-height:1.15}
+.brand span{font-weight:700; letter-spacing:-.01em}
+.brand small{color:var(--muted); font-size:.78rem}
+.burger{display:none; margin-left:auto; background:none; border:0; font-size:1.4rem; cursor:pointer}
+
+.nav{margin-left:auto}
+.nav ul{list-style:none; margin:0; padding:0; display:flex; gap:1.4rem}
+.nav>ul>li{position:relative}
+.nav a{text-decoration:none; font-size:.94rem; color:var(--muted); padding:.35rem 0; display:block}
+.nav a:hover{color:var(--ink)}
+.nav li.on>a{color:var(--ink); font-weight:600}
+.nav .sub{
+  display:none; position:absolute; left:-.9rem; top:100%; flex-direction:column; gap:.1rem;
+  background:var(--card); border:1px solid var(--line); border-radius:10px;
+  padding:.6rem .9rem; min-width:230px; box-shadow:0 12px 30px rgba(0,0,0,.08);
+}
+.nav>ul>li:hover .sub{display:flex}
+.nav .sub a{padding:.3rem 0; font-size:.9rem}
+
+/* indhold */
+main{padding:2.5rem 1.25rem 4rem; overflow-x:clip}
+.page{max-width:var(--max); margin:0 auto}
+.embed{max-width:1180px; margin:0 auto; overflow-x:clip}
+.embed img{max-width:100%}
+h1{font-size:clamp(2rem,5vw,2.9rem); line-height:1.1; letter-spacing:-.02em; margin:0 0 1rem}
+h2{font-size:1.5rem; letter-spacing:-.01em; margin:2.4rem 0 .8rem}
+h3{font-size:1.15rem; margin:1.8rem 0 .5rem}
+p{margin:0 0 1rem}
+.lead{font-size:1.2rem; color:var(--muted); max-width:36em}
+.prose{margin:0 0 1.4rem}
+.prose ul,.prose ol{padding-left:1.2rem}
+
+figure{margin:1.8rem 0}
+figure img{border-radius:12px; width:100%}
+figcaption{color:var(--muted); font-size:.87rem; margin-top:.5rem}
+
+.gallery{display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr)); gap:.9rem; margin:1.8rem 0}
+.gallery img{border-radius:10px; aspect-ratio:4/3; object-fit:cover; width:100%}
+
+.card{
+  display:flex; gap:1.1rem; align-items:flex-start; background:var(--card);
+  border:1px solid var(--line); border-radius:14px; padding:1.1rem; margin:.9rem 0;
+}
+.card img{width:110px; border-radius:9px; flex:0 0 auto; aspect-ratio:1; object-fit:cover}
+.card h3{margin:0 0 .3rem; font-size:1.05rem}
+.card p{margin:0; color:var(--muted); font-size:.94rem}
+
+.video{position:relative; aspect-ratio:16/9; margin:1.8rem 0}
+.video iframe{position:absolute; inset:0; width:100%; height:100%; border:0; border-radius:12px}
+
+.btn{
+  display:inline-block; text-decoration:none; background:var(--ink); color:#fff;
+  padding:.6rem 1.2rem; border-radius:999px; font-size:.92rem;
+}
+
+/* forside */
+.hero{padding-top:2rem; padding-bottom:1rem}
+.semgrid{
+  max-width:var(--max); margin:2.5rem auto 0;
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:1.2rem;
+}
+.sem{background:var(--card); border:1px solid var(--line); border-radius:14px; padding:1.3rem 1.4rem}
+.sem h2{margin:0 0 .7rem; font-size:1.2rem}
+.sem h2 a{text-decoration:none}
+.sem ul{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:.4rem}
+.sem a{color:var(--muted); text-decoration:none; font-size:.94rem}
+.sem a:hover{color:var(--ink)}
+
+.foot{border-top:1px solid var(--line); padding:2rem 1.5rem; color:var(--muted); font-size:.88rem; text-align:center}
+
+@media(max-width:860px){
+  .burger{display:block}
+  .nav{flex-basis:100%; display:none}
+  body.open .nav{display:block}
+  .nav ul{flex-direction:column; gap:.2rem}
+  .nav .sub{display:flex; position:static; border:0; box-shadow:none; padding:.2rem 0 .6rem 1rem; background:none}
+  .card{flex-direction:column}
+  .card img{width:100%; aspect-ratio:16/9}
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="index.html"><span>Ingrid Klein</span><small>Procesportfolio</small></a>
+  <button class="burger" aria-label="Menu" onclick="document.body.classList.toggle('open')">☰</button>
+  <nav class="nav"><ul>
+<li class="on"><a href="1-semester.html">1. Semester</a>
+<ul class="sub">
+<li class="on"><a href="227976-2.html">Studie-tur</a></li>
+<li><a href="intro-projekt.html">Intro Projekt</a></li>
+<li><a href="re-design-af-en-hjemmeside.html">Re-design af en hjemmeside</a></li>
+<li><a href="elementor-228182.html">Installationsprojekt</a></li>
+<li><a href="our-mission.html">KleinDesign</a></li>
+<li><a href="moving-art.html">Moving Art</a></li>
+<li><a href="tone-of-voice-workshop.html">Tone Of Voice</a></li>
+<li><a href="prototyping-workshop.html">Prototyping</a></li>
+</ul>
+</li>
+<li><a href="2-semester.html">2. Semester</a>
+<ul class="sub">
+<li><a href="jawasript.html">JavaScript</a></li>
+<li><a href="elementor-side-228653.html">Projekt 4</a></li>
+<li><a href="projekt-5-eksamensprojekt.html">Projekt 5 – Eksamensprojekt</a></li>
+<li><a href="code-challenge-workshop.html">Code Challenge Workshop</a></li>
+<li><a href="elementor-228775.html">Design Challenge Workshop</a></li>
+<li><a href="projekt.html">Workshop Content Creation</a></li>
+</ul>
+</li>
+<li><a href="3-semester.html">3. Semester</a>
+</li>
+<li><a href="studiemakker-paa-tvaers.html">Studiemakker på tværs</a>
+</li>
+</ul></nav>
+</header>
+<main>
+<article class="page"><h1>Studie-tur</h1>
+<h2>Stemmings billeder</h2>
+<div class="prose"><p>Hamburg har en helt særlig stemning, hvor kontraster mødes — mellem ro og bevægelse, struktur og kaos, nyt og gammelt.<br data-start="365" data-end="368" />Byen føltes levende hele tiden, både i de stille øjeblikke og i de steder, hvor lyset, lydene og menneskene skabte energi.<br data-start="490" data-end="493" />Jeg har valgt tre billeder, der for mig indfanger den stemning, jeg oplevede på turen — fra det rolige til det pulserende.</p></div>
+<figure><img src="img/2025/10/Untitled-Project-Instagram-Post-Square-5.jpg" alt="" loading="lazy"></figure>
+<figure><img src="img/2025/10/Untitled-Project-Instagram-Post-Square-8.jpg" alt="" loading="lazy"></figure>
+<figure><img src="img/2025/10/Untitled-Project-Instagram-Post-Square-9.jpg" alt="" loading="lazy"></figure>
+<div class="prose"><p style="text-align: center;">Lys, ro og bevægelse midt i storbyen – et øjeblik af ro i Hamburgs nattestemning.</p></div>
+<div class="prose"><p style="text-align: center;">Struktur og rytme i byens arkitektur – hvor farver og former skaber harmoni.</p></div>
+<div class="prose"><p style="text-align: center;">Kreativt kaos og ungdommelig energi – byens rå udtryk samlet i ét rum.</p></div>
+<h2>Typografi i byrummet</h2>
+<div class="prose"><p>På turen til Hamburg fandt jeg flere eksempler på typografier, hvor designet ikke helt passede til stedet.<br data-start="1722" data-end="1725" />Her analyserer jeg tre skilte og reflekterer over, hvordan de kunne forbedres, så de kommunikerer tydeligere.</p></div>
+<div class="prose"><strong>Molotow</strong><p data-start="420" data-end="925">Typografien på skiltet virker tung og lidt for kompakt i forhold til stedets kreative og energiske atmosfære. Formen på bogstaverne er sjov og anderledes, men det geometriske og bastante udtryk gør logoet en smule svært at aflæse på afstand. Jeg synes ikke, fonten formidler den dynamik og liv, man forbinder med et spillested. Hvis jeg skulle ændre noget, ville jeg vælge en mere organisk og åben font med tydeligere kontrast og rytme — fx en sans-serif med lidt rundhed for at skabe bevægelse og energi.</p></div>
+<figure><img src="img/2025/10/IMG_8344-2.jpeg" alt="" loading="lazy"></figure>
+<figure><img src="img/2025/10/IMG_8789-1.jpg" alt="" loading="lazy"></figure>
+<div class="prose">Lima
+<p data-start="1442" data-end="1939">Logoet forsøger at være kreativt ved at integrere en shisha i bogstavet “I” og bruge spejlvendte bogstaver, men resultatet bliver rodet og svært at læse. Idéen er sjov, men typografien mister balance og klarhed. Den grønne farve fungerer fint til temaet, men formen og kompositionen gør, at helhedsindtrykket virker ufærdigt. Jeg ville i stedet vælge en font med klarere linjer og tydelig hierarki, så budskabet står stærkt — samtidig med at man kan bevare shisha-ikonet som en del af identiteten.</p></div>
+<div class="prose">Wodka<p data-start="932" data-end="947">Typografien her føles for legende og uprofessionel i forhold til, hvad man forventer af en bar. De runde bogstaver og den ujævne form minder mest af alt om en børnevenlig café frem for et sted, der serverer alkohol. Figuren forstærker det naive udtryk, hvilket skaber en visuel konflikt med budskabet. Jeg ville foreslå en font med mere struktur og mindre bløde former — måske en kondenset sans-serif, der giver associationer til byliv, lys og fest, uden at virke barnlig.</p></div>
+<figure><img src="img/2025/10/IMG_8715-1.jpg" alt="" loading="lazy"></figure>
+<h2>Der Spielzeugmacher</h2>
+<div class="prose"><p>Jeg var afsted med Sebastian og Mikkel i escape roomet <em data-start="1096" data-end="1117">Der Spielzeugmacher</em>. Det var en virkelig spændende og udfordrende oplevelse, hvor vi hurtigt blev nødt til at samarbejde og kommunikere for at finde løsninger.<br data-start="1257" data-end="1260" />Jeg syntes, det var fascinerende at se, hvordan rummet var bygget op med små detaljer, der både udfordrede logik og kreativitet. Vi arbejdede koncentreret, men havde også det sjovt undervejs — og følelsen af at klare sig igennem sammen gjorde det endnu federe.<br data-start="1520" data-end="1523" />Oplevelsen mindede mig om, hvor vigtig kommunikation og samarbejde er, også i vores faglige projekter, hvor man ofte skal finde løsninger gennem fælles idéudvikling og koordinering.</p></div>
+<figure><img src="img/2025/10/hamburg-escape-room-.jpg" alt="" loading="lazy"></figure>
+<figure><img src="img/2025/10/IMG_8364-scaled.jpeg" alt="" loading="lazy"></figure>
+<figure><img src="img/2025/10/IMG_8361-scaled.jpeg" alt="" loading="lazy"></figure>
+<div class="prose"><p>Da vi ankom til Big Break Hamburg, blev vi mødt af tydelig skiltning, som viste, hvilke rum der var tilgængelige. Det gjorde det let at finde rundt og skabte allerede her en forventning om, at oplevelsen ville være velorganiseret og gennemført.</p></div>
+<div class="prose"><p>Skiltet med instruktioner og billeder af rummene var en sjov detalje, der gjorde oplevelsen mere imødekommende. Der var humor i kommunikationen, men stadig et klart overblik over, hvor man skulle hen. Det viste, hvordan selv små designvalg kan gøre en oplevelse mere flydende og tryg for brugeren.</p></div>
+<div class="prose"><p>Billederne viser forskellige stemninger fra turen og de indtryk, der har inspireret mig visuelt og kreativt.</p></div></article>
+</main>
+<footer class="foot">
+  <p>Procesportfolio · Multimediedesign · Ingrid Klein</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,817 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Code Challenge Workshop — Ingrid Klein</title>
+<meta name="description" content="Procesportfolio for Ingrid Klein, multimediedesign.">
+<style>:root{
+  --ink:#1a1a1a; --muted:#6b6b6b; --line:#e6e4e0; --bg:#fbfaf8; --card:#fff;
+  --accent:#cc1016; --max:900px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font:400 17px/1.65 "Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+}
+img{max-width:100%; height:auto; display:block}
+a{color:inherit}
+
+/* header */
+.top{
+  position:sticky; top:0; z-index:50; background:rgba(251,250,248,.92);
+  backdrop-filter:blur(8px); border-bottom:1px solid var(--line);
+  display:flex; align-items:center; gap:1.5rem; padding:.85rem 1.5rem; flex-wrap:wrap;
+}
+.brand{text-decoration:none; display:flex; flex-direction:column; line-height:1.15}
+.brand span{font-weight:700; letter-spacing:-.01em}
+.brand small{color:var(--muted); font-size:.78rem}
+.burger{display:none; margin-left:auto; background:none; border:0; font-size:1.4rem; cursor:pointer}
+
+.nav{margin-left:auto}
+.nav ul{list-style:none; margin:0; padding:0; display:flex; gap:1.4rem}
+.nav>ul>li{position:relative}
+.nav a{text-decoration:none; font-size:.94rem; color:var(--muted); padding:.35rem 0; display:block}
+.nav a:hover{color:var(--ink)}
+.nav li.on>a{color:var(--ink); font-weight:600}
+.nav .sub{
+  display:none; position:absolute; left:-.9rem; top:100%; flex-direction:column; gap:.1rem;
+  background:var(--card); border:1px solid var(--line); border-radius:10px;
+  padding:.6rem .9rem; min-width:230px; box-shadow:0 12px 30px rgba(0,0,0,.08);
+}
+.nav>ul>li:hover .sub{display:flex}
+.nav .sub a{padding:.3rem 0; font-size:.9rem}
+
+/* indhold */
+main{padding:2.5rem 1.25rem 4rem; overflow-x:clip}
+.page{max-width:var(--max); margin:0 auto}
+.embed{max-width:1180px; margin:0 auto; overflow-x:clip}
+.embed img{max-width:100%}
+h1{font-size:clamp(2rem,5vw,2.9rem); line-height:1.1; letter-spacing:-.02em; margin:0 0 1rem}
+h2{font-size:1.5rem; letter-spacing:-.01em; margin:2.4rem 0 .8rem}
+h3{font-size:1.15rem; margin:1.8rem 0 .5rem}
+p{margin:0 0 1rem}
+.lead{font-size:1.2rem; color:var(--muted); max-width:36em}
+.prose{margin:0 0 1.4rem}
+.prose ul,.prose ol{padding-left:1.2rem}
+
+figure{margin:1.8rem 0}
+figure img{border-radius:12px; width:100%}
+figcaption{color:var(--muted); font-size:.87rem; margin-top:.5rem}
+
+.gallery{display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr)); gap:.9rem; margin:1.8rem 0}
+.gallery img{border-radius:10px; aspect-ratio:4/3; object-fit:cover; width:100%}
+
+.card{
+  display:flex; gap:1.1rem; align-items:flex-start; background:var(--card);
+  border:1px solid var(--line); border-radius:14px; padding:1.1rem; margin:.9rem 0;
+}
+.card img{width:110px; border-radius:9px; flex:0 0 auto; aspect-ratio:1; object-fit:cover}
+.card h3{margin:0 0 .3rem; font-size:1.05rem}
+.card p{margin:0; color:var(--muted); font-size:.94rem}
+
+.video{position:relative; aspect-ratio:16/9; margin:1.8rem 0}
+.video iframe{position:absolute; inset:0; width:100%; height:100%; border:0; border-radius:12px}
+
+.btn{
+  display:inline-block; text-decoration:none; background:var(--ink); color:#fff;
+  padding:.6rem 1.2rem; border-radius:999px; font-size:.92rem;
+}
+
+/* forside */
+.hero{padding-top:2rem; padding-bottom:1rem}
+.semgrid{
+  max-width:var(--max); margin:2.5rem auto 0;
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:1.2rem;
+}
+.sem{background:var(--card); border:1px solid var(--line); border-radius:14px; padding:1.3rem 1.4rem}
+.sem h2{margin:0 0 .7rem; font-size:1.2rem}
+.sem h2 a{text-decoration:none}
+.sem ul{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:.4rem}
+.sem a{color:var(--muted); text-decoration:none; font-size:.94rem}
+.sem a:hover{color:var(--ink)}
+
+.foot{border-top:1px solid var(--line); padding:2rem 1.5rem; color:var(--muted); font-size:.88rem; text-align:center}
+
+@media(max-width:860px){
+  .burger{display:block}
+  .nav{flex-basis:100%; display:none}
+  body.open .nav{display:block}
+  .nav ul{flex-direction:column; gap:.2rem}
+  .nav .sub{display:flex; position:static; border:0; box-shadow:none; padding:.2rem 0 .6rem 1rem; background:none}
+  .card{flex-direction:column}
+  .card img{width:100%; aspect-ratio:16/9}
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="index.html"><span>Ingrid Klein</span><small>Procesportfolio</small></a>
+  <button class="burger" aria-label="Menu" onclick="document.body.classList.toggle('open')">☰</button>
+  <nav class="nav"><ul>
+<li><a href="1-semester.html">1. Semester</a>
+<ul class="sub">
+<li><a href="227976-2.html">Studie-tur</a></li>
+<li><a href="intro-projekt.html">Intro Projekt</a></li>
+<li><a href="re-design-af-en-hjemmeside.html">Re-design af en hjemmeside</a></li>
+<li><a href="elementor-228182.html">Installationsprojekt</a></li>
+<li><a href="our-mission.html">KleinDesign</a></li>
+<li><a href="moving-art.html">Moving Art</a></li>
+<li><a href="tone-of-voice-workshop.html">Tone Of Voice</a></li>
+<li><a href="prototyping-workshop.html">Prototyping</a></li>
+</ul>
+</li>
+<li class="on"><a href="2-semester.html">2. Semester</a>
+<ul class="sub">
+<li><a href="jawasript.html">JavaScript</a></li>
+<li><a href="elementor-side-228653.html">Projekt 4</a></li>
+<li><a href="projekt-5-eksamensprojekt.html">Projekt 5 – Eksamensprojekt</a></li>
+<li class="on"><a href="code-challenge-workshop.html">Code Challenge Workshop</a></li>
+<li><a href="elementor-228775.html">Design Challenge Workshop</a></li>
+<li><a href="projekt.html">Workshop Content Creation</a></li>
+</ul>
+</li>
+<li><a href="3-semester.html">3. Semester</a>
+</li>
+<li><a href="studiemakker-paa-tvaers.html">Studiemakker på tværs</a>
+</li>
+</ul></nav>
+</header>
+<main>
+<article class="embed">
+-->
+
+<style>
+  .cc-wrap {
+    font-family: sans-serif;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    color: #111;
+  }
+
+  /* HERO */
+  .cc-hero {
+    position: relative;
+    border-radius: 14px;
+    overflow: hidden;
+    aspect-ratio: 16/7;
+    background: #1a1a2e;
+    margin-bottom: 2.5rem;
+  }
+  .cc-hero img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
+    opacity: 0.5;
+  }
+  .cc-hero-text {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    padding: 2rem 2.5rem;
+  }
+  .cc-tag {
+    display: inline-block;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 99px;
+    padding: 4px 14px;
+    margin-bottom: 0.75rem;
+  }
+  .cc-hero h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #fff;
+    margin: 0 0 0.4rem;
+    line-height: 1.2;
+  }
+  .cc-hero-meta {
+    font-size: 13px;
+    color: rgba(255,255,255,0.65);
+    margin: 0;
+  }
+
+  /* META ROW */
+  .cc-meta {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #e5e5e5;
+  }
+  .cc-meta-item label {
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #999;
+    display: block;
+    margin-bottom: 4px;
+  }
+  .cc-meta-item span {
+    font-size: 14px;
+    color: #111;
+    font-weight: 500;
+  }
+
+  /* INTRO */
+  .cc-intro {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: #f7f7f7;
+    border-radius: 10px;
+    border-left: 3px solid #111;
+  }
+
+  /* SECTION HEADERS */
+  .cc-h2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #111;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #e5e5e5;
+  }
+
+  /* COMMAND TABLE */
+  .cc-table-wrap {
+    overflow-x: auto;
+    margin-bottom: 2rem;
+  }
+  .cc-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+  }
+  .cc-table th {
+    text-align: left;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #999;
+    padding: 8px 12px;
+    border-bottom: 1px solid #e5e5e5;
+    white-space: nowrap;
+  }
+  .cc-table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #f0f0f0;
+    color: #333;
+    vertical-align: middle;
+  }
+  .cc-table tr:last-child td { border-bottom: none; }
+  .cc-badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    font-family: monospace;
+    white-space: nowrap;
+  }
+  .badge-yellow { background: #fff9c4; color: #7a6400; }
+  .badge-blue   { background: #dbeafe; color: #1e3a8a; }
+  .badge-pink   { background: #fce7f3; color: #831843; }
+  .badge-orange { background: #ffedd5; color: #9a3412; }
+
+  /* TASKS */
+  .cc-tasks { display: grid; gap: 1.25rem; margin-bottom: 2rem; }
+  .cc-task {
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .cc-task-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 1rem 1.25rem;
+    background: #f9f9f9;
+    border-bottom: 1px solid #e5e5e5;
+  }
+  .cc-task-num {
+    width: 30px; height: 30px;
+    border-radius: 50%;
+    background: #111;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .cc-task-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: #111;
+    margin: 0;
+  }
+  .cc-task-new {
+    margin-left: auto;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #666;
+    background: #efefef;
+    padding: 3px 10px;
+    border-radius: 99px;
+    white-space: nowrap;
+  }
+  .cc-task-body { padding: 1rem 1.25rem; }
+  .cc-task-opgave {
+    font-size: 13px;
+    font-weight: 600;
+    color: #555;
+    margin: 0 0 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .cc-task-body p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #444;
+    margin: 0 0 0.75rem;
+  }
+  .cc-code {
+    background: #1a1a2e;
+    color: #e2e8f0;
+    font-family: monospace;
+    font-size: 13px;
+    line-height: 1.8;
+    padding: 1rem 1.25rem;
+    border-radius: 8px;
+    margin: 0.75rem 0;
+    overflow-x: auto;
+    white-space: pre;
+  }
+
+  /* BILLEDER */
+  .cc-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+  }
+  .cc-gallery img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    border-radius: 8px;
+    background: #eee;
+    display: block;
+  }
+
+  /* LEARNING TABLE */
+  .cc-learn-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    margin-bottom: 2rem;
+  }
+  .cc-learn-table th {
+    text-align: left;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #999;
+    padding: 8px 12px;
+    border-bottom: 2px solid #111;
+  }
+  .cc-learn-table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #f0f0f0;
+    color: #333;
+    vertical-align: top;
+  }
+  .cc-learn-table tr:last-child td { border-bottom: none; }
+  .cc-mono {
+    font-family: monospace;
+    font-size: 13px;
+    background: #f1f5f9;
+    padding: 2px 6px;
+    border-radius: 4px;
+    color: #1e3a8a;
+  }
+
+  /* REFLECTION */
+  .cc-reflection {
+    background: #f7f7f7;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  .cc-reflection p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #444;
+    margin: 0;
+  }
+
+  /* DIVIDER + NAV */
+  .cc-divider { border: none; border-top: 1px solid #e5e5e5; margin: 2rem 0; }
+  .cc-nav {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: #999;
+    padding-top: 0.5rem;
+  }
+  .cc-nav a { color: #555; text-decoration: none; }
+  .cc-nav a:hover { color: #111; }
+</style>
+
+<div class="cc-wrap">
+
+  <!-- HERO -->
+  <div class="cc-hero">
+    <!-- Upload dit eget hero-billede og skift URL her: -->
+    <img src="img/2026/05/att.IrAWvaSG4Q21kE4HPMc9xBl-Ew-ahz4Y3BZowFKo7H4.jpeg" alt="Code Challenge Workshop" />
+    <div class="cc-hero-text">
+      <div class="cc-tag">Workshop</div>
+      <h1>Code Challenge Workshop</h1>
+      <p class="cc-hero-meta">Forår 2026 &nbsp;·&nbsp; Underviser: Marc Altfuldisch</p>
+    </div>
+  </div>
+
+  <!-- META -->
+  <div class="cc-meta">
+    <div class="cc-meta-item">
+      <label>Semester</label>
+      <span>Forår 2026</span>
+    </div>
+    <div class="cc-meta-item">
+      <label>Underviser</label>
+      <span>Marc Altfuldisch</span>
+    </div>
+    <div class="cc-meta-item">
+      <label>Opgaver</label>
+      <span>10 challenges</span>
+    </div>
+    <div class="cc-meta-item">
+      <label>Tema</label>
+      <span>Programmering & CPU-logik</span>
+    </div>
+  </div>
+
+  <!-- INTRO -->
+  <div class="cc-intro">
+    Workshoppen handlede om at lære grundlæggende programmeringslogik ved at simulere en CPU — en fabrik med Inbox og Outbox. I stedet for at kode brugte vi farvede post-its til at bygge instruktioner fysisk på papir. Konceptet er inspireret af spillet <em>Human Resource Machine</em>.
+  </div>
+
+  <!-- BILLEDER -->
+  <p class="cc-h2">Billeder fra workshoppen</p>
+  <div class="cc-gallery">
+    <!-- Skift disse 3 ud med dine egne billeder -->
+    <img src="img/2026/05/IMG_6074-scaled.jpeg" alt="Post-its på bordet" />
+    <img src="img/2026/05/IMG_6067-scaled.jpeg" alt="Gruppe arbejder med opgaver" />
+    <img src="img/2026/05/IMG_6064-scaled.jpeg" alt="Løsning på papir" />
+  </div>
+
+  <!-- KOMMANDOOVERSIGT -->
+  <p class="cc-h2">Kommandooversigt</p>
+  <div class="cc-table-wrap">
+    <table class="cc-table">
+      <thead>
+        <tr>
+          <th>Farve</th>
+          <th>Kommando</th>
+          <th>Beskrivelse</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>🟡 Gul</td>
+          <td><span class="cc-badge badge-yellow">Inbox</span></td>
+          <td>Hent næste kasse fra transportbåndet</td>
+        </tr>
+        <tr>
+          <td>🟡 Gul</td>
+          <td><span class="cc-badge badge-yellow">Outbox</span></td>
+          <td>Aflever kasse til outputbåndet</td>
+        </tr>
+        <tr>
+          <td>🔵 Blå</td>
+          <td><span class="cc-badge badge-blue">Jump</span></td>
+          <td>Hop til et andet sted i instruktionerne (løkke)</td>
+        </tr>
+        <tr>
+          <td>🔵 Blå</td>
+          <td><span class="cc-badge badge-blue">JumpIfZero</span></td>
+          <td>Hop kun hvis værdien er 0</td>
+        </tr>
+        <tr>
+          <td>🔵 Blå</td>
+          <td><span class="cc-badge badge-blue">JumpIfNegative</span></td>
+          <td>Hop kun hvis værdien er negativ</td>
+        </tr>
+        <tr>
+          <td>🩷 Pink</td>
+          <td><span class="cc-badge badge-pink">CopyFrom</span></td>
+          <td>Kopiér kasse fra en bordplads til hånden</td>
+        </tr>
+        <tr>
+          <td>🩷 Pink</td>
+          <td><span class="cc-badge badge-pink">CopyTo</span></td>
+          <td>Kopiér kassen i hånden til en bordplads</td>
+        </tr>
+        <tr>
+          <td>🟠 Orange</td>
+          <td><span class="cc-badge badge-orange">Add</span></td>
+          <td>Læg bordkassens værdi til kassen i hånden</td>
+        </tr>
+        <tr>
+          <td>🟠 Orange</td>
+          <td><span class="cc-badge badge-orange">Sub</span></td>
+          <td>Træk håndkassens værdi fra bordkassens værdi</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- OPGAVER -->
+  <p class="cc-h2">Opgaverne</p>
+  <div class="cc-tasks">
+
+    <!-- OPGAVE 1 -->
+    <div class="cc-task">
+      <div class="cc-task-header">
+        <div class="cc-task-num">1</div>
+        <p class="cc-task-title">Det basale — Inbox & Outbox</p>
+        <span class="cc-task-new">Ny: Inbox · Outbox</span>
+      </div>
+      <div class="cc-task-body">
+        <p class="cc-task-opgave">Opgaven</p>
+        <p>Flyt alle tal fra Inbox til Outbox i samme rækkefølge.</p>
+        <div class="cc-code">Inbox
+Outbox
+Inbox
+Outbox
+Inbox
+Outbox</div>
+        <p>Den simpleste mulige opgave — vi lærte de to grundkommandoer. Inbox henter den næste kasse fra transportbåndet og sætter den i hånden. Outbox afleverer kassen til outputbåndet. Det svarer til at kopiere en liste direkte.</p>
+      </div>
+    </div>
+
+    <!-- OPGAVE 2 -->
+    <div class="cc-task">
+      <div class="cc-task-header">
+        <div class="cc-task-num">2</div>
+        <p class="cc-task-title">Jump — løkker</p>
+        <span class="cc-task-new">Ny: Jump</span>
+      </div>
+      <div class="cc-task-body">
+        <p class="cc-task-opgave">Opgaven</p>
+        <p>Flyt alle tal fra Inbox til Outbox i samme rækkefølge. Maks 3 kommandoer!</p>
+        <div class="cc-code">→ Inbox      ← start her
+  Outbox
+  Jump ↑     ← hop tilbage til Inbox</div>
+        <p>Her oplevede vi magien ved en løkke. I stedet for at skrive Inbox/Outbox igen og igen brugte vi Jump til at hoppe tilbage til starten. Dette svarer præcis til en <span class="cc-mono">while</span>-løkke i rigtig kode — og er grundlaget for al automatisering.</p>
+      </div>
+    </div>
+
+    <!-- OPGAVE 3 -->
+    <div class="cc-task">
+      <div class="cc-task-header">
+        <div class="cc-task-num">3</div>
+        <p class="cc-task-title">CopyFrom — variable og hukommelse</p>
+        <span class="cc-task-new">Ny: CopyFrom</span>
+      </div>
+      <div class="cc-task-body">
+        <p class="cc-task-opgave">Opgaven</p>
+        <p>Inbox er i stykker — kasserne ligger fast på bordet. Hent bogstaverne B, U og G i den rækkefølge og send dem til Outbox. (A=0, D=1, G=2, B=3, C=4, U=5)</p>
+        <div class="cc-code">CopyFrom 3   (hent B fra plads 3)
+Outbox
+CopyFrom 5   (hent U fra plads 5)
+Outbox
+CopyFrom 2   (hent G fra plads 2)
+Outbox</div>
+        <p>CopyFrom fungerer som at læse fra en variabel — du angiver en plads på bordet (en adresse i hukommelsen). Bordet er computerens RAM, og pladsnumrene er adresserne. Første gang vi arbejdede med indeksering.</p>
+      </div>
+    </div>
+
+    <!-- OPGAVE 4 -->
+    <div class="cc-task">
+      <div class="cc-task-header">
+        <div class="cc-task-num">4</div>
+        <p class="cc-task-title">CopyTo — gem til hukommelse</p>
+        <span class="cc-task-new">Ny: CopyTo</span>
+      </div>
+      <div class="cc-task-body">
+        <p class="cc-task-opgave">Opgaven</p>
+        <p>Tag de to første kasser og flyt dem til Outbox i omvendt rækkefølge. Gentag for hvert par.</p>
+        <div class="cc-code">→ Inbox
+  CopyTo 1       (gem første kasse på plads 1)
+  Inbox          (hent anden kasse)
+  Outbox         (send den direkte)
+  CopyFrom 1     (hent den gemte første kasse)
+  Outbox
+  Jump ↑</div>
+        <p>Her lærte vi at gemme en kasse midlertidigt — ligesom at tildele en variabel: <span class="cc-mono">temp = inbox</span>. Det er præcis hvad en computer gør når den gemmer en mellemregning i RAM.</p>
+      </div>
+    </div>
+
+    <!-- OPGAVE 5 -->
+    <div class="cc-task">
+      <div class="cc-task-header">
+        <div class="cc-task-num">5</div>
+        <p class="cc-task-title">Add — matematik og addition</p>
+        <span class="cc-task-new">Ny: Add</span>
+      </div>
+      <div class="cc-task-body">
+        <p class="cc-task-opgave">Opgaven</p>
+        <p>For hvert par kasser i Inbox: læg dem sammen og send summen til Outbox.</p>
+        <div class="cc-code">→ Inbox
+  CopyTo 0       (gem første kasse på plads 0)
+  Inbox          (hent anden kasse)
+  Add 0          (læg værdien fra plads 0 til kassen i hånden)
+  Outbox
+  Jump ↑</div>
+        <p>Add henter værdien fra en bordplads og lægger den til kassen du holder — resultatet bliver i hånden. Dette illustrerer hvordan en CPU laver aritmetik: den henter to værdier, behandler dem i et register (hånden), og producerer et resultat.</p>
+      </div>
+    </div>
+
+    <!-- OPGAVE 6 -->
+    <div class="cc-task">
+      <div class="cc-task-header">
+        <div class="cc-task-num">6</div>
+        <p class="cc-task-title">JumpIfZero — betinget hop og filtrering</p>
+        <span class="cc-task-new">Ny: JumpIfZero</span>
+      </div>
+      <div class="cc-task-body">
+        <p class="cc-task-opgave">Opgaven</p>
+        <p>Send alt der IKKE er 0 fra Inbox til Outbox. Nul-kasser springes over.</p>
+        <div class="cc-code">→ Inbox
+  JumpIfZero ↓  (hvis 0 → spring Outbox over)
+  Outbox
+  Jump ↑        (tilbage til start)</div>
+        <p>Dette er vores første betingede statement — svarende til en <span class="cc-mono">if</span>-sætning. JumpIfZero checker om kassen i hånden er 0. Det er fundamentet for al logik og beslutningstagning i computere.</p>
+      </div>
+    </div>
+
+    <!-- OPGAVE 7 -->
+    <div class="cc-task">
+      <div class="cc-task-header">
+        <div class="cc-task-num">7</div>
+        <p class="cc-task-title">Kun nuller — omvendt filtrering</p>
+        <span class="cc-task-new">Hard mode</span>
+      </div>
+      <div class="cc-task-body">
+        <p class="cc-task-opgave">Opgaven</p>
+        <p>Denne gang må vi KUN sende nuller til Outbox — alt andet kasseres.</p>
+        <div class="cc-code">→ Inbox
+  JumpIfZero →  (hvis 0 → hop til Outbox)
+  Jump ↑        (ikke 0 → hent næste uden at sende)
+→ Outbox
+  Jump ↑        (tilbage til start)</div>
+        <p>Her vendte vi logikken om fra opgave 6. Det viser hvordan den samme kommando kan bruges til modsatte formål afhængigt af programmets flow — og at løkker kan have flere mulige udgange. Maks 5 kommandoer, maks 25 trin.</p>
+      </div>
+    </div>
+
+    <!-- OPGAVE 8 -->
+    <div class="cc-task">
+      <div class="cc-task-header">
+        <div class="cc-task-num">8</div>
+        <p class="cc-task-title">Sub — subtraktion med to output pr. par</p>
+        <span class="cc-task-new">Ny: Sub</span>
+      </div>
+      <div class="cc-task-body">
+        <p class="cc-task-opgave">Opgaven</p>
+        <p>For hvert par kasser: træk første fra anden → Outbox. Træk anden fra første → Outbox. Gentag.</p>
+        <div class="cc-code">→ Inbox
+  CopyTo 0       (gem første kasse)
+  Inbox
+  CopyTo 1       (gem anden kasse)
+  Sub 0          (B - A)
+  Outbox
+  CopyFrom 0
+  Sub 1          (A - B)
+  Outbox
+  Jump ↑</div>
+        <p>Sub virker modsat Add. Her gemte vi begge inputkasser på bordet, så vi kunne lave begge subtraktioner. Bordet bruges som scratch space — svarende til midlertidige variabler i en swap-algoritme. Hard mode: Maks 10 kommandoer, maks 40 trin.</p>
+      </div>
+    </div>
+
+    <!-- OPGAVE 9 -->
+    <div class="cc-task">
+      <div class="cc-task-header">
+        <div class="cc-task-num">9</div>
+        <p class="cc-task-title">JumpIfNegative — sammenligning af to værdier</p>
+        <span class="cc-task-new">Ny: JumpIfNegative</span>
+      </div>
+      <div class="cc-task-body">
+        <p class="cc-task-opgave">Opgaven</p>
+        <p>Tag to kasser. Har de samme værdi → send en af dem til Outbox. Har de forskellig værdi → send ingenting.</p>
+        <div class="cc-code">→ Inbox
+  CopyTo 0
+  Inbox
+  Sub 0            (første minus anden — er de ens giver det 0)
+  JumpIfZero →     (hop til Outbox hvis 0 = de er ens)
+  Jump ↑           (ellers hent næste par)
+→ Outbox
+  Jump ↑</div>
+        <p>Trikket er at sammenligne to tal ved at trække dem fra hinanden. Hvis resultatet er 0, er de ens. Subtraktion som sammenligningsmetode — præcis hvad rigtige CPUer gør internt. Fundamentet for alle <span class="cc-mono">if (a == b)</span>-checks. Hard mode: Maks 9 kommandoer, maks 27 trin.</p>
+      </div>
+    </div>
+
+    <!-- OPGAVE 10 -->
+    <div class="cc-task">
+      <div class="cc-task-header">
+        <div class="cc-task-num">10</div>
+        <p class="cc-task-title">Binær logik — XOR og fortegnssammenligning</p>
+        <span class="cc-task-new">Sværeste</span>
+      </div>
+      <div class="cc-task-body">
+        <p class="cc-task-opgave">Opgaven</p>
+        <p>For hvert par kasser: har de samme fortegn → send 0 til Outbox. Har de forskelligt fortegn → send 1. Konstanterne 0 og 1 ligger på plads 4 og 5 på bordet.</p>
+        <div class="cc-code">→ Inbox
+  CopyTo 0
+  Inbox
+  JumpIfNegative → (håndkassen er negativ — tjek om første også var det)
+  Sub 0            (begge positive: positivt = ens fortegn)
+  JumpIfNegative → (neg resultat = forskelligt fortegn → send 1)
+  CopyFrom 4       (send 0 = samme fortegn)
+  Outbox
+  Jump ↑
+→ CopyFrom 5       (send 1 = forskelligt fortegn)
+  Outbox
+  Jump ↑</div>
+        <p>Den sværeste opgave — den kræver XOR-lignende logik. Vi bruger JumpIfNegative til at detektere fortegn, og de faste værdier på plads 4 og 5 fungerer som konstanter i hukommelsen — svarende til at gemme <span class="cc-mono">true</span> og <span class="cc-mono">false</span> som variabler.</p>
+      </div>
+    </div>
+
+  </div><!-- /cc-tasks -->
+
+  <!-- HVAD LÆRTE VI -->
+  <p class="cc-h2">Hvad lærte vi?</p>
+  <p style="font-size:15px; line-height:1.7; color:#444; margin-bottom:1.25rem;">
+    Workshoppen introducerede grundlæggende koncepter i computerarkitektur og programmering — uden at skrive én linje kode.
+  </p>
+  <div class="cc-table-wrap">
+    <table class="cc-learn-table">
+      <thead>
+        <tr>
+          <th>Koncept</th>
+          <th>Opgave</th>
+          <th>Parallel i rigtig kode</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Sekvens</td>
+          <td>1</td>
+          <td>Linje-for-linje eksekvering</td>
+        </tr>
+        <tr>
+          <td>Løkker</td>
+          <td>2</td>
+          <td><span class="cc-mono">while (inbox != empty)</span></td>
+        </tr>
+        <tr>
+          <td>Variable / RAM</td>
+          <td>3–4</td>
+          <td><span class="cc-mono">let x = inbox</span></td>
+        </tr>
+        <tr>
+          <td>Aritmetik</td>
+          <td>5, 8</td>
+          <td><span class="cc-mono">a + b</span>, <span class="cc-mono">a - b</span></td>
+        </tr>
+        <tr>
+          <td>If-statements</td>
+          <td>6–7</td>
+          <td><span class="cc-mono">if (x == 0)</span></td>
+        </tr>
+        <tr>
+          <td>Sammenligninger</td>
+          <td>9–10</td>
+          <td><span class="cc-mono">if (a == b)</span>, <span class="cc-mono">if (a &lt; 0)</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- REFLEKSION -->
+  <p class="cc-h2">Refleksion</p>
+  <div class="cc-reflection">
+    <p>
+      <!-- Skriv din personlige refleksion her -->
+      Det var overraskende hvor hurtigt man forstod programmeringslogik, når man arbejdede med det fysisk. Post-its og pile på papir gjorde abstrakte begreber som løkker, variable og if-statements konkrete og håndgribelige. Workshoppen viste at en CPU i bund og grund blot gør meget simple ting — enormt hurtigt.
+    </p>
+  </div>
+
+  </article>
+</main>
+<footer class="foot">
+  <p>Procesportfolio · Multimediedesign · Ingrid Klein</p>
+</footer>
+</body>
+</html>

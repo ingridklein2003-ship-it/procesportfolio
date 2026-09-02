@@ -1,0 +1,630 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Design Challenge Workshop — Ingrid Klein</title>
+<meta name="description" content="Procesportfolio for Ingrid Klein, multimediedesign.">
+<style>:root{
+  --ink:#1a1a1a; --muted:#6b6b6b; --line:#e6e4e0; --bg:#fbfaf8; --card:#fff;
+  --accent:#cc1016; --max:900px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font:400 17px/1.65 "Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+}
+img{max-width:100%; height:auto; display:block}
+a{color:inherit}
+
+/* header */
+.top{
+  position:sticky; top:0; z-index:50; background:rgba(251,250,248,.92);
+  backdrop-filter:blur(8px); border-bottom:1px solid var(--line);
+  display:flex; align-items:center; gap:1.5rem; padding:.85rem 1.5rem; flex-wrap:wrap;
+}
+.brand{text-decoration:none; display:flex; flex-direction:column; line-height:1.15}
+.brand span{font-weight:700; letter-spacing:-.01em}
+.brand small{color:var(--muted); font-size:.78rem}
+.burger{display:none; margin-left:auto; background:none; border:0; font-size:1.4rem; cursor:pointer}
+
+.nav{margin-left:auto}
+.nav ul{list-style:none; margin:0; padding:0; display:flex; gap:1.4rem}
+.nav>ul>li{position:relative}
+.nav a{text-decoration:none; font-size:.94rem; color:var(--muted); padding:.35rem 0; display:block}
+.nav a:hover{color:var(--ink)}
+.nav li.on>a{color:var(--ink); font-weight:600}
+.nav .sub{
+  display:none; position:absolute; left:-.9rem; top:100%; flex-direction:column; gap:.1rem;
+  background:var(--card); border:1px solid var(--line); border-radius:10px;
+  padding:.6rem .9rem; min-width:230px; box-shadow:0 12px 30px rgba(0,0,0,.08);
+}
+.nav>ul>li:hover .sub{display:flex}
+.nav .sub a{padding:.3rem 0; font-size:.9rem}
+
+/* indhold */
+main{padding:2.5rem 1.25rem 4rem; overflow-x:clip}
+.page{max-width:var(--max); margin:0 auto}
+.embed{max-width:1180px; margin:0 auto; overflow-x:clip}
+.embed img{max-width:100%}
+h1{font-size:clamp(2rem,5vw,2.9rem); line-height:1.1; letter-spacing:-.02em; margin:0 0 1rem}
+h2{font-size:1.5rem; letter-spacing:-.01em; margin:2.4rem 0 .8rem}
+h3{font-size:1.15rem; margin:1.8rem 0 .5rem}
+p{margin:0 0 1rem}
+.lead{font-size:1.2rem; color:var(--muted); max-width:36em}
+.prose{margin:0 0 1.4rem}
+.prose ul,.prose ol{padding-left:1.2rem}
+
+figure{margin:1.8rem 0}
+figure img{border-radius:12px; width:100%}
+figcaption{color:var(--muted); font-size:.87rem; margin-top:.5rem}
+
+.gallery{display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr)); gap:.9rem; margin:1.8rem 0}
+.gallery img{border-radius:10px; aspect-ratio:4/3; object-fit:cover; width:100%}
+
+.card{
+  display:flex; gap:1.1rem; align-items:flex-start; background:var(--card);
+  border:1px solid var(--line); border-radius:14px; padding:1.1rem; margin:.9rem 0;
+}
+.card img{width:110px; border-radius:9px; flex:0 0 auto; aspect-ratio:1; object-fit:cover}
+.card h3{margin:0 0 .3rem; font-size:1.05rem}
+.card p{margin:0; color:var(--muted); font-size:.94rem}
+
+.video{position:relative; aspect-ratio:16/9; margin:1.8rem 0}
+.video iframe{position:absolute; inset:0; width:100%; height:100%; border:0; border-radius:12px}
+
+.btn{
+  display:inline-block; text-decoration:none; background:var(--ink); color:#fff;
+  padding:.6rem 1.2rem; border-radius:999px; font-size:.92rem;
+}
+
+/* forside */
+.hero{padding-top:2rem; padding-bottom:1rem}
+.semgrid{
+  max-width:var(--max); margin:2.5rem auto 0;
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:1.2rem;
+}
+.sem{background:var(--card); border:1px solid var(--line); border-radius:14px; padding:1.3rem 1.4rem}
+.sem h2{margin:0 0 .7rem; font-size:1.2rem}
+.sem h2 a{text-decoration:none}
+.sem ul{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:.4rem}
+.sem a{color:var(--muted); text-decoration:none; font-size:.94rem}
+.sem a:hover{color:var(--ink)}
+
+.foot{border-top:1px solid var(--line); padding:2rem 1.5rem; color:var(--muted); font-size:.88rem; text-align:center}
+
+@media(max-width:860px){
+  .burger{display:block}
+  .nav{flex-basis:100%; display:none}
+  body.open .nav{display:block}
+  .nav ul{flex-direction:column; gap:.2rem}
+  .nav .sub{display:flex; position:static; border:0; box-shadow:none; padding:.2rem 0 .6rem 1rem; background:none}
+  .card{flex-direction:column}
+  .card img{width:100%; aspect-ratio:16/9}
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="index.html"><span>Ingrid Klein</span><small>Procesportfolio</small></a>
+  <button class="burger" aria-label="Menu" onclick="document.body.classList.toggle('open')">☰</button>
+  <nav class="nav"><ul>
+<li><a href="1-semester.html">1. Semester</a>
+<ul class="sub">
+<li><a href="227976-2.html">Studie-tur</a></li>
+<li><a href="intro-projekt.html">Intro Projekt</a></li>
+<li><a href="re-design-af-en-hjemmeside.html">Re-design af en hjemmeside</a></li>
+<li><a href="elementor-228182.html">Installationsprojekt</a></li>
+<li><a href="our-mission.html">KleinDesign</a></li>
+<li><a href="moving-art.html">Moving Art</a></li>
+<li><a href="tone-of-voice-workshop.html">Tone Of Voice</a></li>
+<li><a href="prototyping-workshop.html">Prototyping</a></li>
+</ul>
+</li>
+<li class="on"><a href="2-semester.html">2. Semester</a>
+<ul class="sub">
+<li><a href="jawasript.html">JavaScript</a></li>
+<li><a href="elementor-side-228653.html">Projekt 4</a></li>
+<li><a href="projekt-5-eksamensprojekt.html">Projekt 5 – Eksamensprojekt</a></li>
+<li><a href="code-challenge-workshop.html">Code Challenge Workshop</a></li>
+<li class="on"><a href="elementor-228775.html">Design Challenge Workshop</a></li>
+<li><a href="projekt.html">Workshop Content Creation</a></li>
+</ul>
+</li>
+<li><a href="3-semester.html">3. Semester</a>
+</li>
+<li><a href="studiemakker-paa-tvaers.html">Studiemakker på tværs</a>
+</li>
+</ul></nav>
+</header>
+<main>
+<article class="embed"><!--
+  DESIGN CHALLENGE WORKSHOP — komplet version
+  Paste i HTML-widget i Elementor.
+  Kun ét billede bruges: dit Figma-screenshot af VAULT Sport & Fitness.
+  Skift billedlinket i hero-sektionen ud med den rigtige URL fra dit WordPress-mediebibliotek.
+-->
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+  .dc-root {
+    font-family: 'Inter', sans-serif;
+    max-width: 100%;
+    margin: 0; padding: 0;
+    color: #111;
+    overflow-x: hidden;
+  }
+
+  /* ── TITLE ── */
+  .dc-title-block { padding: 3rem 2rem 2rem; }
+  .dc-overline {
+    font-size: 11px; font-weight: 600;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: #999; margin-bottom: 0.5rem;
+  }
+  .dc-big-title {
+    font-size: clamp(3.5rem, 11vw, 9rem);
+    font-weight: 900; line-height: 0.88;
+    letter-spacing: -0.03em; color: #111;
+    margin: 0 0 2rem; text-transform: uppercase;
+  }
+  .dc-big-title span { display: block; }
+  .dc-big-title .indent { padding-left: clamp(2rem, 8vw, 7rem); }
+
+  /* ── INTRO GRID ── */
+  .dc-intro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 3rem;
+    padding: 0 2rem 4rem;
+    align-items: start;
+    border-bottom: 1px solid #e5e5e5;
+    margin-bottom: 4rem;
+  }
+  .dc-meta-item {
+    margin-bottom: 1.25rem; padding-bottom: 1.25rem;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  .dc-meta-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .dc-meta-item label {
+    font-size: 10px; font-weight: 700;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    color: #bbb; display: block; margin-bottom: 4px;
+  }
+  .dc-meta-item span { font-size: 14px; color: #111; font-weight: 500; line-height: 1.5; }
+  .dc-intro-text p { font-size: 16px; line-height: 1.8; color: #444; margin: 0 0 1rem; }
+  .dc-intro-text p:last-child { margin: 0; }
+  .dc-intro-text strong { color: #111; }
+
+  /* ── FIGMA SHOWCASE ── */
+  .dc-figma-showcase {
+    margin: 0 2rem 4rem;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #e5e5e5;
+    background: #1a1a2e;
+  }
+  .dc-figma-showcase img {
+    width: 100%; display: block;
+  }
+  .dc-figma-caption {
+    font-size: 11px; color: #aaa;
+    text-align: center;
+    padding: 0.75rem;
+    background: #f8f8f8;
+    border-top: 1px solid #e5e5e5;
+  }
+
+  /* ── SECTION ── */
+  .dc-section { padding: 4rem 2rem; }
+  .dc-section + .dc-section { border-top: 1px solid #e5e5e5; }
+  .dc-section-label {
+    font-size: 10px; font-weight: 700;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: #bbb; margin-bottom: 0.75rem;
+  }
+  .dc-section-title {
+    font-size: clamp(1.75rem, 4vw, 2.75rem);
+    font-weight: 800; letter-spacing: -0.02em;
+    line-height: 1.05; color: #111; margin: 0 0 2.5rem;
+  }
+
+  /* ── TENDENSER ── */
+  .dc-trends-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px; background: #e5e5e5;
+    border: 1px solid #e5e5e5;
+  }
+  .dc-trend-item { background: #fff; padding: 1.75rem; }
+  .dc-trend-num { font-size: 10px; font-weight: 700; color: #ccc; letter-spacing: 0.1em; margin-bottom: 0.4rem; }
+  .dc-trend-title { font-size: 14px; font-weight: 700; color: #111; margin-bottom: 0.75rem; line-height: 1.3; }
+  .dc-trend-body { font-size: 13px; line-height: 1.65; color: #555; }
+  .dc-trend-tags { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: 0.75rem; }
+  .dc-trend-tag { font-size: 10px; font-weight: 600; background: #f3f3f3; color: #666; padding: 3px 8px; border-radius: 4px; }
+
+  /* ── SITE CARDS ── */
+  .dc-sites-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 2rem; }
+  .dc-sites-grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+  .dc-site-card { border: 1px solid #e5e5e5; border-radius: 12px; overflow: hidden; }
+  .dc-site-card.bad { border-color: #fde8e8; }
+  .dc-site-header { padding: 1.25rem 1.25rem 0; display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem; }
+  .dc-site-verdict { font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 10px; border-radius: 99px; }
+  .dc-site-verdict.good { background: #e8f5e9; color: #2e7d32; }
+  .dc-site-verdict.bad  { background: #fde8e8; color: #c62828; }
+  .dc-site-name { font-size: 14px; font-weight: 700; color: #111; }
+  .dc-site-body { padding: 0 1.25rem 1.25rem; }
+  .dc-site-row { margin-bottom: 0.75rem; padding-bottom: 0.75rem; border-bottom: 1px solid #f3f3f3; }
+  .dc-site-row:last-child { border: none; margin: 0; padding: 0; }
+  .dc-site-row-label { font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #bbb; margin-bottom: 3px; }
+  .dc-site-row-text { font-size: 13px; line-height: 1.55; color: #444; }
+  .dc-site-tags { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-top: 0.6rem; }
+  .dc-site-tag { font-size: 10px; font-weight: 600; padding: 2px 8px; border-radius: 4px; }
+  .dc-site-tag.check { background: #e8f5e9; color: #2e7d32; }
+  .dc-site-tag.cross { background: #fde8e8; color: #c62828; }
+
+  /* ── TABEL ── */
+  .dc-table-wrap { overflow-x: auto; margin: 1.5rem 0; }
+  .dc-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  .dc-table th { text-align: left; font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #999; padding: 10px 14px; border-bottom: 2px solid #111; white-space: nowrap; }
+  .dc-table td { padding: 10px 14px; border-bottom: 1px solid #f0f0f0; color: #444; vertical-align: top; line-height: 1.5; }
+  .dc-table tr:last-child td { border-bottom: none; }
+  .dc-table td:first-child { font-weight: 600; color: #111; white-space: nowrap; }
+  .dc-check { color: #2e7d32; font-weight: 700; }
+  .dc-cross { color: #c62828; font-weight: 700; }
+
+  /* ── KONKLUSION ── */
+  .dc-conclusion { background: #111; padding: 4rem 2rem; }
+  .dc-conclusion .dc-section-label { color: #555; }
+  .dc-conclusion .dc-section-title { color: #fff; margin-bottom: 1.5rem; }
+  .dc-conclusion-body { font-size: 15px; line-height: 1.8; color: rgba(255,255,255,0.7); max-width: 700px; margin-bottom: 2rem; }
+  .dc-conclusion-body strong { color: #fff; }
+  .dc-learnings { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: #222; }
+  .dc-learning { background: #111; padding: 2rem; border-top: 1px solid #222; }
+  .dc-learning-num { font-size: 10px; font-weight: 700; letter-spacing: 0.1em; color: #555; margin-bottom: 0.5rem; }
+  .dc-learning-title { font-size: 14px; font-weight: 700; color: #fff; margin-bottom: 0.5rem; }
+  .dc-learning-text { font-size: 13px; line-height: 1.65; color: rgba(255,255,255,0.6); }
+
+  /* NAV */
+  .dc-nav { display: flex; justify-content: space-between; padding: 1.5rem 2rem; font-size: 13px; border-top: 1px solid #e5e5e5; }
+  .dc-nav a { color: #555; text-decoration: none; }
+
+  @media (max-width: 700px) {
+    .dc-intro-grid { grid-template-columns: 1fr; gap: 2rem; padding: 0 1.25rem 3rem; }
+    .dc-trends-grid { grid-template-columns: 1fr; }
+    .dc-sites-grid-3, .dc-sites-grid-2 { grid-template-columns: 1fr; }
+    .dc-learnings { grid-template-columns: 1fr; }
+    .dc-big-title { font-size: 3.5rem; }
+    .dc-section { padding: 3rem 1.25rem; }
+    .dc-conclusion { padding: 3rem 1.25rem; }
+    .dc-title-block { padding: 2rem 1.25rem 1.5rem; }
+    .dc-figma-showcase { margin: 0 1.25rem 3rem; }
+  }
+</style>
+
+<div class="dc-root">
+
+  <!-- TITLE -->
+  <div class="dc-title-block">
+    <p class="dc-overline">Workshop · 2. semester · 27. februar 2026</p>
+    <h1 class="dc-big-title">
+      <span>DESIGN</span>
+      <span class="indent">CHALLENGE</span>
+    </h1>
+  </div>
+
+  <!-- INTRO -->
+  <div class="dc-intro-grid">
+    <div>
+      <div class="dc-meta-item"><label>Branche</label><span>Hobby butik / E-handel</span></div>
+      <div class="dc-meta-item"><label>Opgave</label><span>Analyser UI-tendenser + 5 hjemmesider (tekst, farver, opsætning)</span></div>
+      <div class="dc-meta-item"><label>Kilde</label><span>awwwards.com</span></div>
+      <div class="dc-meta-item"><label>Eget design</label><span>VAULT Sport & Fitness — Desktop 1440px + Mobil 390px</span></div>
+      <div class="dc-meta-item"><label>Sektioner</label><span>6 UI-tendenser · 3 gode sites · 2 svage sites · Tabel · Konklusion</span></div>
+    </div>
+    <div class="dc-intro-text">
+      <p>Workshoppen handlede om at analysere UI-tendenser inden for hobby og e-handel — og derefter designe et eget website med udgangspunkt i dem. Opgaven var at finde fem kommercielle hjemmesider, tre gode og to med klare svagheder, og analysere dem ud fra farver, typografi og layout.</p>
+      <p>Jeg valgte brancherne <strong>hobby butik og e-handel</strong> og brugte Awwwards som primær kilde. Mit eget design endte som <strong>VAULT Sport & Fitness</strong> — en mørk, sporty webshop inspireret af de tendenser jeg analyserede: bold typografi, klar farvepalette og struktureret layout.</p>
+    </div>
+  </div>
+
+  <!-- FIGMA SHOWCASE -->
+  <div class="dc-figma-showcase">
+    <!--
+      Skift dette billede ud med URL'en fra dit WordPress-mediebibliotek.
+      Gå til WordPress → Medier → Upload billedet → Kopiér "Fil-URL"
+    -->
+    <img src="img/2026/05/Skaermbillede-2026-02-27-kl.-15.45.53.jpg" alt="VAULT Sport & Fitness — Figma design desktop og mobil" />
+    <p class="dc-figma-caption">VAULT Sport & Fitness · Desktop 1440px & Mobil 390px · Figma</p>
+  </div>
+
+  <!-- TENDENSER -->
+  <div class="dc-section">
+    <p class="dc-section-label">Del 1</p>
+    <h2 class="dc-section-title">6 UI-tendenser inden for hobby e-handel 2025–26</h2>
+    <div class="dc-trends-grid">
+      <div class="dc-trend-item">
+        <div class="dc-trend-num">01</div>
+        <div class="dc-trend-title">Personalisering & AI-anbefalinger</div>
+        <div class="dc-trend-body">Moderne hobbysites tilpasser sig den enkelte bruger via AI der analyserer klik og køb. "Du vil måske også synes om..." er nu standard — ligesom Spotify's playlister baseret på hvad du lytter til.</div>
+        <div class="dc-trend-tags"><span class="dc-trend-tag">AI</span><span class="dc-trend-tag">Personalisering</span></div>
+      </div>
+      <div class="dc-trend-item">
+        <div class="dc-trend-num">02</div>
+        <div class="dc-trend-title">Bento Grid-layout</div>
+        <div class="dc-trend-body">Modulært layout inspireret af en japansk madkasse. Produkter og kategorier i blokke af varierende størrelse — dynamisk og scanbart frem for ensformige rækker. God til shops med mange produkttyper.</div>
+        <div class="dc-trend-tags"><span class="dc-trend-tag">Layout</span><span class="dc-trend-tag">Grid</span></div>
+      </div>
+      <div class="dc-trend-item">
+        <div class="dc-trend-num">03</div>
+        <div class="dc-trend-title">Bold typografi & levende farver</div>
+        <div class="dc-trend-body">Store, iøjnefaldende overskrifter og farver der matcher hobbyen. Farvepaletten fortæller brandets personlighed — men skal altid passe til branchen og målgruppen, ikke bare se fedt ud.</div>
+        <div class="dc-trend-tags"><span class="dc-trend-tag">Typografi</span><span class="dc-trend-tag">Farver</span></div>
+      </div>
+      <div class="dc-trend-item">
+        <div class="dc-trend-num">04</div>
+        <div class="dc-trend-title">Micro-interaktioner & animation</div>
+        <div class="dc-trend-body">Knapper der skifter farve ved klik, billeder der zoomer, flydende scroll. Giver siden en "levende" fornemmelse og bekræfter at brugerens handlinger virker — selv de mindste detaljer mærkes.</div>
+        <div class="dc-trend-tags"><span class="dc-trend-tag">Animation</span><span class="dc-trend-tag">UX</span></div>
+      </div>
+      <div class="dc-trend-item">
+        <div class="dc-trend-num">05</div>
+        <div class="dc-trend-title">3D produktvisning & AR</div>
+        <div class="dc-trend-body">360° produktbilleder og AR-knapper som "Se dette i dit rum". Lader brugerne vurdere produkter de ellers ikke kan røre ved — som IKEA Place-appen der placerer møbler i din stue.</div>
+        <div class="dc-trend-tags"><span class="dc-trend-tag">3D</span><span class="dc-trend-tag">AR</span></div>
+      </div>
+      <div class="dc-trend-item">
+        <div class="dc-trend-num">06</div>
+        <div class="dc-trend-title">Minimalistisk, "usynlig" UX</div>
+        <div class="dc-trend-body">Den bedste navigation er den man ikke lægger mærke til. White space, få menupunkter, produkterne i centrum. Minimalistisk er ikke kedeligt — alt der er på siden, er der med en god grund.</div>
+        <div class="dc-trend-tags"><span class="dc-trend-tag">Minimalism</span><span class="dc-trend-tag">White space</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GODE SITES -->
+  <div class="dc-section">
+    <p class="dc-section-label">Del 2</p>
+    <h2 class="dc-section-title">3 gode hjemmesider fra Awwwards</h2>
+    <div class="dc-sites-grid-3">
+      <div class="dc-site-card">
+        <div class="dc-site-header">
+          <span class="dc-site-verdict good">✓ God</span>
+          <span class="dc-site-name">-ism crafts</span>
+        </div>
+        <div class="dc-site-body">
+          <div class="dc-site-row">
+            <div class="dc-site-row-label">Farver</div>
+            <div class="dc-site-row-text">Varm, jordnær palette: brun (#987654), hvid og guldgul (#ECD06F). Signalerer håndværk og autenticitet — føles som en boutique frem for en massewebshop.</div>
+          </div>
+          <div class="dc-site-row">
+            <div class="dc-site-row-label">Typografi</div>
+            <div class="dc-site-row-text">Ren og minimal med store, enkle overskrifter. Korte, præcise beskrivelser med en varm og personlig tone.</div>
+          </div>
+          <div class="dc-site-row">
+            <div class="dc-site-row-label">Layout</div>
+            <div class="dc-site-row-text">Minimalistisk grid med masser af white space. Produkterne har plads til at "ånde". Subtile micro-interaktioner der ikke distraherer.</div>
+          </div>
+          <div class="dc-site-tags">
+            <span class="dc-site-tag check">Minimalistisk UX</span>
+            <span class="dc-site-tag check">Bold typografi</span>
+            <span class="dc-site-tag check">Micro-interaktioner</span>
+          </div>
+        </div>
+      </div>
+      <div class="dc-site-card">
+        <div class="dc-site-header">
+          <span class="dc-site-verdict good">✓ God</span>
+          <span class="dc-site-name">TEAFLOW</span>
+        </div>
+        <div class="dc-site-body">
+          <div class="dc-site-row">
+            <div class="dc-site-row-label">Farver</div>
+            <div class="dc-site-row-text">Ekstremt stram 2-farvet palette: dybsort (#222020) og hvid. Skaber en premium, luksusagtig fornemmelse — teen er en oplevelse, ikke bare en drik.</div>
+          </div>
+          <div class="dc-site-row">
+            <div class="dc-site-row-label">Typografi</div>
+            <div class="dc-site-row-text">Store, dristige bogstaver som designelement i sig selv. Kortfattet og poetisk tekst i tråd med teen som slow-living produkt.</div>
+          </div>
+          <div class="dc-site-row">
+            <div class="dc-site-row-label">Layout</div>
+            <div class="dc-site-row-text">Alt er bevidst og minimalt. Store produktfotos og lidt tekst. Ingen unødvendige knapper. Raffinerede mouse-interaktioner tilføjer eksklusivitet.</div>
+          </div>
+          <div class="dc-site-tags">
+            <span class="dc-site-tag check">Minimalistisk UX</span>
+            <span class="dc-site-tag check">Bold typografi</span>
+            <span class="dc-site-tag check">Micro-interaktioner</span>
+          </div>
+        </div>
+      </div>
+      <div class="dc-site-card">
+        <div class="dc-site-header">
+          <span class="dc-site-verdict good">✓ God</span>
+          <span class="dc-site-name">Analogue AF-1</span>
+        </div>
+        <div class="dc-site-body">
+          <div class="dc-site-row">
+            <div class="dc-site-row-label">Farver</div>
+            <div class="dc-site-row-text">Mørk, teknisk palette med sort og metallic toner der understøtter brandets identitet og skaber en high-end fornemmelse.</div>
+          </div>
+          <div class="dc-site-row">
+            <div class="dc-site-row-label">Typografi</div>
+            <div class="dc-site-row-text">Minimalt og præcist. Store overskrifter skaber hierarki der guider brugeren naturligt ned gennem siden.</div>
+          </div>
+          <div class="dc-site-row">
+            <div class="dc-site-row-label">Layout</div>
+            <div class="dc-site-row-text">Scrollytelling — jo mere du scroller, jo mere udfolder produkthistorien sig. Produktet roterer og animerer undervejs.</div>
+          </div>
+          <div class="dc-site-tags">
+            <span class="dc-site-tag check">3D produktvisning</span>
+            <span class="dc-site-tag check">Micro-interaktioner</span>
+            <span class="dc-site-tag check">Scrollytelling</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SVAGE SITES -->
+  <div class="dc-section">
+    <p class="dc-section-label">Del 3</p>
+    <h2 class="dc-section-title">2 hjemmesider med klare svagheder</h2>
+    <div class="dc-sites-grid-2">
+      <div class="dc-site-card bad">
+        <div class="dc-site-header">
+          <span class="dc-site-verdict bad">✗ Svag</span>
+          <span class="dc-site-name">BR.dk</span>
+        </div>
+        <div class="dc-site-body">
+          <div class="dc-site-row">
+            <div class="dc-site-row-label">Farver</div>
+            <div class="dc-site-row-text">Rød/gul palette brugt inkonsistent — grøn, rød, gul, blå på én gang skaber visuelt støj og gør det svært at fokusere på produkterne. Ingen klar farveidentitet.</div>
+          </div>
+          <div class="dc-site-row">
+            <div class="dc-site-row-label">Typografi</div>
+            <div class="dc-site-row-text">Store kampagnetekster skifter til meget lille produkttekst. "KØB NU!", "50% RABAT!" skaber en stressende handleoplevelse frem for en behagelig en.</div>
+          </div>
+          <div class="dc-site-row">
+            <div class="dc-site-row-label">Layout</div>
+            <div class="dc-site-row-text">Tætpakket med bannere og tilbudsbokse. Intet white space — alt kæmper om opmærksomheden på én gang. Kompleks og ulogisk navigation.</div>
+          </div>
+          <div class="dc-site-tags">
+            <span class="dc-site-tag cross">Ingen klar palette</span>
+            <span class="dc-site-tag cross">Mangler white space</span>
+            <span class="dc-site-tag cross">0 UI-tendenser</span>
+          </div>
+        </div>
+      </div>
+      <div class="dc-site-card bad">
+        <div class="dc-site-header">
+          <span class="dc-site-verdict bad">✗ Svag</span>
+          <span class="dc-site-name">Hobbii.dk</span>
+        </div>
+        <div class="dc-site-body">
+          <div class="dc-site-row">
+            <div class="dc-site-row-label">Farver</div>
+            <div class="dc-site-row-text">Lys og venlig men inkonsistent — kampagner bryder med den overordnede stil. Generiske e-handelsfarver uden en unik brandhistorie der skiller sig ud.</div>
+          </div>
+          <div class="dc-site-row">
+            <div class="dc-site-row-label">Typografi</div>
+            <div class="dc-site-row-text">For meget tekst overalt. Lange produktbeskrivelser og teksttunge bannere. Overskrifterne er ikke stærke nok til at guide brugeren.</div>
+          </div>
+          <div class="dc-site-row">
+            <div class="dc-site-row-label">Layout</div>
+            <div class="dc-site-row-text">Standard grid med ensformige produktkort. Funktionelt men ikke inspirerende. Sammenlignet med Bento Grid-standarden virker det fladt og uengagerende.</div>
+          </div>
+          <div class="dc-site-tags">
+            <span class="dc-site-tag cross">Mangler Bento Grid</span>
+            <span class="dc-site-tag cross">Ingen storytelling</span>
+            <span class="dc-site-tag cross">Svag identitet</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TABEL -->
+  <div class="dc-section">
+    <p class="dc-section-label">Del 4</p>
+    <h2 class="dc-section-title">Sammenligningstabel</h2>
+    <div class="dc-table-wrap">
+      <table class="dc-table">
+        <thead>
+          <tr>
+            <th>Kriterium</th>
+            <th>-ism crafts ✅</th>
+            <th>TEAFLOW ✅</th>
+            <th>Analogue AF-1 ✅</th>
+            <th>BR.dk ❌</th>
+            <th>Hobbii.dk ❌</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Farvepalette</td>
+            <td>Varm, konsistent</td>
+            <td>Sort/hvid, minimal</td>
+            <td>Mørk, teknisk</td>
+            <td>Mange ukonsistente</td>
+            <td>Lys, generisk</td>
+          </tr>
+          <tr>
+            <td>Typografi</td>
+            <td>Ren, enkel</td>
+            <td>Bold, stor</td>
+            <td>Minimal, hierarkisk</td>
+            <td>Varierende, støjende</td>
+            <td>Teksttung</td>
+          </tr>
+          <tr>
+            <td>Layout</td>
+            <td>Minimalt grid</td>
+            <td>Storytelling</td>
+            <td>Scrollytelling</td>
+            <td>Tætpakket</td>
+            <td>Standard grid</td>
+          </tr>
+          <tr>
+            <td>Micro-interaktioner</td>
+            <td><span class="dc-check">✓ Subtile</span></td>
+            <td><span class="dc-check">✓ Elegante</span></td>
+            <td><span class="dc-check">✓ Avancerede</span></td>
+            <td><span class="dc-cross">✗ Meget få</span></td>
+            <td><span class="dc-cross">✗ Begrænsede</span></td>
+          </tr>
+          <tr>
+            <td>Brugeroplevelse</td>
+            <td>Behagelig</td>
+            <td>Premium</td>
+            <td>Immersiv</td>
+            <td>Stressende</td>
+            <td>Funktionel</td>
+          </tr>
+          <tr>
+            <td>UI-tendenser</td>
+            <td><span class="dc-check">3 tendenser</span></td>
+            <td><span class="dc-check">3 tendenser</span></td>
+            <td><span class="dc-check">3 tendenser</span></td>
+            <td><span class="dc-cross">0 tendenser</span></td>
+            <td><span class="dc-cross">1 tendens</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- KONKLUSION -->
+  <div class="dc-conclusion">
+    <p class="dc-section-label">Del 5</p>
+    <h2 class="dc-section-title">Konklusion — hvad kan vi lære?</h2>
+    <p class="dc-conclusion-body">
+      De bedste hobby og e-handelssites i 2025–2026 har ét til fælles: <strong>de respekterer brugerens opmærksomhed</strong>. De råber ikke — de inviterer. De svageste sider gør det modsatte og prøver at kommunikere alt på én gang uden at give brugeren et klart fokuspunkt.
+    </p>
+    <div class="dc-learnings">
+      <div class="dc-learning">
+        <div class="dc-learning-num">01</div>
+        <div class="dc-learning-title">Farver fortæller en historie</div>
+        <div class="dc-learning-text">Hold paletten simpel og konsistent. Farvevalg handler ikke om hvad der ser fedt ud — det handler om hvad der passer til brandet og målgruppen.</div>
+      </div>
+      <div class="dc-learning">
+        <div class="dc-learning-num">02</div>
+        <div class="dc-learning-title">White space er ikke spild</div>
+        <div class="dc-learning-text">Det er det der giver produkterne luft og opmærksomhed. En tætpakket side kæmper mod sig selv. Tom plads er et aktivt designvalg.</div>
+      </div>
+      <div class="dc-learning">
+        <div class="dc-learning-num">03</div>
+        <div class="dc-learning-title">Micro-interaktioner gør siden levende</div>
+        <div class="dc-learning-text">Selv en knap der reagerer på hover, gør en kæmpe forskel for oplevelsen. Det bekræfter brugeren og giver siden personlighed.</div>
+      </div>
+    </div>
+  </div>
+
+ </article>
+</main>
+<footer class="foot">
+  <p>Procesportfolio · Multimediedesign · Ingrid Klein</p>
+</footer>
+</body>
+</html>

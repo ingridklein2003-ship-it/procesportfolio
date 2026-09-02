@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Installationsprojekt — Ingrid Klein</title>
+<meta name="description" content="Procesportfolio for Ingrid Klein, multimediedesign.">
+<style>:root{
+  --ink:#1a1a1a; --muted:#6b6b6b; --line:#e6e4e0; --bg:#fbfaf8; --card:#fff;
+  --accent:#cc1016; --max:900px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font:400 17px/1.65 "Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+}
+img{max-width:100%; height:auto; display:block}
+a{color:inherit}
+
+/* header */
+.top{
+  position:sticky; top:0; z-index:50; background:rgba(251,250,248,.92);
+  backdrop-filter:blur(8px); border-bottom:1px solid var(--line);
+  display:flex; align-items:center; gap:1.5rem; padding:.85rem 1.5rem; flex-wrap:wrap;
+}
+.brand{text-decoration:none; display:flex; flex-direction:column; line-height:1.15}
+.brand span{font-weight:700; letter-spacing:-.01em}
+.brand small{color:var(--muted); font-size:.78rem}
+.burger{display:none; margin-left:auto; background:none; border:0; font-size:1.4rem; cursor:pointer}
+
+.nav{margin-left:auto}
+.nav ul{list-style:none; margin:0; padding:0; display:flex; gap:1.4rem}
+.nav>ul>li{position:relative}
+.nav a{text-decoration:none; font-size:.94rem; color:var(--muted); padding:.35rem 0; display:block}
+.nav a:hover{color:var(--ink)}
+.nav li.on>a{color:var(--ink); font-weight:600}
+.nav .sub{
+  display:none; position:absolute; left:-.9rem; top:100%; flex-direction:column; gap:.1rem;
+  background:var(--card); border:1px solid var(--line); border-radius:10px;
+  padding:.6rem .9rem; min-width:230px; box-shadow:0 12px 30px rgba(0,0,0,.08);
+}
+.nav>ul>li:hover .sub{display:flex}
+.nav .sub a{padding:.3rem 0; font-size:.9rem}
+
+/* indhold */
+main{padding:2.5rem 1.25rem 4rem; overflow-x:clip}
+.page{max-width:var(--max); margin:0 auto}
+.embed{max-width:1180px; margin:0 auto; overflow-x:clip}
+.embed img{max-width:100%}
+h1{font-size:clamp(2rem,5vw,2.9rem); line-height:1.1; letter-spacing:-.02em; margin:0 0 1rem}
+h2{font-size:1.5rem; letter-spacing:-.01em; margin:2.4rem 0 .8rem}
+h3{font-size:1.15rem; margin:1.8rem 0 .5rem}
+p{margin:0 0 1rem}
+.lead{font-size:1.2rem; color:var(--muted); max-width:36em}
+.prose{margin:0 0 1.4rem}
+.prose ul,.prose ol{padding-left:1.2rem}
+
+figure{margin:1.8rem 0}
+figure img{border-radius:12px; width:100%}
+figcaption{color:var(--muted); font-size:.87rem; margin-top:.5rem}
+
+.gallery{display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr)); gap:.9rem; margin:1.8rem 0}
+.gallery img{border-radius:10px; aspect-ratio:4/3; object-fit:cover; width:100%}
+
+.card{
+  display:flex; gap:1.1rem; align-items:flex-start; background:var(--card);
+  border:1px solid var(--line); border-radius:14px; padding:1.1rem; margin:.9rem 0;
+}
+.card img{width:110px; border-radius:9px; flex:0 0 auto; aspect-ratio:1; object-fit:cover}
+.card h3{margin:0 0 .3rem; font-size:1.05rem}
+.card p{margin:0; color:var(--muted); font-size:.94rem}
+
+.video{position:relative; aspect-ratio:16/9; margin:1.8rem 0}
+.video iframe{position:absolute; inset:0; width:100%; height:100%; border:0; border-radius:12px}
+
+.btn{
+  display:inline-block; text-decoration:none; background:var(--ink); color:#fff;
+  padding:.6rem 1.2rem; border-radius:999px; font-size:.92rem;
+}
+
+/* forside */
+.hero{padding-top:2rem; padding-bottom:1rem}
+.semgrid{
+  max-width:var(--max); margin:2.5rem auto 0;
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:1.2rem;
+}
+.sem{background:var(--card); border:1px solid var(--line); border-radius:14px; padding:1.3rem 1.4rem}
+.sem h2{margin:0 0 .7rem; font-size:1.2rem}
+.sem h2 a{text-decoration:none}
+.sem ul{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:.4rem}
+.sem a{color:var(--muted); text-decoration:none; font-size:.94rem}
+.sem a:hover{color:var(--ink)}
+
+.foot{border-top:1px solid var(--line); padding:2rem 1.5rem; color:var(--muted); font-size:.88rem; text-align:center}
+
+@media(max-width:860px){
+  .burger{display:block}
+  .nav{flex-basis:100%; display:none}
+  body.open .nav{display:block}
+  .nav ul{flex-direction:column; gap:.2rem}
+  .nav .sub{display:flex; position:static; border:0; box-shadow:none; padding:.2rem 0 .6rem 1rem; background:none}
+  .card{flex-direction:column}
+  .card img{width:100%; aspect-ratio:16/9}
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="index.html"><span>Ingrid Klein</span><small>Procesportfolio</small></a>
+  <button class="burger" aria-label="Menu" onclick="document.body.classList.toggle('open')">☰</button>
+  <nav class="nav"><ul>
+<li class="on"><a href="1-semester.html">1. Semester</a>
+<ul class="sub">
+<li><a href="227976-2.html">Studie-tur</a></li>
+<li><a href="intro-projekt.html">Intro Projekt</a></li>
+<li><a href="re-design-af-en-hjemmeside.html">Re-design af en hjemmeside</a></li>
+<li class="on"><a href="elementor-228182.html">Installationsprojekt</a></li>
+<li><a href="our-mission.html">KleinDesign</a></li>
+<li><a href="moving-art.html">Moving Art</a></li>
+<li><a href="tone-of-voice-workshop.html">Tone Of Voice</a></li>
+<li><a href="prototyping-workshop.html">Prototyping</a></li>
+</ul>
+</li>
+<li><a href="2-semester.html">2. Semester</a>
+<ul class="sub">
+<li><a href="jawasript.html">JavaScript</a></li>
+<li><a href="elementor-side-228653.html">Projekt 4</a></li>
+<li><a href="projekt-5-eksamensprojekt.html">Projekt 5 – Eksamensprojekt</a></li>
+<li><a href="code-challenge-workshop.html">Code Challenge Workshop</a></li>
+<li><a href="elementor-228775.html">Design Challenge Workshop</a></li>
+<li><a href="projekt.html">Workshop Content Creation</a></li>
+</ul>
+</li>
+<li><a href="3-semester.html">3. Semester</a>
+</li>
+<li><a href="studiemakker-paa-tvaers.html">Studiemakker på tværs</a>
+</li>
+</ul></nav>
+</header>
+<main>
+<article class="page"><h1>Installationsprojekt</h1>
+<h2>Programplanlægger til Word Festival</h2>
+<div class="prose"><p data-start="384" data-end="871">I dette projekt udviklede vi en digital løsning til Word Festival – en kultur- og litteraturfestival med over 100 events fordelt på tre dage. Festivalens omfattende program kan virke uoverskueligt for mange gæster, og formålet med projektet var derfor at skabe en løsning, hvor brugerne nemt kan sammensætte deres eget personlige program. Målet var at udvikle en enkel, brugervenlig og overskuelig planlægningsapp, der gør det lettere at navigere mellem talks, foredrag og arrangementer.</p><p data-start="873" data-end="1439">Word Festival arbejder ud fra værdier som ro, fordybelse og en “pauseknap fra hverdagen”, men den eksisterende programoplevelse kan opleves som kompleks – særligt for brugere, der ikke kender Odense eller festivalens venues. Gennem vores analyse identificerede vi tre centrale udfordringer: manglende overblik i programmet, fraværet af en personlig planlægningsfunktion samt manglen på indblik i eventenes popularitet. På den baggrund arbejdede vi mod at udvikle et digitalt værktøj, der skaber struktur og overblik uden at fjerne fokus fra selve festivaloplevelsen.</p><p data-start="1441" data-end="1880">For at sikre et brugercentreret udgangspunkt udviklede vi en persona baseret på research og klientens målgruppe. Personaen Karen på 58 år repræsenterer en typisk kulturforbruger, som sætter pris på ro, fordybelse og overskuelighed, men som let kan blive overvældet af mange valg. Hendes behov blev styrende for vores designbeslutninger og førte blandt andet til fokus på tydelige knapper, farvekoder og en personlig “Mit program”-funktion.</p><p data-start="1882" data-end="2407">Researchfasen bestod af netnografisk research af Word Festivals digitale tilstedeværelse samt en heuristisk evaluering af den eksisterende programside. Dette gav indsigt i både den visuelle identitet og de navigationsmæssige udfordringer. På baggrund af researchen udviklede vi flere koncepter og lo-fi prototyper, som blev præsenteret ved en midtvejspitch. Feedbacken herfra pegede tydeligt på programplanlæggeren som det stærkeste koncept, hvorefter vi videreudviklede en hi-fi prototype i Figma og gennemførte brugertests.</p><p data-start="2409" data-end="2863">Den endelige løsning er en planlægningsapp, hvor brugerne kan filtrere programmet efter interesse, dag og venue samt tilføje events til deres personlige program. Et farvekodesystem viser eventets popularitet og hjælper brugeren med hurtigt at vurdere relevante arrangementer. Den visuelle stil er holdt i rolige farver med høj læsbarhed og tager udgangspunkt i et simpelt grid samt C.R.A.P.-principperne for at skabe struktur, genkendelighed og overblik.</p><p data-start="2865" data-end="3148">Brugertestene viste, at løsningen blev opfattet som intuitiv og overskuelig. Særligt funktionerne “Mit program”, filtrene og farvesystemet blev fremhævet positivt. På baggrund af feedbacken justerede vi blandt andet knapstørrelser, luft i layoutet og tydeligheden i kategoriseringen.</p><h3 data-start="3150" data-end="3192"> </h3><h3 data-start="3150" data-end="3192">Refleksion over proces og samarbejde</h3><p data-start="3194" data-end="3637">Projektet har været både lærerigt og udfordrende, særligt i forhold til samarbejdet i gruppen. Jeg havde rollen som gruppeleder, hvilket gav mig ansvar for overblik, planlægning og koordinering. Samarbejdet fungerede overordnet godt, men det var til tider udfordrende at finde fælles mødetider, da flere i gruppen havde travlt med andre projekter. Det betød, at en stor del af arbejdet blev lavet individuelt hjemmefra og koordineret digitalt.</p><p data-start="3639" data-end="4090">Selvom denne arbejdsform fungerede, savnede jeg flere fysiske arbejdsdage, hvor vi kunne sidde sammen og udvikle idéer i fællesskab. Rollen som gruppeleder har lært mig vigtigheden af tydelig kommunikation, forventningsafstemning og opfølgning – især når gruppemedlemmer har forskellige tidsplaner. Samtidig har projektet givet mig en bedre forståelse for gruppeprocesser og for, hvordan fleksibilitet og ansvar spiller en central rolle i samarbejdet.</p><p data-start="4092" data-end="4342">Samlet set har projektet styrket mine kompetencer inden for UX, research og visuel designproces, men i høj grad også mine samarbejds- og ledelseskompetencer. Erfaringerne fra dette projekt tager jeg med mig videre i kommende projekter på uddannelsen.</p></div>
+<div class="gallery"><img src="img/2025/12/Skaermbillede-2025-12-15-kl.-04.38.27.jpg" alt="" loading="lazy"><img src="img/2025/12/Skaermbillede-2025-12-15-kl.-04.38.21.jpg" alt="" loading="lazy"><img src="img/2025/12/Skaermbillede-2025-12-15-kl.-04.38.17.jpg" alt="" loading="lazy"><img src="img/2025/12/Skaermbillede-2025-12-15-kl.-04.38.13.jpg" alt="" loading="lazy"><img src="img/2025/12/Skaermbillede-2025-12-15-kl.-04.38.09.jpg" alt="" loading="lazy"><img src="img/2025/12/Skaermbillede-2025-12-15-kl.-04.38.00.jpg" alt="" loading="lazy"></div>
+<div class="gallery"><img src="img/2025/12/IMG_4208-1-scaled.jpg" alt="" loading="lazy"><img src="img/2025/12/582051365_839825038509861_7443843670084965301_n-scaled.jpg" alt="" loading="lazy"></div></article>
+</main>
+<footer class="foot">
+  <p>Procesportfolio · Multimediedesign · Ingrid Klein</p>
+</footer>
+</body>
+</html>

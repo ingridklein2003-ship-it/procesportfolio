@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Re-design af en hjemmeside — Ingrid Klein</title>
+<meta name="description" content="Procesportfolio for Ingrid Klein, multimediedesign.">
+<style>:root{
+  --ink:#1a1a1a; --muted:#6b6b6b; --line:#e6e4e0; --bg:#fbfaf8; --card:#fff;
+  --accent:#cc1016; --max:900px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font:400 17px/1.65 "Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+}
+img{max-width:100%; height:auto; display:block}
+a{color:inherit}
+
+/* header */
+.top{
+  position:sticky; top:0; z-index:50; background:rgba(251,250,248,.92);
+  backdrop-filter:blur(8px); border-bottom:1px solid var(--line);
+  display:flex; align-items:center; gap:1.5rem; padding:.85rem 1.5rem; flex-wrap:wrap;
+}
+.brand{text-decoration:none; display:flex; flex-direction:column; line-height:1.15}
+.brand span{font-weight:700; letter-spacing:-.01em}
+.brand small{color:var(--muted); font-size:.78rem}
+.burger{display:none; margin-left:auto; background:none; border:0; font-size:1.4rem; cursor:pointer}
+
+.nav{margin-left:auto}
+.nav ul{list-style:none; margin:0; padding:0; display:flex; gap:1.4rem}
+.nav>ul>li{position:relative}
+.nav a{text-decoration:none; font-size:.94rem; color:var(--muted); padding:.35rem 0; display:block}
+.nav a:hover{color:var(--ink)}
+.nav li.on>a{color:var(--ink); font-weight:600}
+.nav .sub{
+  display:none; position:absolute; left:-.9rem; top:100%; flex-direction:column; gap:.1rem;
+  background:var(--card); border:1px solid var(--line); border-radius:10px;
+  padding:.6rem .9rem; min-width:230px; box-shadow:0 12px 30px rgba(0,0,0,.08);
+}
+.nav>ul>li:hover .sub{display:flex}
+.nav .sub a{padding:.3rem 0; font-size:.9rem}
+
+/* indhold */
+main{padding:2.5rem 1.25rem 4rem; overflow-x:clip}
+.page{max-width:var(--max); margin:0 auto}
+.embed{max-width:1180px; margin:0 auto; overflow-x:clip}
+.embed img{max-width:100%}
+h1{font-size:clamp(2rem,5vw,2.9rem); line-height:1.1; letter-spacing:-.02em; margin:0 0 1rem}
+h2{font-size:1.5rem; letter-spacing:-.01em; margin:2.4rem 0 .8rem}
+h3{font-size:1.15rem; margin:1.8rem 0 .5rem}
+p{margin:0 0 1rem}
+.lead{font-size:1.2rem; color:var(--muted); max-width:36em}
+.prose{margin:0 0 1.4rem}
+.prose ul,.prose ol{padding-left:1.2rem}
+
+figure{margin:1.8rem 0}
+figure img{border-radius:12px; width:100%}
+figcaption{color:var(--muted); font-size:.87rem; margin-top:.5rem}
+
+.gallery{display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr)); gap:.9rem; margin:1.8rem 0}
+.gallery img{border-radius:10px; aspect-ratio:4/3; object-fit:cover; width:100%}
+
+.card{
+  display:flex; gap:1.1rem; align-items:flex-start; background:var(--card);
+  border:1px solid var(--line); border-radius:14px; padding:1.1rem; margin:.9rem 0;
+}
+.card img{width:110px; border-radius:9px; flex:0 0 auto; aspect-ratio:1; object-fit:cover}
+.card h3{margin:0 0 .3rem; font-size:1.05rem}
+.card p{margin:0; color:var(--muted); font-size:.94rem}
+
+.video{position:relative; aspect-ratio:16/9; margin:1.8rem 0}
+.video iframe{position:absolute; inset:0; width:100%; height:100%; border:0; border-radius:12px}
+
+.btn{
+  display:inline-block; text-decoration:none; background:var(--ink); color:#fff;
+  padding:.6rem 1.2rem; border-radius:999px; font-size:.92rem;
+}
+
+/* forside */
+.hero{padding-top:2rem; padding-bottom:1rem}
+.semgrid{
+  max-width:var(--max); margin:2.5rem auto 0;
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:1.2rem;
+}
+.sem{background:var(--card); border:1px solid var(--line); border-radius:14px; padding:1.3rem 1.4rem}
+.sem h2{margin:0 0 .7rem; font-size:1.2rem}
+.sem h2 a{text-decoration:none}
+.sem ul{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:.4rem}
+.sem a{color:var(--muted); text-decoration:none; font-size:.94rem}
+.sem a:hover{color:var(--ink)}
+
+.foot{border-top:1px solid var(--line); padding:2rem 1.5rem; color:var(--muted); font-size:.88rem; text-align:center}
+
+@media(max-width:860px){
+  .burger{display:block}
+  .nav{flex-basis:100%; display:none}
+  body.open .nav{display:block}
+  .nav ul{flex-direction:column; gap:.2rem}
+  .nav .sub{display:flex; position:static; border:0; box-shadow:none; padding:.2rem 0 .6rem 1rem; background:none}
+  .card{flex-direction:column}
+  .card img{width:100%; aspect-ratio:16/9}
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="index.html"><span>Ingrid Klein</span><small>Procesportfolio</small></a>
+  <button class="burger" aria-label="Menu" onclick="document.body.classList.toggle('open')">☰</button>
+  <nav class="nav"><ul>
+<li class="on"><a href="1-semester.html">1. Semester</a>
+<ul class="sub">
+<li><a href="227976-2.html">Studie-tur</a></li>
+<li><a href="intro-projekt.html">Intro Projekt</a></li>
+<li class="on"><a href="re-design-af-en-hjemmeside.html">Re-design af en hjemmeside</a></li>
+<li><a href="elementor-228182.html">Installationsprojekt</a></li>
+<li><a href="our-mission.html">KleinDesign</a></li>
+<li><a href="moving-art.html">Moving Art</a></li>
+<li><a href="tone-of-voice-workshop.html">Tone Of Voice</a></li>
+<li><a href="prototyping-workshop.html">Prototyping</a></li>
+</ul>
+</li>
+<li><a href="2-semester.html">2. Semester</a>
+<ul class="sub">
+<li><a href="jawasript.html">JavaScript</a></li>
+<li><a href="elementor-side-228653.html">Projekt 4</a></li>
+<li><a href="projekt-5-eksamensprojekt.html">Projekt 5 – Eksamensprojekt</a></li>
+<li><a href="code-challenge-workshop.html">Code Challenge Workshop</a></li>
+<li><a href="elementor-228775.html">Design Challenge Workshop</a></li>
+<li><a href="projekt.html">Workshop Content Creation</a></li>
+</ul>
+</li>
+<li><a href="3-semester.html">3. Semester</a>
+</li>
+<li><a href="studiemakker-paa-tvaers.html">Studiemakker på tværs</a>
+</li>
+</ul></nav>
+</header>
+<main>
+<article class="page"><h1>Re-design af en hjemmeside</h1>
+<h2>Tilføj din overskrift her</h2>
+<article class="card"><img src="img/2025/12/B2C-scaled.png" alt="" loading="lazy"><div><h3>Re-design af Lillebælt Sport &amp; Kulturs hjemmeside</h3><p>Projektet fokuserer på at analysere, forbedre og redesigne LSOK’s hjemmeside, så den bliver mere brugervenlig, overskuelig og professionel.
+
+Gennem heuristisk evaluering, brugertests og moderne designprincipper har vi skabt et redesign, der afspejler LSOK’s værdier – fællesskab, bevægelse og kvalitet.</p></div></article>
+<div class="prose"><p style="margin: 0in; font-family: Calibri; font-size: 16.0pt;">Formål og problemstilling</p><p style="margin: 0in; font-family: Calibri; font-size: 11.0pt;">Da vi skulle påbegynde redesignet, stod det hurtigt klart, at den gamle hjemmeside manglede både struktur og tydelig retning. Navigationen var omfattende og uoverskuelig, og de mange menupunkter gjorde det svært for brugeren at orientere sig. Det visuelle udtryk skabte tilsvarende forvirring, fordi der var meget lidt hierarki i både tekst, billeder og knapper, og man blev ikke guidet igennem siden. Det var derfor nemt at miste overblikket, selv når man blot forsøgte at udføre simple handlinger.</p><p style="margin: 0in; font-family: Calibri; font-size: 11.0pt;">Det centrale formål i redesignet blev at skabe en mere rolig og struktureret oplevelse med fokus på overskuelighed, tydelig navigation og et ensartet visuelt udtryk. Vi ønskede at gøre det nemt at finde relevant indhold, uanset om brugeren er privat kunde eller virksomhed.</p><p style="margin: 0in; font-family: Calibri; font-size: 16.0pt;"> </p><p style="margin: 0in; font-family: Calibri; font-size: 16.0pt;">Research og metoder</p><p style="margin: 0in; font-family: Calibri; font-size: 11.0pt;">For at forstå både problemerne og brugernes behov begyndte vi med en heuristisk evaluering baseret på Jakob Nielsens usability-principper. Dette hjalp os med at identificere centrale problemer i navigationen, det visuelle hierarki og strukturen. Vi udførte også en desirability-test, hvor brugere vurderede, hvordan de oplevede hjemmesidens udtryk og stemning. Denne test viste tydeligt, at brugerne ønskede en mere moderne og overskuelig side med tydelige handlingselementer.</p><p style="margin: 0in; font-family: Calibri; font-size: 11.0pt;">Derudover gennemførte vi en konkurrentanalyse for at undersøge, hvordan lignende organisationer kommunikerer online. Det gav os inspiration til, hvordan vi kunne skabe et mere intuitivt layout og en bedre opdeling mellem privat- og erhvervsindhold.</p><p style="margin: 0in; font-family: Calibri; font-size: 11.0pt;">Vi lavede også brugertests af både den eksisterende hjemmeside og vores hi-fi Figma-prototype. Testene gjorde det muligt at observere, hvor brugerne blev i tvivl, hvor de stoppede op, og hvilke løsninger der fungerede bedst. På baggrund af denne feedback finjusterede vi designet løbende.</p><p style="margin: 0in; font-family: Calibri; font-size: 16.0pt;"> </p><p style="margin: 0in; font-family: Calibri; font-size: 16.0pt;">Style Tile og visuel identitet</p><p style="margin: 0in; font-family: Calibri; font-size: 11.0pt;">For at skabe en ensartet visuel identitet udviklede vi en style tile i Figma. Her fastlagde vi farver, typografi, knapper, ikoner og UI-elementer, som skulle gå igen på hele hjemmesiden. Vi valgte farver, der tager udgangspunkt i LSOK’s rød fra logoet, kombineret med sort, hvid og grå for at skabe kontrast og ro.</p><p style="margin: 0in; font-family: Calibri; font-size: 11.0pt;">Typografierne Lato og Quicksand blev valgt, fordi de skaber et moderne, professionelt og venligt udtryk på samme tid. Style tile’en dannede grundlaget for et stringent design med en tydelig rød tråd på tværs af alle sider og sektioner.</p><p style="margin: 0in; font-family: Calibri; font-size: 16.0pt;"> </p><p style="margin: 0in; font-family: Calibri; font-size: 16.0pt;">Designproces og C.R.A.P.-principper</p><p style="margin: 0in; font-family: Calibri; font-size: 11.0pt;">Hele redesignet blev opbygget ud fra et 12-column grid, som gav os mulighed for at arbejde struktureret med luft, linjer og alignment. For at skabe et visuelt hierarki tog vi udgangspunkt i C.R.A.P.-principperne: Kontrast, Repetition, Alignment og Proximity.</p><p style="margin: 0in; font-family: Calibri; font-size: 11.0pt;">Kontrasten blev styrket ved at bruge klare røde knapper og skygger på billederne, så de fremstod tydeligt på en lys baggrund. Repetition skabte sammenhæng ved at gentage de samme farver, knapper og designkomponenter gennem hele sitet. Alignment blev sikret ved, at alle elementer blev justeret efter grid-strukturen, hvilket skabte balance og et professionelt udtryk. Proximity gjorde det nemmere at afkode indholdet ved at gruppere tekst, billeder og ikoner logisk.</p><p style="margin: 0in; font-family: Calibri; font-size: 11.0pt;"> </p><p style="margin: 0in; font-family: Calibri; font-size: 16.0pt;">Afdelinger og 3D-repræsentanter</p><p style="margin: 0in; font-family: Calibri; font-size: 11.0pt;">En vigtig del af vores redesign blev udviklingen af tre 3D-karakterer, som repræsenterer LSOK’s hovedafdelinger: Sport-Sander, Kultur-Kira og Erhverv-Eva. Hver figur er skabt til at visualisere en bestemt målgruppe og skabe genkendelighed i kommunikationen.</p><p style="margin: 0in; font-family: Calibri; font-size: 11.0pt;">Sport-Sander repræsenterer energi og fællesskab i sportsafdelingen, Kultur-Kira symboliserer kreativitet og kulturliv, mens Erhverv-Eva repræsenterer professionalisme og ro for B2B-kunder. Disse figurer bruges i markedsføring og på hjemmesidens undersider for at hjælpe brugerne med hurtigt at afkode, hvilket indhold der er rettet mod dem.</p><p style="margin: 0in; font-family: Calibri; font-size: 11.0pt;"> </p><p style="margin: 0in; font-family: Calibri; font-size: 16.0pt;">Brugertest af redesign</p><p style="margin: 0in; font-family: Calibri; font-size: 11.0pt;">Efter vi havde udviklet vores hi-fi prototype i Figma, udførte vi en brugertest for at evaluere, hvordan brugerne oplevede det nye layout. Testpersonerne oplevede hurtigt, at den nye side var mere overskuelig og moderne. Flere beskrev, hvordan øjnene “får lov til at bevæge sig naturligt gennem siden”, og at de følte sig langt bedre guidet end på den gamle hjemmeside.</p><p style="margin: 0in; font-family: Calibri; font-size: 11.0pt;">Brugertesten bekræftede, at vores fokus på luft, struktur og tydelige call-to-actions havde en positiv effekt på brugeroplevelsen. De vigtigste funktioner fremstod mere logiske og intuitive, og navigationen blev oplevet som markant enklere.</p><p style="margin: 0in; font-family: Calibri; font-size: 11.0pt;"> </p><p style="margin: 0in; font-family: Calibri; font-size: 20.0pt;">Resultat og Konklusion</p><p style="margin: 0in; font-family: Calibri; font-size: 11.0pt;">Det færdige redesign af Lillebælt Sport &amp; Kulturs hjemmeside endte med at blive en langt mere brugervenlig, rolig og moderne løsning, end den vi startede med. Vi fik skabt en mere tydelig struktur, hvor det er nemt at se forskellen på indhold til private og erhvervskunder, og vi brugte ensartede designprincipper for at holde en rød tråd hele vejen igennem. De vigtigste handlingselementer – som “Ring til os” og “Book nu” – blev gjort synlige og nemme at finde, så brugerne ikke længere skal lede efter det mest basale.</p><p style="margin: 0in; font-family: Calibri; font-size: 11.0pt;">Overordnet set fremstår hjemmesiden nu langt mere samlet og professionel, og det er blevet lettere for brugerne at navigere uden at føle sig overvældet. Den nye visuelle identitet giver et meget mere roligt udtryk, og vi kan tydeligt se, at designet nu understøtter LSOK’s kommunikation bedre end før.</p><p style="margin: 0in; font-family: Calibri; font-size: 11.0pt;"> </p><p style="margin: 0in; font-family: Calibri; font-size: 20.0pt;">Refleksion</p><p style="margin: 0in; font-family: Calibri; font-size: 11.0pt;">Hvis jeg skal være helt ærlig, så har det her projekt været ret hårdt – især fordi det var vores allerførste store projekt på studiet. I starten tror jeg, at vi tog alt for meget på os. Vi ville gerne gøre det hele perfekt, analysere alt, lave mange undersider og tilføje flere idéer, end vi egentlig kunne nå at udføre. Det gav os nogle ret pressede perioder undervejs, hvor vi blev nødt til at stoppe op og indse, at vi skulle prioritere helt anderledes, hvis vi ville nå i mål.</p><p style="margin: 0in; font-family: Calibri; font-size: 11.0pt;">Men netop dét endte faktisk med at være noget af det mest lærerige. Jeg fandt ud af, hvor vigtigt det er at holde fokus, vælge sine løsninger med omtanke og acceptere, at man ikke kan nå alt. Jeg lærte også, hvor meget det betyder at teste ting løbende – ikke som en “sidste ting”, men som en del af hele arbejdsprocessen. Brugertestene ændrede faktisk vores design mere, end jeg troede, de ville.</p><p style="margin: 0in; font-family: Calibri; font-size: 11.0pt;">Jeg føler, at projektet har givet mig en bedre forståelse for, hvad brugercentreret design egentlig vil sige i praksis, og hvor meget der ligger bag et redesign, som udefra måske ser simpelt ud. Vi skulle både tænke struktur, UX, visuel identitet, målgrupper og tekniske løsninger på samme tid. Det var svært – men også ret fedt, når tingene pludselig begyndte at hænge sammen.</p><p style="margin: 0in; font-family: Calibri; font-size: 11.0pt;">Alt i alt står jeg tilbage med følelsen af, at selvom vi på nogle tidspunkter var ved at drukne i opgaver, så kom vi stærkere ud af det. Og nu, hvor resultatet er færdigt, kan jeg faktisk godt se, at det hårde arbejde var det værd.</p></div>
+<p><a class="btn" href="#https://www.figma.com/proto/BQKNE0BRm9rkM9n0tLfqUt/Re-design?page-id=418%3A93&amp;node-id=454-382&amp;p=f&amp;viewport=187%2C92%2C0.14&amp;t=iFrITQ3XAL01DlDL-1&amp;scaling=scale-down&amp;content-scaling=fixed">Re-Deseign</a></p></article>
+</main>
+<footer class="foot">
+  <p>Procesportfolio · Multimediedesign · Ingrid Klein</p>
+</footer>
+</body>
+</html>
