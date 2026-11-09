@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Front-End Projekt · Ingrid Klein</title>
+<meta name="description" content="Procesportfolio for Ingrid Klein, multimediedesign.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+ <a class="brand" href="index.html"><span>Ingrid Klein</span><small>Procesportfolio</small></a>
+ <button class="burger" aria-label="Menu" onclick="document.body.classList.toggle('open')">☰</button>
+ <nav class="nav"><ul>
+<li><a href="1-semester.html">1. Semester</a>
+<ul class="sub">
+<li><a href="227976-2.html">Studie-tur</a></li>
+<li><a href="intro-projekt.html">Intro Projekt</a></li>
+<li><a href="re-design-af-en-hjemmeside.html">Re-design af en hjemmeside</a></li>
+<li><a href="elementor-228182.html">Installationsprojekt</a></li>
+<li><a href="our-mission.html">KleinDesign</a></li>
+<li><a href="moving-art.html">Moving Art</a></li>
+<li><a href="tone-of-voice-workshop.html">Tone Of Voice</a></li>
+<li><a href="prototyping-workshop.html">Prototyping</a></li>
+</ul>
+</li>
+<li><a href="2-semester.html">2. Semester</a>
+<ul class="sub">
+<li><a href="jawasript.html">JavaScript</a></li>
+<li><a href="elementor-side-228653.html">Projekt 4</a></li>
+<li><a href="projekt-5-eksamensprojekt.html">Projekt 5 – Eksamensprojekt</a></li>
+<li><a href="code-challenge-workshop.html">Code Challenge Workshop</a></li>
+<li><a href="elementor-228775.html">Design Challenge Workshop</a></li>
+<li><a href="projekt.html">Workshop Content Creation</a></li>
+</ul>
+</li>
+<li class="on"><a href="3-semester.html">3. Semester</a>
+<ul class="sub">
+<li class="subhead">Projekter</li>
+<li><a href="front-end-projekt.html">Front-End Projekt</a></li>
+<li><a href="semester-buddy.html">Semester-buddy</a></li>
+<li class="subhead">Workshops</li>
+<li><a href="creative-ai-workshop.html">Creative AI Workshop</a></li>
+</ul>
+</li>
+<li><a href="studiemakker-paa-tvaers.html">Studiemakker på tværs</a>
+</li>
+<li><a href="gallery.html">Galleri</a>
+</li>
+</ul></nav>
+</header>
+<main>
+<div class="phead"><div><p class="label">3. Semester</p><h1 class="display">Front-End Projekt</h1></div><div></div></div>
+<hr class="rule"><div class="body"><p class="lead">Semester-buddy som hjemmeside: forklaring af Discord-botten, live skema og personlige studieopgaver samlet ét sted.</p>
+<a class="btn" href="https://semester-buddy-guide.vercel.app/" target="_blank" rel="noopener">Se hjemmesiden</a> <a class="btn btn-ghost" href="https://semester-buddy-guide.vercel.app/#skema" target="_blank" rel="noopener">Se skemaet</a> <figure><img src="img/2026/11/front-end-skema.jpg" alt="Skemaet på Semester-buddy-hjemmesiden" loading="lazy"></figure>
+<h2>Opgaven</h2>
+<div class="prose"><p>Front-End Projekt var et individuelt valgfagsprojekt, hvor jeg skulle lave og præsentere en datadreven front-end-løsning. Den skulle hente data fra et API, bruge teknologi ud over almindelig JavaScript og kunne vises live.</p></div>
+<h2>Idéen</h2>
+<div class="prose"><p>Jeg havde allerede Discord-botten Semester-buddy, så jeg tog udgangspunkt i den frem for at finde på et helt nyt system. Projektet blev samlet i to spørgsmål: <strong>Hvor skal jeg være? Hvad skal jeg nå?</strong></p><p>Botten er god til hurtige svar i den kanal, holdet allerede bruger. Hjemmesiden giver et samlet overblik, man selv kan søge og filtrere i.</p></div>
+<h2>Løsningen</h2>
+<div class="prose"><p>Skemaet henter data fra TimeEdit og er bygget med Vue 3. Siden viser næste modul med nedtælling, ugens fremskridt, dagfiltre og søgning efter fag, undervisere, lokaler og online-moduler. Der er også visninger til indlæsning, fejl og ingen resultater.</p><p>Da min underviser havde set projektet, foreslog vedkommende, at jeg også viste Discord-botten. Derfor samlede jeg skemaet på den side, der allerede forklarede botten.</p></div>
+<h2>Fra at læse data til fuld CRUD</h2>
+<div class="prose"><p>Skemaet kunne kun læse data, så jeg tilføjede <strong>Mine studieopgaver</strong>, hvor man kan oprette, læse, redigere og slette sine egne opgaver. De gemmes i browseren med localStorage, så de kun ligger på den enhed, man bruger.</p></div>
+<h2>Test og rettelser</h2>
+<div class="prose"><p>Jeg afprøvede de handlinger, der skulle vises i demoen, og det afslørede to fejl. Søgning på “online” fandt ikke modulerne, fordi ordet blev fjernet fra titlen, og der stod en løs separator foran underviseren på nogle moduler. Begge dele blev rettet.</p></div>
+<h2>AI og min rolle</h2>
+<div class="prose"><p>Jeg bestemte retningen: koblingen til botten, at alt skulle samles på ét link, kravet om fuld CRUD og den korte, visuelle præsentation. Claude og Codex skrev koden ud fra mine valg og hjalp med at forklare den.</p></div>
+<h2>Det lærte jeg</h2>
+<div class="prose"><ul><li>At hente data fra et API og omforme dem, så de kan vises.</li><li>At holde en visning reaktiv med Vue.</li><li>Forskellen på at filtrere data og at lave nye API-kald.</li><li>Forskellen på kun at læse data og fuld CRUD med lokal lagring.</li></ul><p>Projektet er bestået.</p></div>
+</div>
+</main>
+<footer class="foot">Procesportfolio · Multimediedesign · Ingrid Klein</footer>
+</body>
+</html>

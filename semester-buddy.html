@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Semester-buddy · Ingrid Klein</title>
+<meta name="description" content="Procesportfolio for Ingrid Klein, multimediedesign.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+ <a class="brand" href="index.html"><span>Ingrid Klein</span><small>Procesportfolio</small></a>
+ <button class="burger" aria-label="Menu" onclick="document.body.classList.toggle('open')">☰</button>
+ <nav class="nav"><ul>
+<li><a href="1-semester.html">1. Semester</a>
+<ul class="sub">
+<li><a href="227976-2.html">Studie-tur</a></li>
+<li><a href="intro-projekt.html">Intro Projekt</a></li>
+<li><a href="re-design-af-en-hjemmeside.html">Re-design af en hjemmeside</a></li>
+<li><a href="elementor-228182.html">Installationsprojekt</a></li>
+<li><a href="our-mission.html">KleinDesign</a></li>
+<li><a href="moving-art.html">Moving Art</a></li>
+<li><a href="tone-of-voice-workshop.html">Tone Of Voice</a></li>
+<li><a href="prototyping-workshop.html">Prototyping</a></li>
+</ul>
+</li>
+<li><a href="2-semester.html">2. Semester</a>
+<ul class="sub">
+<li><a href="jawasript.html">JavaScript</a></li>
+<li><a href="elementor-side-228653.html">Projekt 4</a></li>
+<li><a href="projekt-5-eksamensprojekt.html">Projekt 5 – Eksamensprojekt</a></li>
+<li><a href="code-challenge-workshop.html">Code Challenge Workshop</a></li>
+<li><a href="elementor-228775.html">Design Challenge Workshop</a></li>
+<li><a href="projekt.html">Workshop Content Creation</a></li>
+</ul>
+</li>
+<li class="on"><a href="3-semester.html">3. Semester</a>
+<ul class="sub">
+<li class="subhead">Projekter</li>
+<li><a href="front-end-projekt.html">Front-End Projekt</a></li>
+<li><a href="semester-buddy.html">Semester-buddy</a></li>
+<li class="subhead">Workshops</li>
+<li><a href="creative-ai-workshop.html">Creative AI Workshop</a></li>
+</ul>
+</li>
+<li><a href="studiemakker-paa-tvaers.html">Studiemakker på tværs</a>
+</li>
+<li><a href="gallery.html">Galleri</a>
+</li>
+</ul></nav>
+</header>
+<main>
+<div class="phead"><div><p class="label">3. Semester</p><h1 class="display">Semester-buddy</h1></div><div></div></div>
+<hr class="rule"><div class="body"><p class="lead">En Discord-bot til 1. semester, som samler skema, afleveringer og svar på typiske spørgsmål ét sted.</p>
+<a class="btn" href="https://semester-buddy-guide.vercel.app/" target="_blank" rel="noopener">Se guiden til botten</a> <figure><img src="img/2026/11/semester-buddy-forside.jpg" alt="Forsiden af guiden til Semester-buddy" loading="lazy"></figure>
+<h2>Opgaven</h2>
+<div class="prose"><p>I Studiemakker på tværs skulle jeg lave en prototype på en Discord-bot og præsentere den individuelt. Jeg er tutor for 1. semester, så jeg valgte at lave den til dem.</p><p>Det vigtigste krav var, at botten ikke må dele noget fra serveren med eksterne parter. Derfor kan den ikke læse beskeder, den har ingen database, og afleveringer ligger som begivenheder i Discord.</p></div>
+<h2>Det kan botten</h2>
+<div class="prose"><ul><li><strong>/næste</strong> viser, hvor og hvornår næste modul er.</li><li><strong>/skema</strong> viser skemaet.</li><li><strong>/faq</strong> svarer på de mest stillede spørgsmål.</li><li><strong>/begreb</strong> forklarer fagbegreber.</li><li><strong>/deadline</strong> viser kommende afleveringer.</li><li><strong>/fokus</strong> starter en Pomodoro-session.</li></ul><p>Botten sender også selv dagens skema kl. 7 og en påmindelse om næste dag kl. 20. Hver halve time tjekker den, om skemaet er ændret.</p></div>
+<h2>Sådan virker den</h2>
+<div class="prose"><p>Jeg byggede den i JavaScript med biblioteket discord.js og med AI som hjælp. Hver kommando ligger i sin egen fil, så det er nemt at tilføje nye. Skemaet hentes som en .ics-fil fra TimeEdit, og koden laver den om til en liste af moduler. Svarene til FAQ og fagbegreber ligger i JSON-filer. Jeg satte botten til at køre på en server i EU, og den kom ud til holdet i en ny kanal med en besked og et link til guiden.</p></div>
+<h2>Test</h2>
+<div class="prose"><p>Botten har været tilgængelig for teamet siden 26. oktober, og jeg præsenterede den i Frontend Voice den 9. november. Jeg har ikke lavet en samlet test med teamet endnu. Næste skridt er at teste den med dem på vores møde den 10. november.</p><p>Næste gang vil jeg inddrage brugerne tidligere, så deres behov er med fra starten.</p></div>
+<h2>Det lærte jeg</h2>
+<div class="prose"><ul><li>At tænke privatliv ind fra starten.</li><li>At hente rigtige data fra et API.</li><li>At få en bot til at køre på en server.</li><li>Det er fedt at lave noget, rigtige studerende kan bruge.</li></ul></div>
+</div>
+</main>
+<footer class="foot">Procesportfolio · Multimediedesign · Ingrid Klein</footer>
+</body>
+</html>

@@ -367,3 +367,8 @@ figcaption{color:var(--faint); font-size:11px; letter-spacing:.06em; text-transf
 }
 .nav .sub .subhead:first-child{padding-top:.3rem}
 .nav .sub li + .subhead{border-top:1px solid var(--hair); margin-top:.35rem; padding-top:.6rem}
+
+/* 3. semester: kort som links */
+a.card{text-decoration:none; color:inherit}
+a.card h3,a.card p{text-decoration:none}
+.cards-fit{grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr))}
