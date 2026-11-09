@@ -372,3 +372,7 @@ figcaption{color:var(--faint); font-size:11px; letter-spacing:.06em; text-transf
 a.card{text-decoration:none; color:inherit}
 a.card h3,a.card p{text-decoration:none}
 .cards-fit{grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr))}
+
+/* videoer */
+figure video{display:block; width:100%; height:auto; border-radius:6px; background:#000}
+figure.video-tall{max-width:360px}
